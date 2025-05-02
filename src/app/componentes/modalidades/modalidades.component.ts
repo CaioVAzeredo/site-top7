@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './modalidades.component.css'
 })
 export class ModalidadesComponent {
-
+  fucaoUnidade(){
+    alert("Fucão Unidade");
+  }
 }

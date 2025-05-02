@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './matriculas.component.css'
 })
 export class MatriculasComponent {
-
+  acaoButao(){
+    alert("Botão clicado!");
+  }
 }

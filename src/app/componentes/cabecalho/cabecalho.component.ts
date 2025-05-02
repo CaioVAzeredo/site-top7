@@ -11,4 +11,7 @@ export class CabecalhoComponent {
   statusMenu() {
     this.menuAberto = !this.menuAberto;
   }
+  cart() {
+    alert("Carrinho de compras clicado!");
+  }
 }
