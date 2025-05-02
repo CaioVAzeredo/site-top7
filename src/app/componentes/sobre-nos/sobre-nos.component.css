@@ -1,0 +1,36 @@
+h2 {
+    text-align: center;
+}
+
+.sobre-nos {
+    background-color: white;
+    padding: 20px;
+}
+
+.sobre-nos .primeiro-modal img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.sobre-nos .primeiro-modal h3 span {
+    color: var(--cor-dourado);
+    font-size: 17px;
+}
+
+.sobre-nos .segundo-modal img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+.sobre-nos .segundo-modal h3 {
+    color: var(--cor-dourado);
+}
+.sobre-nos .segundo-modal h3 span {
+    color: var(--cor-azul-escuro);
+    font-size: 17px;
+}   
