@@ -1,1 +1,19 @@
-<p>contato works!</p>
+<section class="contato">
+    <form (submit)="form($event)">
+        <h2>Contato</h2>
+
+        <div class="container-dropdown">
+            <select name="" id="" class="dropdown">
+                <option value="opcao">Escolha um assunto</option>
+                <option value="opcao1">opcao 1</option>
+                <option value="opcao2">opcao 2</option>
+                <option value="opcao3">opcao 3</option>
+                <option value="opcao4">Outro</option>
+            </select>
+        </div>
+
+        <div class="div-button">
+            <app-button-component texto="Enviar" type="submit"></app-button-component>
+        </div>
+    </form>
+</section>

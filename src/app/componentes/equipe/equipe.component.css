@@ -1,0 +1,20 @@
+.equipe {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+h2 {
+    margin-bottom: 50px;
+}
+
+p {
+    width: 80%;
+    margin:0 auto;
+    margin-bottom: 50px;
+}
+
+img {
+    border-radius: 100%;
+}

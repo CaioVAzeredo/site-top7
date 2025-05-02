@@ -53,12 +53,6 @@
     margin-bottom: 400px;
 }
 
-.btn-saiba-mais {
-    background-color: var(--cor-dourado-claro);
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-}
 
 h2 {
     font-size: 24px;
@@ -81,9 +75,10 @@ ul li {
     margin-bottom: 50px;
 }
 
-button {
-    margin-top: 150px;
+ul {
+    margin-bottom: 200px;
 }
+
 
 .lista-mensalidade,
 .descricao-mensalidade {
