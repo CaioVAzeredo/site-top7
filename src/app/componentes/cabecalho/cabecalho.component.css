@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 79px;
+    height: 24px;
+    margin-top: 0.3rem;
+    cursor: pointer;
+}
+
+.cart {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+nav {
+    margin-top: 0.3rem;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+
+}
+
+li {
+    margin: 0 10px;
+    cursor: pointer;
+}

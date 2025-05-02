@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+/* ========= REGISTRO DAS FONTES ========= */
+@font-face {
+    font-family: 'Sansation';
+    src: url('../src/assets/sansation/Sansation_Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Sansation';
+    src: url('../src/assets/sansation/Sansation_Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Sansation';
+    src: url('../src/assets/sansation/Sansation_Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Sansation';
+    src: url('../src/assets/sansation/Sansation_Bold_Italic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Sansation';
+    src: url('../src/assets/sansation/Sansation_Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Sansation';
+    src: url('../src/assets/sansation/Sansation_Light_Italic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  /* ========= VARIÁVEIS ========= */
+  :root {
+    --fonte-padrao: 'Sansation', sans-serif;
+  
+    --cor-dourado: #BC943C;
+    --cor-dourado-claro: #C7A55B;
+    --cor-azul-escuro: #0C1450;
+    --cor-fundo: #f5f5f5;
+  }
+  
+  /* ========= ESTILOS GLOBAIS ========= */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: var(--fonte-padrao);
+    background-color: var(--cor-fundo);
+  }
+  
