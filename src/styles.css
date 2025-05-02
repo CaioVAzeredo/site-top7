@@ -57,6 +57,7 @@
     padding: 0;
     height: 100%;
     font-family: var(--fonte-padrao);
+    color: var(--cor-azul-escuro);
     background-color: var(--cor-fundo);
   }
   
