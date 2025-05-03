@@ -12,7 +12,7 @@
     margin: 0 auto;
     border-radius: 34px 34px 0 0;
     position: relative;
-    z-index: 2; /* Coloca a imagem na frente */
+    z-index: 2;
 }
 
 .modal-button {
@@ -20,11 +20,8 @@
     width: 300px;
     height: 130px;
     display: flex;
-    /* flex ao invés de block */
     justify-content: center;
-    /* centraliza horizontalmente */
     align-items: center;
-    /* centraliza verticalmente */
     margin: 0 auto;
     border-radius: 0 0 34px 34px;
     box-shadow: 0px 0px 48px #888888;
@@ -33,11 +30,10 @@
 .modal-button p {
     margin: 0;
     font-weight: 500;
-    /* opcional: para ficar mais visível */
     font-size: 1rem;
-    /* ajuste conforme o design */
     font-size: 20px;
 }
+
 .container-imagens{
     margin-bottom: 60px;
 }

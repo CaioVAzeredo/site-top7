@@ -7,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrl: './rodape.component.css'
 })
 export class RodapeComponent {
-
+  btnLogo(){
+    alert("Botão logo");
+  }
+  btnInstagram(){
+    alert("Botão instagram");
+  }
+  btnTermosDeUso(){
+    alert("termos de uso");
+  }
+  btnPoliticaDePrivacidade(){
+    alert("politica de privacidade");
+  }
 }
