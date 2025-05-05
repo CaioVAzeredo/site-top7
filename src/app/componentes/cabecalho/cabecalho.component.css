@@ -35,17 +35,11 @@ nav {
     justify-content: space-between;
 }
 
-/* ul {
-    display: flex;
-    list-style: none;
-    margin: 0 -35px;
-    background-color: var(--cor-azul-escuro);
-} */
 ul {
     display: flex;
     list-style: none;
-    margin: 0; /* remove margens negativas */
-    padding: 0 20px; /* opcional: adiciona espaçamento interno */
+    margin: 0;
+    padding: 0 20px; 
     background-color: var(--cor-azul-escuro);
     overflow-x: hidden;
     box-sizing: border-box;
@@ -76,8 +70,7 @@ li a {
     pointer-events: none;
     transition: all 0.3s ease-in-out;
     opacity: 0;
-    /*  
-    */
+
 }
 
 .itens.show {

@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" id="header">
     <img src="/assets/logoazul.png" alt="LOGO TOP7" class="logo" />
 
     <div class="menu-cart">
@@ -10,11 +10,11 @@
 
     <nav>
         <ul class="itens" [class.show]="menuAberto">
-            <li><a href="#sobre-nos">Sobre a TOP7</a></li>
-            <li><a href="#modalidades">Modalidades</a></li>
-            <li><a href="#matriculas">Matrículas</a></li>
-            <li><a href="#equipe">Equipe</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a href="#sobre-nos" (click)="statusMenu()">Sobre a TOP7</a></li>
+            <li><a href="#modalidades" (click)="statusMenu()">Modalidades</a></li>
+            <li><a href="#matriculas" (click)="statusMenu()">Matrículas</a></li>
+            <li><a href="#equipe" (click)="statusMenu()">Equipe</a></li>
+            <li><a href="#contato" (click)="statusMenu()">Contato</a></li>
         </ul>
     </nav>
 </header>

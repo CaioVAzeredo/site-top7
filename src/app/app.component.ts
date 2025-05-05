@@ -9,10 +9,11 @@ import { EquipeComponent } from "./componentes/equipe/equipe.component";
 import { ContatoComponent } from "./componentes/contato/contato.component";
 import { RodapeComponent } from "./componentes/rodape/rodape.component";
 import { WppComponent } from "./componentes/wpp/wpp.component";
+import { BotaoSubirComponent } from "./componentes/botao-subir/botao-subir.component";
 
 @Component({
   selector: 'app-root',
-  imports: [CabecalhoComponent, HeroComponent, ModalidadesComponent, SobreNosComponent, MatriculasComponent, EquipeComponent, ContatoComponent, RodapeComponent, WppComponent],
+  imports: [CabecalhoComponent, HeroComponent, ModalidadesComponent, SobreNosComponent, MatriculasComponent, EquipeComponent, ContatoComponent, RodapeComponent, WppComponent, BotaoSubirComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']  // <-- aqui estava errado
 })
