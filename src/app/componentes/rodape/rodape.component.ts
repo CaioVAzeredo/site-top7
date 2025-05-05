@@ -11,7 +11,7 @@ export class RodapeComponent {
     alert("Botão logo");
   }
   btnInstagram(){
-    alert("Botão instagram");
+    window.open("https://www.instagram.com/top7esportes/", "_blank")
   }
   btnTermosDeUso(){
     alert("termos de uso");

@@ -1,0 +1,12 @@
+.wpp-fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 50px;
+    color: #25d366;
+    z-index: 1000;
+}
+
+.wpp-fixo .wpp {
+    width: 60px;
+}

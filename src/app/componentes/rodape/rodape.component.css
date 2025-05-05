@@ -4,7 +4,7 @@
 }
 
 .container-img {
-    
+
     margin: 0 auto;
     width: 118.5px;
 }
@@ -15,29 +15,34 @@
     height: 36px;
     cursor: pointer;
 }
-.insta{
+
+.insta {
     width: 50px;
-    
+
 }
-.container-insta{
+
+.container-insta {
     width: 50px;
     margin: 0 auto;
     cursor: pointer;
 }
-p{
+
+p {
     color: var(--cor-dourado);
     text-align: center;
     margin: 15px 0 15px 0;
 }
-.container-button{
+
+.container-button {
     display: flex;
     flex-direction: column;
 }
-.container-button button{
-background-color: var(--cor-azul-escuro);
-border: none;
-color: var(--cor-dourado);
-font-size: 16px;
-margin: 15px 0 15px 0;
-cursor: pointer;
+
+.container-button button {
+    background-color: var(--cor-azul-escuro);
+    border: none;
+    color: var(--cor-dourado);
+    font-size: 16px;
+    margin: 15px 0 15px 0;
+    cursor: pointer;
 }
