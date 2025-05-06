@@ -1,2 +1,12 @@
 
+.scroll-animar {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+  }
+  
+  .aparecer {
+    opacity: 1;
+    transform: translateY(10px);
+  }
   

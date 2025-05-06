@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CabecalhoComponent } from "./componentes/cabecalho/cabecalho.component";
 import { HeroComponent } from "./componentes/hero/hero.component";
@@ -13,11 +13,34 @@ import { BotaoSubirComponent } from "./componentes/botao-subir/botao-subir.compo
 
 @Component({
   selector: 'app-root',
-  imports: [CabecalhoComponent, HeroComponent, ModalidadesComponent, SobreNosComponent, MatriculasComponent, EquipeComponent, ContatoComponent, RodapeComponent, WppComponent, BotaoSubirComponent],
+  imports: [CabecalhoComponent,
+    HeroComponent,
+    ModalidadesComponent,
+    SobreNosComponent,
+    MatriculasComponent,
+    EquipeComponent,
+    ContatoComponent,
+    RodapeComponent,
+    WppComponent,
+    BotaoSubirComponent
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']  // <-- aqui estava errado
 })
 export class AppComponent {
+  @HostListener('window:scroll',[])
+onWindowScroll(){
+  const elementos = document.querySelectorAll('.scroll-animar');
+  const alturaDaJanela = window.innerHeight;
+
+  elementos.forEach((elemento: any)=>{
+    const posicaoTopo = elemento.getBoundingClientRect().top;
+
+    if(posicaoTopo < alturaDaJanela-100){
+      elemento.classList.add('aparecer');
+    }
+  });
+}
   title = 'top7';
 }
 

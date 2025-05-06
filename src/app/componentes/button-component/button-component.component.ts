@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-button-component',
@@ -10,5 +10,11 @@ import { Component, Input } from '@angular/core';
 export class ButtonComponentComponent {
   @Input() texto: string = 'Clique aqui';
   @Input() type: string = 'button';
+
+  @Output() clickBotao = new EventEmitter<void>();
+
+  emitirClick(){
+    this.clickBotao.emit();
+  }
   
 }

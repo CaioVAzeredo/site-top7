@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 100px;
     right: 20px;
-    z-index: 1000;
+    z-index: 500;
     display: flex;
     cursor: pointer;
     background-color: var(--cor-azul-escuro);

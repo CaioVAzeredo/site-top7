@@ -61,4 +61,10 @@
     color: var(--cor-azul-escuro);
     background-color: var(--cor-fundo);
   }
+  body.modal-aberto {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
   

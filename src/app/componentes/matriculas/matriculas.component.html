@@ -12,8 +12,8 @@
                 <li>Aviso prévio de 30 dias</li>
                 <li>Obrigatória para matrícula</li>
             </ul>
-            <app-button-component texto="Saiba mais" (click)="acaoButao()"></app-button-component>
-
+            <app-button-component texto="Saiba mais" (click)="abrirModalAdesao()"></app-button-component>
+            <app-modal-component *ngIf="modalAdesao" (fechar)="fecharModalAdesao()"></app-modal-component>
         </div>
         <div class="container-info">
             <h2>Mensalidade</h2>
@@ -23,7 +23,8 @@
                 <li class="lista-mensalidade">Pagamento por boleto ou cartão</li>
                 <li>Planos semestral e anual disponíveis</li>
             </ul>
-            <app-button-component texto="Saiba mais" (click)="acaoButao()"></app-button-component>
+            <app-button-component texto="Saiba mais" (click)="abrirModalMensalidade()"></app-button-component>
+            <app-modal-component *ngIf="modalMensalidade" (fechar)="fecharModalMensalidade()"></app-modal-component>
         </div>
         <div class="container-info">
             <h2>Uniforme TOP7</h2>
@@ -34,7 +35,8 @@
                 <li>Compra única</li>
                 <li>Uso obrigatório nas aulas</li>
             </ul>
-            <app-button-component texto="Saiba mais" (click)="acaoButao()"></app-button-component>
+            <app-button-component texto="Saiba mais" (click)="abrirModalUniforme()"></app-button-component>
+            <app-modal-component *ngIf="modalUniforme" (fechar)="fecharModalUniforme()"></app-modal-component>
         </div>
     </div>
 </section>
