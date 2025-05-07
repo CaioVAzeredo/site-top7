@@ -1,40 +1,13 @@
 <section class="modalidades" id="modalidades">
     <h2>Modalidades</h2>
     <p>Grades de atividades</p>
-    <div class="container-imagens" (click)="fucaoUnidade()">
-        <img src="/assets/tag31.jpg" class="div-img" alt="">
-        <div class="modal-button">
-            <p class="titulo">Taguatinga- QNG 31</p>
-            <p class="btn-saibamais">Saiba mais</p>
+    <div *ngFor="let unidade of modalidades">
+        <div class="container-imagens" (click)="fucaoUnidade()">
+            <img [src]="unidade.imagem" class="div-img" [alt]="unidade.titulo">
+            <div class="modal-button">
+                <p class="titulo">{{unidade.titulo}}</p>
+                <p class="btn-saibamais">Saiba mais</p>
+            </div>
         </div>
     </div>
-    <div class="container-imagens" (click)="fucaoUnidade()">
-        <img src="/assets/tag31.jpg" class="div-img" alt="">
-        <div class="modal-button">
-            <p class="titulo">Taguatinga- QNG 31</p>
-            <p class="btn-saibamais">Saiba mais</p>
-        </div>
-    </div>
-    <div class="container-imagens" (click)="fucaoUnidade()">
-        <img src="/assets/tag31.jpg" class="div-img" alt="">
-        <div class="modal-button">
-            <p class="titulo">Taguatinga- QNG 31</p>
-            <p class="btn-saibamais">Saiba mais</p>
-        </div>
-    </div>
-    <div class="container-imagens" (click)="fucaoUnidade()">
-        <img src="/assets/tag31.jpg" class="div-img" alt="">
-        <div class="modal-button">
-            <p class="titulo">Taguatinga- QNG 31</p>
-            <p class="btn-saibamais">Saiba mais</p>
-        </div>
-    </div>
-    <div class="container-imagens" (click)="fucaoUnidade()">
-        <img src="/assets/tag31.jpg" class="div-img" alt="">
-        <div class="modal-button">
-            <p class="titulo">Taguatinga- QNG 31</p>
-            <p class="btn-saibamais">Saiba mais</p>
-        </div>
-    </div>
-
 </section>

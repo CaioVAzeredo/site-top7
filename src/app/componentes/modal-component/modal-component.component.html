@@ -2,6 +2,6 @@
   <div class="modal-content">
     <h2 [innerHTML]="titulo"></h2>
     <p [innerHTML]="conteudo"></p>
-    <button (click)="fecharModal()">Fechar</button>
+    <app-button-component [texto]="'Fechar'" (click)="fecharModal()"></app-button-component>
   </div>
 </div>

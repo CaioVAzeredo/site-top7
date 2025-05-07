@@ -1,11 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../service/api.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-equipe',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './equipe.component.html',
-  styleUrl: './equipe.component.css'
+  styleUrls: ['./equipe.component.css'] // <- corrigido aqui
 })
-export class EquipeComponent {
+export class EquipeComponent implements OnInit {
+  equipe: any[] = [];
 
+  constructor(private apiService: ApiService) { }
+
+  ngOnInit(): void {
+    this.apiService.getDadosEquipe().subscribe(res => {
+      this.equipe = res;
+    });
+  }
 }

@@ -1,30 +1,8 @@
 <section class="equipe" id="equipe">
     <h2>Nossa equipe</h2>
-    <div class="membros">
-        <img src="/assets/mario.png" alt="Mario Geovani">
-        <h3>Mário Geovani</h3>
-        <p>Professor do Colégio Ideal ​
-            há 21 anos​</p>
-            <img src="/assets/didi.png" alt="Mario Geovani">
-        <h3>Diójenes (Didi)​</h3>
-        <p>Professor do Colégio Ideal ​
-            há 10 anos​</p>
-            <img src="/assets/wesley.png" alt="Mario Geovani">
-        <h3>Wesley Teixeira​</h3>
-        <p>Professor do Colégio Ideal ​
-            há 12 anos​​</p>
-            <img src="/assets/gaviao.png" alt="Mario Geovani">
-        <h3>João Gavião​</h3>
-        <p>Professor do Colégio Ideal ​
-            há 12 anos</p>
-            <img src="/assets/esdras.png" alt="Mario Geovani">
-        <h3>Esdras Coutinho​</h3>
-        <p>Ex-aluno e professor do Colégio Ideal ​
-            há 10 anos​</p>
-            <img src="/assets/arnor.png" alt="Mario Geovani">
-        <h3>Arnor Tavares​</h3>
-        <p>Professor do Colégio Ideal ​
-            há 21 anos​</p>
-
+    <div class="membros" *ngFor="let colaborador of equipe">
+       <img [src]="colaborador.imagem" [alt]="colaborador.nome">
+       <h3>{{colaborador.nome}}</h3>
+       <p>{{colaborador.descricao}}</p>
     </div>
 </section>

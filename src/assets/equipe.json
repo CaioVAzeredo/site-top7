@@ -1,0 +1,33 @@
+[
+    {
+      "nome": "Mário Geovani",
+      "imagem": "/assets/mario.png",
+      "descricao": "Professor do Colégio Ideal há 21 anos"
+    },
+    {
+      "nome": "Diójenes (Didi)",
+      "imagem": "/assets/didi.png",
+      "descricao": "Professor do Colégio Ideal há 10 anos"
+    },
+    {
+      "nome": "Wesley Teixeira",
+      "imagem": "/assets/wesley.png",
+      "descricao": "Professor do Colégio Ideal há 12 anos"
+    },
+    {
+      "nome": "João Gavião",
+      "imagem": "/assets/gaviao.png",
+      "descricao": "Professor do Colégio Ideal há 12 anos"
+    },
+    {
+      "nome": "Esdras Coutinho",
+      "imagem": "/assets/esdras.png",
+      "descricao": "Ex-aluno e professor do Colégio Ideal há 10 anos"
+    },
+    {
+      "nome": "Arnor Tavares",
+      "imagem": "/assets/arnor.png",
+      "descricao": "Professor do Colégio Ideal há 21 anos"
+    }
+  ]
+  
