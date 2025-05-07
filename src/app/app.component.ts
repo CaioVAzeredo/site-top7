@@ -13,34 +13,15 @@ import { BotaoSubirComponent } from "./componentes/botao-subir/botao-subir.compo
 
 @Component({
   selector: 'app-root',
-  imports: [CabecalhoComponent,
-    HeroComponent,
-    ModalidadesComponent,
-    SobreNosComponent,
-    MatriculasComponent,
-    EquipeComponent,
-    ContatoComponent,
-    RodapeComponent,
-    WppComponent,
-    BotaoSubirComponent
+  standalone: true,
+  imports: [
+    RouterOutlet
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']  // <-- aqui estava errado
+  styleUrls: ['./app.component.css']  
 })
 export class AppComponent {
-  @HostListener('window:scroll',[])
-onWindowScroll(){
-  const elementos = document.querySelectorAll('.scroll-animar');
-  const alturaDaJanela = window.innerHeight;
 
-  elementos.forEach((elemento: any)=>{
-    const posicaoTopo = elemento.getBoundingClientRect().top;
-
-    if(posicaoTopo < alturaDaJanela-100){
-      elemento.classList.add('aparecer');
-    }
-  });
-}
   title = 'top7';
 }
 

@@ -13,18 +13,25 @@
                 <li>Obrigatória para matrícula</li>
             </ul>
             <app-button-component texto="Saiba mais" (click)="abrirModalAdesao()"></app-button-component>
-            <app-modal-component *ngIf="modalAdesao" (fechar)="fecharModalAdesao()"></app-modal-component>
+            <app-modal-component 
+            [titulo]="'Adesão'"
+            [conteudo]="'Informações detalhadas sobre os planos de Adesão, formas de pagamento, prazos e descontos disponíveis.'" 
+            *ngIf="modalAdesao" 
+            (fechar)="fecharModalAdesao()"></app-modal-component>
         </div>
         <div class="container-info">
             <h2>Mensalidade</h2>
             <p class="descricao-mensalidade">A partir de R$ 170,00/mês</p>
             <ul>
-
                 <li class="lista-mensalidade">Pagamento por boleto ou cartão</li>
                 <li>Planos semestral e anual disponíveis</li>
             </ul>
             <app-button-component texto="Saiba mais" (click)="abrirModalMensalidade()"></app-button-component>
-            <app-modal-component *ngIf="modalMensalidade" (fechar)="fecharModalMensalidade()"></app-modal-component>
+            <app-modal-component
+            [titulo]="'Mensalidade'"
+            [conteudo]="'Informações detalhadas sobre os planos de mensalidade, formas de pagamento, prazos e descontos disponíveis.'" 
+            *ngIf="modalMensalidade" 
+            (fechar)="fecharModalMensalidade()"></app-modal-component>
         </div>
         <div class="container-info">
             <h2>Uniforme TOP7</h2>
@@ -36,7 +43,11 @@
                 <li>Uso obrigatório nas aulas</li>
             </ul>
             <app-button-component texto="Saiba mais" (click)="abrirModalUniforme()"></app-button-component>
-            <app-modal-component *ngIf="modalUniforme" (fechar)="fecharModalUniforme()"></app-modal-component>
+            <app-modal-component 
+            [titulo]="'Uniforme TOP7'"
+            [conteudo]="'Informações detalhadas sobre os planos de Uniforme TOP7, formas de pagamento, prazos e descontos disponíveis.'" 
+            *ngIf="modalUniforme" 
+            (fechar)="fecharModalUniforme()"></app-modal-component>
         </div>
     </div>
 </section>

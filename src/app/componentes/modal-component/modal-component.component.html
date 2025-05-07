@@ -1,7 +1,7 @@
 <div class="modal-overlay">
   <div class="modal-content">
-    <h2>Conteúdo do Modal</h2>
-    <p>Exemplo de conteúdo fixo no centro da tela. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, delectus! Consequuntur nam odio ratione, expedita ipsa illum natus? Doloribus exercitationem inventore assumenda similique odio id itaque illo, quam beatae voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maxime magni officiis minus eveniet molestiae aut delectus aspernatur quisquam ipsa, aperiam architecto, obcaecati molestias. Ea reiciendis laboriosam quis sapiente accusamus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, distinctio hic facilis voluptates nulla eius officiis reiciendis sunt natus earum id delectus, omnis assumenda odit deserunt dolorem vel! Error, soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius maxime cumque quidem error neque itaque eligendi? Similique, recusandae nesciunt saepe quod, quam vel animi error laboriosam quo, alias mollitia? </p>
-    <button (click)="onFechar()">Fechar</button>
+    <h2 [innerHTML]="titulo"></h2>
+    <p [innerHTML]="conteudo"></p>
+    <button (click)="fecharModal()">Fechar</button>
   </div>
 </div>

@@ -26,21 +26,21 @@ export class MatriculasComponent {
   }
 
   abrirModalMensalidade(){
-    this.modalAdesao = true;
+    this.modalMensalidade = true;
     document.body.classList.add('modal-aberto');
   }
   fecharModalMensalidade(){
-    this.modalAdesao = false;
+    this.modalMensalidade = false;
     document.body.classList.remove('modal-aberto');
   }
 
   abrirModalUniforme() {
-    this.modalAdesao = true;
+    this.modalUniforme = true;
     document.body.classList.add('modal-aberto');
   }
 
   fecharModalUniforme() {
-    this.modalAdesao = false;
+    this.modalUniforme = false;
     document.body.classList.remove('modal-aberto');
   }
 
