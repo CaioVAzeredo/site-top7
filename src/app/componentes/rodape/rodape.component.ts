@@ -7,9 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './rodape.component.css'
 })
 export class RodapeComponent {
-  btnLogo(){
-    alert("Botão logo");
-  }
   btnInstagram(){
     window.open("https://www.instagram.com/top7esportes/", "_blank")
   }

@@ -8,7 +8,7 @@ export const routes: Routes = [
         component: PrincipalComponent
     },
     {
-        path:'modalidade',
+        path:'modalidade/:id',
         component: ModalidadeComponent
     },
 ];

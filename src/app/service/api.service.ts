@@ -19,4 +19,7 @@ export class ApiService {
   getDadosModalidade():Observable<any>{
     return this.http.get<any>(this.jsonModalidade);
   }
+/*   buscarModalidadePorId(id: number): Observable{
+
+  } */
 }

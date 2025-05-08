@@ -1,15 +1,18 @@
 <header class="header" id="header">
-    <img src="/assets/logoazul.png" alt="LOGO TOP7" class="logo" />
+    <a href="#header">
+        <img src="/assets/logoazul.png" alt="LOGO TOP7" class="logo" />
+    </a>
 
     <div class="menu-cart">
         <span class="material-icons" (click)="statusMenu()">
             {{ menuAberto ? 'close' : 'menu' }}
         </span>
-        <img src="/assets/cart.png" alt="cart" class="cart" (click)="cart()"/>
+        <img src="/assets/cart.png" alt="cart" class="cart" (click)="cart()" />
     </div>
 
     <nav>
         <ul class="itens" [class.show]="menuAberto">
+            <li><a href="#header" (click)="statusMenu()">Home</a></li>
             <li><a href="#sobre-nos" (click)="statusMenu()">Sobre a TOP7</a></li>
             <li><a href="#modalidades" (click)="statusMenu()">Modalidades</a></li>
             <li><a href="#matriculas" (click)="statusMenu()">Matrículas</a></li>

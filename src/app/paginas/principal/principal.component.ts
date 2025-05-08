@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { CabecalhoComponent } from "../../componentes/cabecalho/cabecalho.component";
 import { HeroComponent } from "../../componentes/hero/hero.component";
 import { SobreNosComponent } from "../../componentes/sobre-nos/sobre-nos.component";
-import { ModalidadesComponent } from "../../componentes/modalidades/modalidades.component";
+import { ModalidadesComponent } from "../../componentes/modalidades-component/modalidades.component";
 import { MatriculasComponent } from "../../componentes/matriculas/matriculas.component";
 import { EquipeComponent } from "../../componentes/equipe/equipe.component";
 import { ContatoComponent } from "../../componentes/contato/contato.component";

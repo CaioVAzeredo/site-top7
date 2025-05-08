@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../service/api.service';
+import { UnidadeComponent } from "../unidade/unidade.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-modalidades',
-  imports: [CommonModule],
+  imports: [CommonModule, UnidadeComponent, RouterLink],
   templateUrl: './modalidades.component.html',
   styleUrl: './modalidades.component.css'
 })

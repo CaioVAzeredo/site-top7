@@ -1,0 +1,7 @@
+<section class="container-imagens" [routerLink]="['/modalidade', id]">
+    <img [src]="imagem" class="div-img" [alt]="titulo">
+    <div class="modal-button">
+        <p class="titulo">{{titulo}}</p>
+        <p class="btn-saibamais" [routerLink]="['/modalidade', id]">Saiba mais</p>
+    </div>
+</section>

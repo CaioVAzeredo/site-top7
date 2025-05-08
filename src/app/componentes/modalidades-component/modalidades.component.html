@@ -1,0 +1,11 @@
+<section class="modalidades" id="modalidades">
+    <h2>Modalidades</h2>
+    <p>Grades de atividades</p>
+    <div *ngFor="let unidade of modalidades">
+        <app-unidade 
+        [id]="unidade.id!"
+        [imagem]="unidade.imagem"
+        [titulo] ="unidade.titulo"
+        ></app-unidade>
+    </div>
+</section>
