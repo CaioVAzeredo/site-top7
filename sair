@@ -1,0 +1,107 @@
+[33mcommit b07eefe1f60e6776b6ae129eab729872d87aee1f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Caio Viana de Azeredo <caio.viana.39@gmail.com>
+Date:   Thu May 8 08:55:40 2025 -0300
+
+    adição do rodape na pagina de modalidades
+
+[33mcommit a674d7f66eec6213bd84081d4344a966e709f604[m
+Author: Caio Viana de Azeredo <caio.viana.39@gmail.com>
+Date:   Wed May 7 21:37:40 2025 -0300
+
+    fazendo a pagina das informações das modalidades
+
+[33mcommit 313506267cdadadb0e11ba3f810d36a8a0e46246[m
+Author: Caio Viana de Azeredo <caio.viana.39@gmail.com>
+Date:   Wed May 7 11:50:16 2025 -0300
+
+    refatoranção do codigo para colocar ngFor e estilo no botao do modal
+
+[33mcommit a87b46e0d3f88c589a9779ffabe5ad77d6ceb3ae[m
+Author: Caio Viana de Azeredo <caio.viana.39@gmail.com>
+Date:   Tue May 6 22:24:32 2025 -0300
+
+    Adição das rotas
+
+[33mcommit 8d7905f381e62bcca6ed2110b4f3f75791f59634[m
+Author: Caio Viana de Azeredo <caio.viana.39@gmail.com>
+Date:   Tue May 6 17:50:54 2025 -0300
+
+    colocado o modal da matricula
+
+[33mcommit 04a8ff1f244d48af2edd7a4e4b12b43df5e03bd1[m
+Author: Caio VAzeredo <caio.viana.39@gmail.com>
+Date:   Mon May 5 17:15:14 2025 -0300
+
+    adição do botao de voltar ao topo
+
+[33mcommit 0c6d7fd5515d75d5a1180e5d80f4dbdf863c4614[m
+Author: Caio VAzeredo <caio.viana.39@gmail.com>
+Date:   Mon May 5 16:01:31 2025 -0300
+
+    adição do link das seções com o menu
+
+[33mcommit 29026e6588c2cb4ebe5e5604edb07f2034ee9bc8[m
+Author: Caio Viana de Azeredo <caio.viana.39@gmail.com>
+Date:   Mon May 5 15:16:17 2025 -0300
+
+    adição do icone do whats app
+
+[33mcommit 7a26b5ceae2d8c1074ff6819596589e51cb253e9[m
+Author: Caio Viana de Azeredo <caio.viana.39@gmail.com>
+Date:   Mon May 5 11:18:07 2025 -0300
+
+    adição do icone instagram da cor dourado
+
+[33mcommit d076269792d3a0b9b88d954d8c6f33f78c019dac[m
+Author: Caio VAzeredo <caio.viana.39@gmail.com>
+Date:   Sat May 3 11:31:10 2025 -0300
+
+    adição do visual da pagina completa sem a interação
+
+[33mcommit 79f71af24675e5391f50c266961bb167620ba748[m
+Author: Caio Viana de Azeredo <caio.viana.39@gmail.com>
+Date:   Fri May 2 20:59:06 2025 -0300
+
+    adição da equipe
+
+[33mcommit 09f102acbebe39e0b6351cd2305afc9add9f4372[m
+Author: Caio Viana de Azeredo <caio.viana.39@gmail.com>
+Date:   Fri May 2 16:58:08 2025 -0300
+
+    adição das funções de click
+
+[33mcommit 23ceb684ceb59cd7b821a286781850a54c910d0b[m
+Author: Caio Viana de Azeredo <caio.viana.39@gmail.com>
+Date:   Fri May 2 15:48:58 2025 -0300
+
+    adição do container matriculas
+
+[33mcommit 149035d592958edef748fd98a27b386e14c0b94b[m
+Author: Caio Viana de Azeredo <caio.viana.39@gmail.com>
+Date:   Fri May 2 14:22:01 2025 -0300
+
+    adição do estilo Modalidades
+
+[33mcommit d281045b6ed63f9725dbaa286682a91a007960ad[m
+Author: Caio Viana de Azeredo <caio.viana.39@gmail.com>
+Date:   Fri May 2 12:32:33 2025 -0300
+
+    mudanca de Unidades para Modalidades
+
+[33mcommit 8e857727067ea53b7f993aa2bb26f0130c761815[m
+Author: Caio Viana de Azeredo <caio.viana.39@gmail.com>
+Date:   Fri May 2 12:08:28 2025 -0300
+
+    adição do hero
+
+[33mcommit 62a01a8b16514c6105baeec3d2dd433b78048ac0[m
+Author: Caio Viana de Azeredo <caio.viana.39@gmail.com>
+Date:   Thu May 1 21:04:26 2025 -0300
+
+    adição as informações do header
+
+[33mcommit d6622f30210cc384667ea7f35d5decdb24974a80[m
+Author: Caio VAzeredo <caio.viana.39@gmail.com>
+Date:   Mon Apr 28 16:11:36 2025 -0300
+
+    Adição do projeto base

@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { PrincipalComponent } from './paginas/principal/principal.component';
-import { ModalidadeComponent } from './paginas/modalidade/modalidade.component';
+import { PaginaModalidadeComponent } from './paginas/pagina-modalidade/pagina-modalidade.component';
 
 export const routes: Routes = [
     {
@@ -9,6 +9,6 @@ export const routes: Routes = [
     },
     {
         path:'modalidade/:id',
-        component: ModalidadeComponent
+        component: PaginaModalidadeComponent
     },
 ];

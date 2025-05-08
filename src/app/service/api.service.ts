@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Equipe } from '../componentes/equipe/equipe';
+import { Unidade } from '../componentes/unidade/unidade';
 
 @Injectable({
   providedIn: 'root'
@@ -12,14 +14,11 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getDadosEquipe(): Observable<any> {
-    return this.http.get<any>(this.jsonEquipe);
+  getDadosEquipe(): Observable<Equipe[]> {
+    return this.http.get<Equipe[]>(this.jsonEquipe);
   }
-  
-  getDadosModalidade():Observable<any>{
-    return this.http.get<any>(this.jsonModalidade);
-  }
-/*   buscarModalidadePorId(id: number): Observable{
 
-  } */
+  getDadosModalidade(): Observable<Unidade[]> {
+    return this.http.get<Unidade[]>(this.jsonModalidade);
+  }
 }

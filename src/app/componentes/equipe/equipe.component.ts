@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../service/api.service';
 import { CommonModule } from '@angular/common';
+import { Equipe } from './equipe';
 
 @Component({
   selector: 'app-equipe',
@@ -10,7 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./equipe.component.css'] // <- corrigido aqui
 })
 export class EquipeComponent implements OnInit {
-  equipe: any[] = [];
+  equipe: Equipe[] = [];
 
   constructor(private apiService: ApiService) { }
 
