@@ -3,10 +3,12 @@ import { CabecalhoComponent } from "../../componentes/cabecalho/cabecalho.compon
 import { BotaoSubirComponent } from "../../componentes/botao-subir/botao-subir.component";
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { RodapeComponent } from "../../componentes/rodape/rodape.component";
+import { WppComponent } from "../../componentes/wpp/wpp.component";
 
 @Component({
   selector: 'app-modalidade',
-  imports: [CabecalhoComponent, BotaoSubirComponent, RouterLink, CommonModule],
+  imports: [CabecalhoComponent, BotaoSubirComponent, RouterLink, CommonModule, RodapeComponent, WppComponent],
   templateUrl: './modalidade.component.html',
   styleUrl: './modalidade.component.css'
 })
