@@ -1,8 +1,41 @@
 <app-cabecalho></app-cabecalho>
-<div >
-  <h2>{{ titulo }}</h2>
+<div>
+  <h2 class="titulo-principal">{{ titulo }}</h2>
   <img [src]="imagem" alt="{{ titulo }}" class="imagem-modalidade">
-</div>
+  <h2 class="titulo-atividade">Grades de atividades</h2>
+  <p class="paragrafo">Veja as atividades de cada turma</p>
+
+  <div *ngFor="let item of grade" class="lista-horarios">
+    <h2 class="titulo-secundario">{{item.nivel}}</h2>
+
+    <div *ngFor="let horario of item.horarios" class="blocos-horario">
+      <p class="horario">{{horario.horario}}</p>
+      
+        <ul class="scroll-horarios">
+          <div class="container-seg container-dias-semana">
+            <li>Seg</li>
+            <p> {{horario.seg}}</p>
+          </div>
+          <div class="container-ter container-dias-semana">
+            <li>Ter</li>
+            <p> {{horario.ter}}</p>
+          </div>
+          <div class="container-qua container-dias-semana">
+            <li>Qua</li>
+            <p>{{horario.qua}}</p>
+          </div>
+          <div class="container-qui container-dias-semana">
+            <li>Qui</li>
+            <p>{{horario.qui}}</p>
+          </div>
+          <div class="container-sex container-dias-semana">
+            <li>Sex</li>
+            <p>{{horario.sex}}</p>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
 <app-rodape></app-rodape>
 <app-wpp></app-wpp>
-<app-botao-subir></app-botao-subir> 
+<app-botao-subir></app-botao-subir>

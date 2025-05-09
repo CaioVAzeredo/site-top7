@@ -1,0 +1,67 @@
+.titulo-principal {
+    font-size: 35px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+.titulo-atividade {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 0.01;
+}
+
+.paragrafo {
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 0.01;
+}
+.lista-horarios{
+    margin-top: 100px;
+}
+
+.titulo-secundario {
+    font-size: 20px;
+    text-align: center;
+}
+
+.horario {
+    font-size: 14px;
+    text-align: center;
+    background-color: var(--cor-azul-escuro);
+    color: white;
+    width: 80%;
+    padding: 5px;
+    border-radius: 7px;
+    margin: 0 auto;
+}
+
+
+ul{
+    display: flex;
+    list-style-type: none;
+    padding-left: 0; 
+}
+.container-dias-semana{
+    background-color: #D9D9D9;
+    padding: 10px;
+    min-width: max-content; 
+}
+.container-dias-semana li{
+    text-align: center;
+    color: var(--cor-azul-escuro);
+}
+.container-dias-semana p{
+    background-color: var(--cor-dourado);
+    border-radius: 7px;
+    width: 200px;
+    text-align: center;
+    padding: 5px;
+}
+.scroll-horarios {
+    overflow-x: auto;
+    width: 100%;
+  }
