@@ -36,6 +36,8 @@ export class PaginaModalidadeComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.id = +params['id'];
       this.carregarModalidade();
+      window.scrollTo(0, 0);
+
     });
   }
 
