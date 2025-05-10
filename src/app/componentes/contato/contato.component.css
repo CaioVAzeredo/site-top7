@@ -65,3 +65,6 @@ option {
 .div-container label{
     padding: 10px;
 }
+.mensagem-erro{
+    color: red;
+}

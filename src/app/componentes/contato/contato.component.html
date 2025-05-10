@@ -1,28 +1,43 @@
 <section class="contato" id="contato">
-    <form (submit)="form($event)">
+    <form [formGroup]="contatoForm" (ngSubmit)="salvarContato()">
         <h2>Contato</h2>
 
         <div class="container-dropdown">
-            <select name="" id="" class="dropdown">
-                <option value="opcao">Escolha um assunto</option>
-                <option value="opcao1">opcao 1</option>
-                <option value="opcao2">opcao 2</option>
-                <option value="opcao3">opcao 3</option>
-                <option value="opcao4">Outro</option>
+            <select id="dropdown" class="dropdown" formControlName="assunto">
+                <option value="">Escolha um assunto</option>
+                <option value="duvida">Dúvida</option>
+                <option value="reclamacao">Reclamação</option>
+                <option value="parceria">Proposta de Parceria</option>
+                <option value="sugestoes">Sugestões</option>
+                <option value="outro">Outro</option>
             </select>
         </div>
+
         <div class="container-nome div-container">
-            <label for="Nome">Nome</label>
-            <input type="text" placeholder="Seu nome aqui">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Seu nome aqui" formControlName="nome" />
+            <div class="mensagem-erro" *ngIf="contatoForm.get('nome')?.errors && contatoForm.get('nome')?.touched">
+                Campo obrigatório
+            </div>
         </div>
+
         <div class="container-email div-container">
             <label for="email">E-mail</label>
-            <input type="email" placeholder="exemplo@email.com">
+            <input type="email" id="email" placeholder="exemplo@email.com" formControlName="email" />
+            <div class="mensagem-erro" *ngIf="contatoForm.get('email')?.errors && contatoForm.get('email')?.touched">
+                E-mail inválido ou obrigatório
+            </div>
         </div>
+
         <div class="container-mensagem div-container">
             <label for="mensagem">Sua mensagem</label>
-            <textarea name="mensagem" id="msg" placeholder="Sua mensagem aqui"></textarea>
+            <textarea id="msg" placeholder="Sua mensagem aqui" formControlName="mensagem"></textarea>
+            <div class="mensagem-erro"
+                *ngIf="contatoForm.get('mensagem')?.errors && contatoForm.get('mensagem')?.touched">
+                Campo obrigatório
+            </div>
         </div>
+
         <div class="div-button">
             <app-button-component texto="Enviar" type="submit" class="btn"></app-button-component>
         </div>
