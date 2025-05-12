@@ -2,14 +2,6 @@
     <a href="#header">
         <img src="/assets/logoazul.png" alt="LOGO TOP7" class="logo" />
     </a>
-
-    <div class="menu-cart">
-        <span class="material-icons" (click)="statusMenu()">
-            {{ menuAberto ? 'close' : 'menu' }}
-        </span>
-        <img src="/assets/cart.png" alt="cart" class="cart" (click)="cart()" />
-    </div>
-
     <nav>
         <ul class="itens" [class.show]="menuAberto">
             <li><a href="#header" (click)="statusMenu()">Home</a></li>
@@ -20,4 +12,12 @@
             <li><a href="#contato" (click)="statusMenu()">Contato</a></li>
         </ul>
     </nav>
+
+    <div class="menu-cart">
+        <span class="material-icons" (click)="statusMenu()">
+            {{ menuAberto ? 'close' : 'menu' }}
+        </span>
+        <img src="/assets/cart.png" alt="cart" class="cart" (click)="cart()" />
+    </div>
+
 </header>

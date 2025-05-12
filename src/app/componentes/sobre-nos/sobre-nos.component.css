@@ -7,7 +7,8 @@ h2 {
     padding: 20px;
 }
 
-.sobre-nos .primeiro-modal img {
+.sobre-nos .primeiro-modal .img-prof,
+.sobre-nos .segundo-modal .img-alunos {
     width: 80%;
     height: auto;
     border-radius: 10px;
@@ -20,17 +21,46 @@ h2 {
     font-size: 17px;
 }
 
-.sobre-nos .segundo-modal img {
-    width: 80%;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto;
+.img-prof-tela-grande,
+.img-alunos-tela-grande {
+    display: none;
 }
+
+
 .sobre-nos .segundo-modal h3 {
     color: var(--cor-dourado);
 }
+
 .sobre-nos .segundo-modal h3 span {
     color: var(--cor-azul-escuro);
     font-size: 17px;
-}   
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 32px;
+    }
+
+    .sobre-nos {
+        background-color: #F5F5F5;
+    }
+
+    .sobre-nos .primeiro-modal .img-prof,
+    .sobre-nos .segundo-modal .img-alunos {
+        display: none;
+
+    }
+
+
+    .primeiro-modal,
+    .segundo-modal {
+        display: flex;
+    }
+
+    .img-prof-tela-grande,
+    .img-alunos-tela-grande {
+        display: block;
+        border-radius: 10px;
+    }
+
+}

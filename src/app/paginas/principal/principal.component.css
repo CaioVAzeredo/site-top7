@@ -10,12 +10,12 @@
 }
 
 @media (max-width: 768px) {
-.container-pag-em-desenvolvimento {
+  .container-pag-em-desenvolvimento {
     display: none;
   }
 }
 
-
+/* --------------------------------------------------------- */
 @media (min-width: 768px) {
   .container-principal {
     display: none;
@@ -26,17 +26,21 @@
   }
 
   .container-pag-em-desenvolvimento {
+    display: block;
     margin: 0 auto;
     width: 600px;
   }
-  .container-botao{
+
+  .container-botao {
     margin: 0 auto;
     width: 200px;
   }
-  h1{
+
+  h1 {
     text-align: center;
   }
-  p{
+
+  p {
     text-align: center;
   }
 }
