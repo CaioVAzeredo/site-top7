@@ -12,22 +12,32 @@ import { BotaoSubirComponent } from "../../componentes/botao-subir/botao-subir.c
 
 @Component({
   selector: 'app-principal',
-  imports: [CabecalhoComponent, HeroComponent, SobreNosComponent, ModalidadesComponent, MatriculasComponent, EquipeComponent, ContatoComponent, RodapeComponent, WppComponent, BotaoSubirComponent],
+  imports: [CabecalhoComponent,
+    HeroComponent,
+    SobreNosComponent,
+    ModalidadesComponent,
+    MatriculasComponent,
+    EquipeComponent,
+    ContatoComponent,
+    RodapeComponent,
+    WppComponent,
+    BotaoSubirComponent
+  ],
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css'
 })
 export class PrincipalComponent {
-  @HostListener('window:scroll',[])
-onWindowScroll(){
-  const elementos = document.querySelectorAll('.scroll-animar');
-  const alturaDaJanela = window.innerHeight;
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const elementos = document.querySelectorAll('.scroll-animar');
+    const alturaDaJanela = window.innerHeight;
 
-  elementos.forEach((elemento: any)=>{
-    const posicaoTopo = elemento.getBoundingClientRect().top;
+    elementos.forEach((elemento: any) => {
+      const posicaoTopo = elemento.getBoundingClientRect().top;
 
-    if(posicaoTopo < alturaDaJanela-100){
-      elemento.classList.add('aparecer');
-    }
-  });
-}
+      if (posicaoTopo < alturaDaJanela - 100) {
+        elemento.classList.add('aparecer');
+      }
+    });
+  }
 }
