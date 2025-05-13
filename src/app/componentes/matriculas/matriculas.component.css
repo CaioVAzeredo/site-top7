@@ -19,7 +19,7 @@
     background-color: #f2f2f2;
 }
 
-.container-matriculas {
+.container-info-modal {
     background-color: var(--cor-dourado-claro);
     padding: 80px 0 60px;
     position: relative;
@@ -83,4 +83,15 @@ ul {
 .lista-mensalidade,
 .descricao-mensalidade {
     padding-top: 55px;
+}
+
+
+@media (min-width: 768px) {
+    .container-matriculas {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        height: 350px;
+    }
+
 }

@@ -11,10 +11,25 @@ h2 {
 
 p {
     width: 80%;
-    margin:0 auto;
+    margin: 0 auto;
     margin-bottom: 50px;
 }
 
 img {
     border-radius: 100%;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 34px;
+    }
+
+    .container-mebros {
+        margin: 0 auto;
+        width: 60%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 150px;
+        align-items: start;
+    }
 }

@@ -41,3 +41,13 @@
     color: var(--cor-dourado);
     
 }
+
+@media (min-width: 768px) {
+  .container-imagens {
+    transition: transform 0.3s ease;
+  }
+
+  .container-imagens:hover {
+    transform: scale(1.05);
+  }
+}

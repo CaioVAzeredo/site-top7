@@ -15,10 +15,13 @@ h2 {
     display: block;
     margin: 0 auto;
 }
-
+h3{
+    text-align: center;
+}
 .sobre-nos .primeiro-modal h3 span {
     color: var(--cor-dourado);
     font-size: 17px;
+    text-align: center;
 }
 
 .img-prof-tela-grande,
@@ -29,6 +32,7 @@ h2 {
 
 .sobre-nos .segundo-modal h3 {
     color: var(--cor-dourado);
+    text-align: center;
 }
 
 .sobre-nos .segundo-modal h3 span {
@@ -43,6 +47,8 @@ h2 {
 
     .sobre-nos {
         background-color: #F5F5F5;
+        width: 80%;
+        margin: 0 auto;
     }
 
     .sobre-nos .primeiro-modal .img-prof,
@@ -61,6 +67,23 @@ h2 {
     .img-alunos-tela-grande {
         display: block;
         border-radius: 10px;
+        width: 600px;
     }
+    .img-alunos-tela-grande{
+        margin-left: 50px;
+    }
+
+    h3 {
+        font-size: 32px;
+        margin-top: 130px;
+        width: 60%;
+        text-align: center;
+    }
+
+    .sobre-nos .primeiro-modal h3 span,
+    .sobre-nos .segundo-modal h3 span {
+        font-size: 24px;
+    }
+
 
 }

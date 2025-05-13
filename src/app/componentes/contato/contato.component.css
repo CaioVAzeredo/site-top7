@@ -58,13 +58,25 @@ option {
     padding: 5px;
 }
 
-.div-container textarea{
+.div-container textarea {
     height: 80px;
     margin-bottom: 100px;
 }
-.div-container label{
+
+.div-container label {
     padding: 10px;
 }
-.mensagem-erro{
+
+.mensagem-erro {
     color: red;
+}
+
+@media (min-width: 768px) {
+    h2{
+        font-size: 34px;
+    }
+    .contato {
+        margin-top: 100px;
+        width: 30%;
+    }
 }

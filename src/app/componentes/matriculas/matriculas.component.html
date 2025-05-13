@@ -2,52 +2,49 @@
     <h1>Planos que cabem no seu orçamento e acompanham <span>o crescimento do seu filho</span></h1>
     <p>Pague adesão, uniforme e escolha o plano ideal para você!</p>
 
-    <div class="container-matriculas">
-        <div class="container-info">
-            <h2>Adesão</h2>
-            <p class="preco">R$ 1.700,00</p>
-            <p>em até 10x</p>
-            <ul>
-                <li>Contrato com cancelamento até outubro</li>
-                <li>Aviso prévio de 30 dias</li>
-                <li>Obrigatória para matrícula</li>
-            </ul>
-            <app-button-component texto="Saiba mais" (click)="abrirModalAdesao()"></app-button-component>
-            <app-modal-component 
-            [titulo]="'Adesão'"
-            [conteudo]="'Informações detalhadas sobre os planos de Adesão, formas de pagamento, prazos e descontos disponíveis.'" 
-            *ngIf="modalAdesao" 
-            (fechar)="fecharModalAdesao()"></app-modal-component>
-        </div>
-        <div class="container-info">
-            <h2>Mensalidade</h2>
-            <p class="descricao-mensalidade">A partir de R$ 170,00/mês</p>
-            <ul>
-                <li class="lista-mensalidade">Pagamento por boleto ou cartão</li>
-                <li>Planos semestral e anual disponíveis</li>
-            </ul>
-            <app-button-component texto="Saiba mais" (click)="abrirModalMensalidade()"></app-button-component>
-            <app-modal-component
-            [titulo]="'Mensalidade'"
-            [conteudo]="'Informações detalhadas sobre os planos de mensalidade, formas de pagamento, prazos e descontos disponíveis.'" 
-            *ngIf="modalMensalidade" 
-            (fechar)="fecharModalMensalidade()"></app-modal-component>
-        </div>
-        <div class="container-info">
-            <h2>Uniforme TOP7</h2>
-            <p class="preco">R$ 95,00</p>
-            <p>(short + camiseta)</p>
-            <ul>
-                <li>R$ 50,00 (somente camiseta)</li>
-                <li>Compra única</li>
-                <li>Uso obrigatório nas aulas</li>
-            </ul>
-            <app-button-component texto="Saiba mais" (click)="abrirModalUniforme()"></app-button-component>
-            <app-modal-component 
-            [titulo]="'Uniforme TOP7'"
-            [conteudo]="'Informações detalhadas sobre os planos de Uniforme TOP7, formas de pagamento, prazos e descontos disponíveis.'" 
-            *ngIf="modalUniforme" 
-            (fechar)="fecharModalUniforme()"></app-modal-component>
+    <div class="container-info-modal">
+        <div class="container-matriculas">
+
+            <div class="container-info">
+                <h2>Adesão</h2>
+                <p class="preco">R$ 1.700,00</p>
+                <p>em até 10x</p>
+                <ul>
+                    <li>Contrato com cancelamento até outubro</li>
+                    <li>Aviso prévio de 30 dias</li>
+                    <li>Obrigatória para matrícula</li>
+                </ul>
+                <app-button-component texto="Saiba mais" (click)="abrirModalAdesao()"></app-button-component>
+                <app-modal-component [titulo]="'Adesão'"
+                    [conteudo]="'Informações detalhadas sobre os planos de Adesão, formas de pagamento, prazos e descontos disponíveis.'"
+                    *ngIf="modalAdesao" (fechar)="fecharModalAdesao()"></app-modal-component>
+            </div>
+            <div class="container-info">
+                <h2>Mensalidade</h2>
+                <p class="descricao-mensalidade">A partir de R$ 170,00/mês</p>
+                <ul>
+                    <li class="lista-mensalidade">Pagamento por boleto ou cartão</li>
+                    <li>Planos semestral e anual disponíveis</li>
+                </ul>
+                <app-button-component texto="Saiba mais" (click)="abrirModalMensalidade()"></app-button-component>
+                <app-modal-component [titulo]="'Mensalidade'"
+                    [conteudo]="'Informações detalhadas sobre os planos de mensalidade, formas de pagamento, prazos e descontos disponíveis.'"
+                    *ngIf="modalMensalidade" (fechar)="fecharModalMensalidade()"></app-modal-component>
+            </div>
+            <div class="container-info">
+                <h2>Uniforme TOP7</h2>
+                <p class="preco">R$ 95,00</p>
+                <p>(short + camiseta)</p>
+                <ul>
+                    <li>R$ 50,00 (somente camiseta)</li>
+                    <li>Compra única</li>
+                    <li>Uso obrigatório nas aulas</li>
+                </ul>
+                <app-button-component texto="Saiba mais" (click)="abrirModalUniforme()"></app-button-component>
+                <app-modal-component [titulo]="'Uniforme TOP7'"
+                    [conteudo]="'Informações detalhadas sobre os planos de Uniforme TOP7, formas de pagamento, prazos e descontos disponíveis.'"
+                    *ngIf="modalUniforme" (fechar)="fecharModalUniforme()"></app-modal-component>
+            </div>
         </div>
     </div>
 </section>

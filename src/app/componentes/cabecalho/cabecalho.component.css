@@ -121,13 +121,11 @@ li a {
         color: var(--cor-azul-escuro);
         font-size: larger;
         padding: 10px;
-        transition: background-color 0.3s ease-in-out 0.2s, border-radius 0.3s ease-in-out 0.2s;
-        border-radius: 10%;
         
     }
 
     li a:hover {
-        background-color: var(--cor-dourado-claro);
+        color: var(--cor-dourado-claro);
         border-radius: 10%;
     }
 

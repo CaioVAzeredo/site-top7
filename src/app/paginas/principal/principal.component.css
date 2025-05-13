@@ -18,7 +18,7 @@
 /* --------------------------------------------------------- */
 @media (min-width: 768px) {
   .container-principal {
-    display: none;
+    display: block;
   }
 
   img {
@@ -26,7 +26,7 @@
   }
 
   .container-pag-em-desenvolvimento {
-    display: block;
+    display: none;
     margin: 0 auto;
     width: 600px;
   }
