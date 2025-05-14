@@ -47,3 +47,23 @@ p {
     margin: 15px 0 15px 0;
     cursor: pointer;
 }
+
+@media (min-width: 768px) {
+    .container-img {
+        margin: 0;
+        width: 118.5px;
+    }
+
+    .container-info {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .container-insta-powerd {
+        display: flex;
+    }
+
+    .container-insta {
+        margin-right: 0;
+    }
+}

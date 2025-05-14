@@ -1,6 +1,5 @@
 .contato {
     width: 80%;
-    height: 670px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     margin: 0 auto;
@@ -37,6 +36,7 @@ option {
 .div-button {
     width: 60px;
     margin: 0 auto;
+    margin-top: 50px;
 }
 
 .div-container {
@@ -60,7 +60,7 @@ option {
 
 .div-container textarea {
     height: 80px;
-    margin-bottom: 100px;
+
 }
 
 .div-container label {
@@ -70,11 +70,15 @@ option {
 .mensagem-erro {
     color: red;
 }
+.para-dar-espaco{
+    height: 80px;
+}
 
 @media (min-width: 768px) {
-    h2{
+    h2 {
         font-size: 34px;
     }
+
     .contato {
         margin-top: 100px;
         width: 30%;

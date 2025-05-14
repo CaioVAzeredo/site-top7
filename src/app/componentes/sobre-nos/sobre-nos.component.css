@@ -62,6 +62,9 @@ h3{
     .segundo-modal {
         display: flex;
     }
+    .primeiro-modal{
+        margin-bottom: 100px;
+    }
 
     .img-prof-tela-grande,
     .img-alunos-tela-grande {
@@ -84,6 +87,4 @@ h3{
     .sobre-nos .segundo-modal h3 span {
         font-size: 24px;
     }
-
-
 }
