@@ -47,23 +47,39 @@ p {
     margin: 15px 0 15px 0;
     cursor: pointer;
 }
+ .container-insta-tela-grande {
+        display: none;
+    }
 
 @media (min-width: 768px) {
     .container-img {
         margin: 0;
+        margin-left: 30px;
         width: 118.5px;
+        
     }
+   
 
     .container-info {
-        width: 80%;
+        width: 70%;
         margin: 0 auto;
     }
 
     .container-insta-powerd {
+        display: none;
+    }
+
+    .container-insta-tela-grande {
+        display: block;
         display: flex;
     }
 
     .container-insta {
-        margin-right: 0;
+        margin-right: 0px;
+        margin-top: -40px;
     }
+    .container-insta img{
+        width: 80px;
+    }
+
 }

@@ -71,3 +71,11 @@ ul{
     overflow-x: auto;
     width: 100%;
   }
+@media (min-width: 768px) {
+
+.container-imagem{
+    height: 884px;
+}
+
+
+}
