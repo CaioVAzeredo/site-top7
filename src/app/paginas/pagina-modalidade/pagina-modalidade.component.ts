@@ -25,6 +25,7 @@ export class PaginaModalidadeComponent implements OnInit {
   id: number = 0;
   imagem: string = '';
   titulo: string = '';
+  numero: string = '';
   grade: { nivel: string; horarios: Horario[] }[] = [];
 
   constructor(
@@ -33,10 +34,13 @@ export class PaginaModalidadeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
     this.route.params.subscribe(params => {
       this.id = +params['id'];
       this.carregarModalidade();
-      window.scrollTo(0, 0);
+      if (typeof window !== 'undefined') {
+        window.scrollTo(0, 0);
+      }
 
     });
   }
@@ -48,16 +52,10 @@ export class PaginaModalidadeComponent implements OnInit {
       if (modalidade) {
         this.imagem = modalidade.imagem;
         this.titulo = modalidade.titulo;
-
+        this.numero = modalidade.numero;
 
         this.grade = modalidade.grade;
 
-        this.grade.forEach((grade, i) => {
-          console.log(`Nível ${i}: ${grade.nivel}`);
-          grade.horarios.forEach((horario, j) => {
-            console.log(`Horário ${j}: ${horario.qua}`);
-          });
-        });
       }
     });
   }

@@ -1,5 +1,5 @@
 <app-cabecalho></app-cabecalho>
-<div>
+<div class="modal-tela-pequena">
   <h2 class="titulo-principal">{{ titulo }}</h2>
   <div class="container-imagem">
     <img [src]="imagem" alt="{{ titulo }}" class="imagem-modalidade">
@@ -15,29 +15,61 @@
 
       <ul class="scroll-horarios">
         <div class="container-seg container-dias-semana">
-          <li>Seg</li>
+          <li class="titulo-li">Seg</li>
           <p> {{horario.seg}}</p>
         </div>
         <div class="container-ter container-dias-semana">
-          <li>Ter</li>
+          <li class="titulo-li">Ter</li>
           <p> {{horario.ter}}</p>
         </div>
         <div class="container-qua container-dias-semana">
-          <li>Qua</li>
+          <li class="titulo-li">Qua</li>
           <p>{{horario.qua}}</p>
         </div>
         <div class="container-qui container-dias-semana">
-          <li>Qui</li>
+          <li class="titulo-li">Qui</li>
           <p>{{horario.qui}}</p>
         </div>
         <div class="container-sex container-dias-semana">
-          <li>Sex</li>
+          <li class="titulo-li">Sex</li>
           <p>{{horario.sex}}</p>
         </div>
       </ul>
     </div>
   </div>
 </div>
+
+<div class="grade-container">
+  <h2 class="titulo-principal-tela-grande">{{ titulo }}</h2>
+  <div class="container-imagem-tela-grande">
+    <img [src]="imagem" alt="{{ titulo }}" class="imagem-modalidade-tela-grande">
+  </div>
+  <h2 class="titulo">Grades de atividades</h2>
+  <p class="subtitulo">Veja as atividades de cada turma</p>
+
+  <div *ngFor="let item of grade" class="bloco-nivel">
+    <h3 class="titulo-nivel">{{ item.nivel }}</h3>
+
+    <div class="linha header">
+      <div class="celula inicio">Horário</div>
+      <div class="celula">Seg</div>
+      <div class="celula">Ter</div>
+      <div class="celula">Qua</div>
+      <div class="celula">Qui</div>
+      <div class="celula">Sex</div>
+    </div>
+
+    <div *ngFor="let horario of item.horarios" class="linha">
+      <div class="celula inicio">{{ horario.horario }}</div>
+      <div class="celula">{{ horario.seg }}</div>
+      <div class="celula">{{ horario.ter }}</div>
+      <div class="celula">{{ horario.qua }}</div>
+      <div class="celula">{{ horario.qui }}</div>
+      <div class="celula">{{ horario.sex }}</div>
+    </div>
+  </div>
+</div>
+
 <app-rodape></app-rodape>
-<app-wpp></app-wpp>
+<app-wpp [numero]="numero"></app-wpp>
 <app-botao-subir></app-botao-subir>

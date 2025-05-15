@@ -13,12 +13,10 @@ export class ModalidadesComponent implements OnInit {
   modalidades: any[] = [];
 
   constructor(private apiService: ApiService) { }
-
-  fucaoUnidade() {
-    alert("Fucão Unidade");
-  }
+  
   ngOnInit(): void {
     this.apiService.getDadosModalidade().subscribe(res => {
+      console.log(res);
       this.modalidades = res;
     })
   }

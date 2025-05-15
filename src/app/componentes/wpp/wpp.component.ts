@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-wpp',
@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   templateUrl: './wpp.component.html',
   styleUrl: './wpp.component.css'
 })
-export class WppComponent {
+export class WppComponent implements OnChanges {
+  @Input() numero: string = '';
+  link: string = '';
+
+
+  ngOnChanges(): void {
+    this.link = 'https://wa.me/' + this.numero;
+  }
 
 }

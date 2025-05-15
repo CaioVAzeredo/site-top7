@@ -3,6 +3,7 @@
     "id": 1,
     "imagem": "/assets/tag31.png",
     "titulo": "Taguatinga- QNG 31",
+    "numero": "000000000",
     "grade": [
       {
         "nivel": "Educação Infantil",
@@ -126,6 +127,7 @@
     "id": 2,
     "imagem": "/assets/tag26.png",
     "titulo": "Taguatinga- QNG 26",
+    "numero": "000000000",
     "grade": [
       {
         "nivel": "Educação Infantil",
@@ -249,6 +251,7 @@
     "id": 3,
     "imagem": "/assets/acj.png",
     "titulo": "Águas Cláras Jequitibá",
+    "numero": "000000000",
     "grade": [
       {
         "nivel": "Educação Infantil",
@@ -372,6 +375,7 @@
     "id": 4,
     "imagem": "/assets/acm.png",
     "titulo": "Águas Cláras Manacá",
+    "numero": "000000000",
     "grade": [
       {
         "nivel": "Educação Infantil",
@@ -495,6 +499,7 @@
     "id": 5,
     "imagem": "/assets/as.png",
     "titulo": "Asa Sul",
+    "numero": "000000000",
     "grade": [
       {
         "nivel": "Educação Infantil",
@@ -618,6 +623,7 @@
     "id": 6,
     "imagem": "/assets/an.png",
     "titulo": "Asa Norte",
+    "numero": "000000000",
     "grade": [
       {
         "nivel": "Educação Infantil",
@@ -741,6 +747,7 @@
     "id": 7,
     "imagem": "/assets/jb.png",
     "titulo": "Jardim Botânico",
+    "numero": "000000000",
     "grade": [
       {
         "nivel": "Educação Infantil",

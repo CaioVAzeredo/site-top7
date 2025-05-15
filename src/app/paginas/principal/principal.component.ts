@@ -20,7 +20,6 @@ import { BotaoSubirComponent } from "../../componentes/botao-subir/botao-subir.c
     EquipeComponent,
     ContatoComponent,
     RodapeComponent,
-    WppComponent,
     BotaoSubirComponent
   ],
   templateUrl: './principal.component.html',
