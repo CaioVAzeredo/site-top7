@@ -14,7 +14,7 @@
                     <li>Aviso prévio de 30 dias</li>
                     <li>Obrigatória para matrícula</li>
                 </ul>
-                <app-button-component texto="Saiba mais" (click)="abrirModalAdesao()"></app-button-component>
+                <app-button-component texto="Saiba mais" (click)="abrirModalAdesao($event)"></app-button-component>
                 <app-modal-component [titulo]="'Adesão'"
                     [conteudo]="'Informações detalhadas sobre os planos de Adesão, formas de pagamento, prazos e descontos disponíveis.'"
                     *ngIf="modalAdesao" (fechar)="fecharModalAdesao()"></app-modal-component>
@@ -26,7 +26,7 @@
                     <li class="lista-mensalidade">Pagamento por boleto ou cartão</li>
                     <li>Planos semestral e anual disponíveis</li>
                 </ul>
-                <app-button-component texto="Saiba mais" (click)="abrirModalMensalidade()"></app-button-component>
+                <app-button-component texto="Saiba mais" (click)="abrirModalMensalidade($event)"></app-button-component>
                 <app-modal-component [titulo]="'Mensalidade'"
                     [conteudo]="'Informações detalhadas sobre os planos de mensalidade, formas de pagamento, prazos e descontos disponíveis.'"
                     *ngIf="modalMensalidade" (fechar)="fecharModalMensalidade()"></app-modal-component>
@@ -40,7 +40,7 @@
                     <li>Compra única</li>
                     <li>Uso obrigatório nas aulas</li>
                 </ul>
-                <app-button-component texto="Saiba mais" (click)="abrirModalUniforme()"></app-button-component>
+                <app-button-component texto="Saiba mais" (click)="abrirModalUniforme($event)"></app-button-component>
                 <app-modal-component [titulo]="'Uniforme TOP7'"
                     [conteudo]="'Informações detalhadas sobre os planos de Uniforme TOP7, formas de pagamento, prazos e descontos disponíveis.'"
                     *ngIf="modalUniforme" (fechar)="fecharModalUniforme()"></app-modal-component>

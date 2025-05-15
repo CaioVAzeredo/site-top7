@@ -1,6 +1,7 @@
 .banner-tela-pequena img {
     width: 100vw;
 }
+
 .banner-tela-grande {
     display: none;
 }
@@ -10,13 +11,22 @@
     .banner-tela-pequena {
         display: none;
     }
+
     .banner-tela-grande {
         display: block;
         margin: 0 auto;
         background-color: rgb(0, 0, 0);
     }
+
+    .banner-tela-grande img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1500px) {
+
     .banner-tela-grande img {
         width: 1500px;
-        object-fit: cover;
     }
 }

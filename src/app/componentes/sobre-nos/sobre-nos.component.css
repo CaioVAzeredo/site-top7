@@ -15,9 +15,11 @@ h2 {
     display: block;
     margin: 0 auto;
 }
-h3{
+
+h3 {
     text-align: center;
 }
+
 .sobre-nos .primeiro-modal h3 span {
     color: var(--cor-dourado);
     font-size: 17px;
@@ -62,7 +64,8 @@ h3{
     .segundo-modal {
         display: flex;
     }
-    .primeiro-modal{
+
+    .primeiro-modal {
         margin-bottom: 100px;
     }
 
@@ -72,7 +75,8 @@ h3{
         border-radius: 10px;
         width: 600px;
     }
-    .img-alunos-tela-grande{
+
+    .img-alunos-tela-grande {
         margin-left: 50px;
     }
 
@@ -85,6 +89,41 @@ h3{
 
     .sobre-nos .primeiro-modal h3 span,
     .sobre-nos .segundo-modal h3 span {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 768px)and (max-width: 1500px) {
+    .sobre-nos{
+        width: 93%;
+    }
+    .img-prof-tela-grande,
+    .img-alunos-tela-grande{
+        width: 40%;
+        height: 50%;
+    }
+    h3{
+        margin-top:0%;
+        padding-top: 10px;
+        width: 50%;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 950px) and (max-width: 1500px){
+h3{
+        margin-top:0%;
+        padding-top: 50px;
+        width: 50%;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1136px) and (max-width: 1500px){
+h3{
+        margin-top:0%;
+        padding-top: 80px;
+        width: 50%;
         font-size: 24px;
     }
 }

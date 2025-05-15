@@ -15,7 +15,11 @@ export class MatriculasComponent {
   modalMensalidade = false;
   modalUniforme = false;
 
-  abrirModalAdesao() {
+
+
+
+  abrirModalAdesao(event: Event) {
+    event.preventDefault();
     this.modalAdesao = true;
     document.body.classList.add('modal-aberto');
   }
@@ -25,7 +29,8 @@ export class MatriculasComponent {
     document.body.classList.remove('modal-aberto');
   }
 
-  abrirModalMensalidade(){
+  abrirModalMensalidade(event: Event){
+    event.preventDefault();
     this.modalMensalidade = true;
     document.body.classList.add('modal-aberto');
   }
@@ -34,7 +39,8 @@ export class MatriculasComponent {
     document.body.classList.remove('modal-aberto');
   }
 
-  abrirModalUniforme() {
+  abrirModalUniforme(event: Event) {
+    event.preventDefault();
     this.modalUniforme = true;
     document.body.classList.add('modal-aberto');
   }

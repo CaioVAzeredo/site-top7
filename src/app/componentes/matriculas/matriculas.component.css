@@ -86,7 +86,7 @@ ul {
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
     .container-matriculas {
         display: flex;
         width: 80%;

@@ -1,26 +1,36 @@
 :host {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 99999;
-    /* bem alto pra ficar acima de tudo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  display: block;
 }
 
 .modal-overlay {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(94, 93, 93, 0.76);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* fundo preto opaco */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 100%;
-    padding-top: 150px;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  overflow-y: auto;
+  border-radius: 0;
+}
+
+/* Para telas maiores: largura 800px, altura 500px */
+@media (min-width: 768px) {
+  .modal-content {
+    width: 800px;
+    height: 500px;
+    border-radius: 12px;
+  }
 }
