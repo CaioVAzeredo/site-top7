@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ApiService } from '../../service/api.service';
 import { Unidade } from '../../componentes/unidade/unidade';
 import { CabecalhoComponent } from "../../componentes/cabecalho/cabecalho.component";
@@ -8,6 +8,7 @@ import { WppComponent } from "../../componentes/wpp/wpp.component";
 import { BotaoSubirComponent } from "../../componentes/botao-subir/botao-subir.component";
 import { Horario } from './horario';
 import { CommonModule } from '@angular/common';
+import { ButtonComponentComponent } from "../../componentes/button-component/button-component.component";
 
 
 @Component({
@@ -18,8 +19,8 @@ import { CommonModule } from '@angular/common';
     RodapeComponent,
     WppComponent,
     BotaoSubirComponent,
-    CommonModule
-  ]
+    CommonModule,
+  RouterLink]
 })
 export class PaginaModalidadeComponent implements OnInit {
   id: number = 0;
@@ -43,6 +44,10 @@ export class PaginaModalidadeComponent implements OnInit {
       }
 
     });
+  }
+
+  voltar() {
+
   }
 
   carregarModalidade(): void {

@@ -1,5 +1,8 @@
 <app-cabecalho></app-cabecalho>
 <div class="modal-tela-pequena">
+  <a [routerLink]="['/']" class="botao-voltar"><span class="material-icons">arrow_back</span>
+    <p>Voltar</p>
+  </a>
   <h2 class="titulo-principal">{{ titulo }}</h2>
   <div class="container-imagem">
     <img [src]="imagem" alt="{{ titulo }}" class="imagem-modalidade">
@@ -40,6 +43,7 @@
 </div>
 
 <div class="grade-container">
+
   <h2 class="titulo-principal-tela-grande">{{ titulo }}</h2>
   <div class="container-imagem-tela-grande">
     <img [src]="imagem" alt="{{ titulo }}" class="imagem-modalidade-tela-grande">
