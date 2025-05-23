@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponentComponent } from '../button-component/button-component.component';
+import { ApiService } from '../../service/api.service';
 
 @Component({
   selector: 'app-contato',
   standalone: true,
   imports: [
-    CommonModule, 
-    ReactiveFormsModule, 
+    CommonModule,
+    ReactiveFormsModule,
     ButtonComponentComponent
   ],
   templateUrl: './contato.component.html',
@@ -16,6 +17,8 @@ import { ButtonComponentComponent } from '../button-component/button-component.c
 })
 export class ContatoComponent implements OnInit {
   contatoForm!: FormGroup;
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.inicializarFormulario();
@@ -32,9 +35,16 @@ export class ContatoComponent implements OnInit {
 
   salvarContato() {
     if (this.contatoForm.valid) {
-      console.log(this.contatoForm.value);
-      alert('Formulário enviado com sucesso!');
-      this.contatoForm.reset();
+      this.apiService.enviarDados(this.contatoForm.value).subscribe({
+        next: (resposta) => {
+          console.log('Dados enviados com sucesso!', resposta);
+          this.contatoForm.reset();
+        },
+        error: (error) => {
+          console.log('Erro ao enviar', error);
+          alert('Erro ao enviar os dados. Tente novamente mais tarde.');
+        }
+      })
     } else {
       this.contatoForm.markAllAsTouched();
     }
