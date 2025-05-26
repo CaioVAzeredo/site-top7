@@ -1,6 +1,22 @@
-<section class="banner-tela-pequena">
-    <img src="/assets/banner-tela-pequena.png" alt="banner">
+<section  class="banner-tela-grande">
+    <div class="carrossel">
+        <div class="slides">
+            <img  [src]="imagens[indiceAtual]" alt="Slide">
+        </div>
+        <div class="controles">
+            <button (click)="anterior()">&#10094;</button>
+            <button (click)="proximo()">&#10095;</button>
+        </div>
+    </div>
 </section>
-<section class="banner-tela-grande">
-    <img src="/assets/banner-tela-grande.png" alt="banner-tela-grande" class="banner-tela-grande">
+<section  class="banner-tela-pequena">
+    <div class="carrossel">
+        <div class="slides">
+            <img  [src]="imagensPequenas[indiceAtual]" alt="Slide">
+        </div>
+        <div class="controles">
+            <button (click)="anterior()">&#10094;</button>
+            <button (click)="proximo()">&#10095;</button>
+        </div>
+    </div>
 </section>
