@@ -14,12 +14,12 @@
                     <li>Aviso prévio de 30 dias</li>
                     <li>Obrigatória para matrícula</li>
                 </ul>
-                <app-button-component texto="Saiba mais" (click)="abrirModalAdesao($event)"></app-button-component>
+                <!-- <app-button-component texto="Saiba mais" (click)="abrirModalAdesao($event)"></app-button-component> -->
 
                 <app-modal-component [titulo]="'Adesão'"
                     [conteudo]="'A adesão tem o valor de R$ 1.700,00 e pode ser parcelada em até 10 vezes. Esse pagamento é obrigatório para garantir a matrícula nas modalidades oferecidas pela Top7. A adesão funciona como uma taxa de vínculo que assegura a vaga do aluno e a participação nas atividades durante o ano letivo. É importante destacar que o contrato permite o cancelamento até o mês de outubro, desde que haja aviso prévio de pelo menos 30 dias. Dessa forma, proporcionamos mais segurança e flexibilidade para as famílias, além de um compromisso claro entre a instituição e os responsáveis. A adesão garante não só a matrícula. '"
                     *ngIf="modalAdesao" (fechar)="fecharModalAdesao()"></app-modal-component>
-                    
+
             </div>
             <div class="container-info">
                 <h2>Mensalidade</h2>
@@ -28,7 +28,7 @@
                     <li class="lista-mensalidade">Pagamento por boleto ou cartão</li>
                     <li>Planos semestral e anual disponíveis</li>
                 </ul>
-                <app-button-component texto="Saiba mais" (click)="abrirModalMensalidade($event)"></app-button-component>
+                <!-- <app-button-component texto="Saiba mais" (click)="abrirModalMensalidade($event)"></app-button-component> -->
                 <app-modal-component [titulo]="'Mensalidade'"
                     [conteudo]="'A mensalidade da Top7 tem o valor a partir de R$ 170,00 por mês. Esse valor corresponde à participação nas atividades regulares da modalidade escolhida, com aulas semanais conduzidas por profissionais especializados e comprometidos com o desenvolvimento físico, social e emocional dos alunos. O pagamento pode ser realizado tanto por boleto bancário quanto por cartão, oferecendo praticidade para as famílias. '"
                     *ngIf="modalMensalidade" (fechar)="fecharModalMensalidade()"></app-modal-component>
@@ -42,11 +42,12 @@
                     <li>Compra única</li>
                     <li>Uso obrigatório nas aulas</li>
                 </ul>
-                <app-button-component texto="Saiba mais" (click)="abrirModalUniforme($event)"></app-button-component>
+                <!-- <app-button-component texto="Saiba mais" (click)="abrirModalUniforme($event)"></app-button-component> -->
                 <app-modal-component [titulo]="'Uniforme TOP7'"
                     [conteudo]="'O uniforme da Top7 é um item indispensável para participação nas aulas e eventos. Seu uso é obrigatório, pois contribui para a padronização, organização e fortalecimento da identidade dos nossos alunos durante as atividades. O valor do uniforme completo, composto por short e camiseta, é de R$ 95,00. Caso o responsável opte por adquirir apenas a camiseta, o valor é de R$ 50,00. A compra do uniforme é feita uma única vez, não havendo cobrança recorrente. Além de garantir conforto e segurança, o uso do uniforme também reforça o senso de pertencimento e disciplina, promovendo um ambiente mais organizado, profissional e acolhedor para todos os participantes.'"
                     *ngIf="modalUniforme" (fechar)="fecharModalUniforme()"></app-modal-component>
             </div>
         </div>
     </div>
+
 </section>

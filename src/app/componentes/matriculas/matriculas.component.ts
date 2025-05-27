@@ -15,28 +15,36 @@ export class MatriculasComponent {
   modalMensalidade = false;
   modalUniforme = false;
 
+  alertAberto = false;
+  alertTitulo = '';
+  alertMensagem = '';
+
+
+
+
 
   abrirModalAdesao(event: Event) {
-    alert('Em manutenção');
+    
   }
 
   fecharModalAdesao() {
-    alert('Em manutenção');
+    
   }
 
   abrirModalMensalidade(event: Event) {
-    alert('Em manutenção');
+    
   }
+
   fecharModalMensalidade() {
-    alert('Em manutenção');
+    
   }
 
   abrirModalUniforme(event: Event) {
-    alert('Em manutenção');
+    
   }
 
   fecharModalUniforme() {
-    alert('Em manutenção');
+    
   }
-
 }
+
