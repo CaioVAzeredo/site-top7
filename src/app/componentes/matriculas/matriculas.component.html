@@ -15,9 +15,11 @@
                     <li>Obrigatória para matrícula</li>
                 </ul>
                 <app-button-component texto="Saiba mais" (click)="abrirModalAdesao($event)"></app-button-component>
+
                 <app-modal-component [titulo]="'Adesão'"
                     [conteudo]="'A adesão tem o valor de R$ 1.700,00 e pode ser parcelada em até 10 vezes. Esse pagamento é obrigatório para garantir a matrícula nas modalidades oferecidas pela Top7. A adesão funciona como uma taxa de vínculo que assegura a vaga do aluno e a participação nas atividades durante o ano letivo. É importante destacar que o contrato permite o cancelamento até o mês de outubro, desde que haja aviso prévio de pelo menos 30 dias. Dessa forma, proporcionamos mais segurança e flexibilidade para as famílias, além de um compromisso claro entre a instituição e os responsáveis. A adesão garante não só a matrícula. '"
                     *ngIf="modalAdesao" (fechar)="fecharModalAdesao()"></app-modal-component>
+                    
             </div>
             <div class="container-info">
                 <h2>Mensalidade</h2>

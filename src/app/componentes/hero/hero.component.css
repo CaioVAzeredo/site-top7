@@ -1,10 +1,13 @@
-/* 🔥 Estilo geral */
+
 .banner-tela-pequena img {
     width: 100vw;
+    z-index: unset;
 }
 
 .banner-tela-grande {
     display: none;
+    z-index: unset;
+
 }
 
 .slides {
@@ -14,14 +17,12 @@
     position: relative;
 }
 
-/* 🔥 Estilo dos controles */
 .controles {
     position: absolute;
     top: 35%;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    z-index: unset;
 }
 
 .controles button {
@@ -38,9 +39,7 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* 🔥 Media Queries */
 
-/* Telas médias */
 @media (min-width: 768px) {
     .banner-tela-pequena {
         display: none;
@@ -61,14 +60,13 @@
     }
 }
 
-/* Telas grandes */
 @media (min-width: 975px) {
     .controles {
         top: 400px;
     }
 }
 
-/* Telas muito grandes */
+
 @media (min-width: 1500px) {
     .banner-tela-grande img {
         width: 1500px;

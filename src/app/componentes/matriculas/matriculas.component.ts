@@ -16,38 +16,27 @@ export class MatriculasComponent {
   modalUniforme = false;
 
 
-
-
   abrirModalAdesao(event: Event) {
-    event.preventDefault();
-    this.modalAdesao = true;
-    document.body.classList.add('modal-aberto');
+    alert('Em manutenção');
   }
 
   fecharModalAdesao() {
-    this.modalAdesao = false;
-    document.body.classList.remove('modal-aberto');
+    alert('Em manutenção');
   }
 
-  abrirModalMensalidade(event: Event){
-    event.preventDefault();
-    this.modalMensalidade = true;
-    document.body.classList.add('modal-aberto');
+  abrirModalMensalidade(event: Event) {
+    alert('Em manutenção');
   }
-  fecharModalMensalidade(){
-    this.modalMensalidade = false;
-    document.body.classList.remove('modal-aberto');
+  fecharModalMensalidade() {
+    alert('Em manutenção');
   }
 
   abrirModalUniforme(event: Event) {
-    event.preventDefault();
-    this.modalUniforme = true;
-    document.body.classList.add('modal-aberto');
+    alert('Em manutenção');
   }
 
   fecharModalUniforme() {
-    this.modalUniforme = false;
-    document.body.classList.remove('modal-aberto');
+    alert('Em manutenção');
   }
 
 }

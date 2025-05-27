@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponentComponent } from "../button-component/button-component.component";
 
@@ -9,7 +9,7 @@ import { ButtonComponentComponent } from "../button-component/button-component.c
   templateUrl: './modal-component.component.html',
   styleUrls: ['./modal-component.component.css']
 })
-export class ModalComponentComponent implements OnInit, OnDestroy {
+export class ModalComponentComponent {
 
   @Input() titulo: string = '';
   @Input() conteudo: string = '';
@@ -17,26 +17,11 @@ export class ModalComponentComponent implements OnInit, OnDestroy {
   @Output() abriu = new EventEmitter<void>();
   @Output() fechou = new EventEmitter<void>();
 
-  private scrollPosition = 0;
+estadomodal: boolean = false
 
   fecharModal() {
-    this.fechar.emit();
-  }
-
-  ngOnInit(): void {
-    this.scrollPosition = window.scrollY;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${this.scrollPosition}px`;
-    document.body.style.width = '100%';
-    this.abriu.emit();
-  }
-
-  ngOnDestroy(): void {
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.width = '';
-    window.scrollTo(0, this.scrollPosition);
-    this.fechou.emit();
+    alert('Modal fechado');
+    /* this.fechar.emit(); */
   }
 }
 
