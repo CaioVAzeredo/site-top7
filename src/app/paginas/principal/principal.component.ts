@@ -7,7 +7,6 @@ import { MatriculasComponent } from "../../componentes/matriculas/matriculas.com
 import { EquipeComponent } from "../../componentes/equipe/equipe.component";
 import { ContatoComponent } from "../../componentes/contato/contato.component";
 import { RodapeComponent } from "../../componentes/rodape/rodape.component";
-import { WppComponent } from "../../componentes/wpp/wpp.component";
 import { BotaoSubirComponent } from "../../componentes/botao-subir/botao-subir.component";
 
 @Component({
@@ -20,8 +19,7 @@ import { BotaoSubirComponent } from "../../componentes/botao-subir/botao-subir.c
     EquipeComponent,
     ContatoComponent,
     RodapeComponent,
-    BotaoSubirComponent
-  ],
+    BotaoSubirComponent],
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css'
 })
