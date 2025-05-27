@@ -9,7 +9,7 @@ import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit, OnDestroy {
-   imagensPequenas = [
+  imagensPequenas = [
     '/assets/banner-tela-pequena.png',
     '/assets/colonia-de-ferias-tela-pequena.png'
   ];
@@ -55,5 +55,8 @@ export class HeroComponent implements OnInit, OnDestroy {
     if (this.imagens.length > 0) {
       this.indiceAtual = (this.indiceAtual - 1 + this.imagens.length) % this.imagens.length;
     }
+  }
+  clickColocniadeFerias() {
+    
   }
 }

@@ -9,6 +9,17 @@
   transform: translateY(10px);
 }
 
+a {
+  text-decoration: none;
+  color: var(--cor-azul-escuro);
+  text-align: center;
+  font-size: 24px;
+}
+
+span {
+  color: var(--cor-dourado);
+}
+
 @media (max-width: 768px) {
   .container-pag-em-desenvolvimento {
     display: none;
@@ -43,4 +54,8 @@
   p {
     text-align: center;
   }
+  a{
+    font-size: 34px;
+  }
+
 }
