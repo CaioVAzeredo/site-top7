@@ -9,6 +9,13 @@
   transform: translateY(10px);
 }
 
+  .titulo-colonia {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
 a {
   text-decoration: none;
   color: var(--cor-azul-escuro);
@@ -32,6 +39,7 @@ span {
     display: block;
   }
 
+
   img {
     width: 600px;
   }
@@ -41,6 +49,8 @@ span {
     margin: 0 auto;
     width: 600px;
   }
+
+
 
   .container-botao {
     margin: 0 auto;
@@ -54,7 +64,8 @@ span {
   p {
     text-align: center;
   }
-  a{
+
+  a {
     font-size: 34px;
   }
 
