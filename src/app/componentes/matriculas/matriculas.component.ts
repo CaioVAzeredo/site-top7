@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { ButtonComponentComponent } from "../button-component/button-component.component";
 import { ModalComponentComponent } from "../modal-component/modal-component.component";
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-matriculas',
   standalone: true,
-  imports: [ButtonComponentComponent, ModalComponentComponent, CommonModule],
+  imports: [ ModalComponentComponent, CommonModule],
   templateUrl: './matriculas.component.html',
   styleUrl: './matriculas.component.css'
 })
