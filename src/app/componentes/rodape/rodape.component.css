@@ -22,6 +22,17 @@
     padding-bottom: 40px;
 }
 
+.email {
+    width: 43px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.container-redes-tela-pequena {
+    width: 100px;
+    margin: 0 auto
+}
+
 .container-insta {
     width: 50px;
     margin: 0 auto;
@@ -47,18 +58,25 @@ p {
     margin: 15px 0 15px 0;
     cursor: pointer;
 }
- .container-insta-tela-grande {
-        display: none;
-    }
+
+.container-insta-tela-grande {
+    display: none;
+}
+
+.container-redes-tela-pequena {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
 @media (min-width: 768px) {
     .container-img {
         margin: 0;
         margin-left: 30px;
         width: 118.5px;
-        
+
     }
-   
+
 
     .container-info {
         width: 70%;
@@ -70,16 +88,33 @@ p {
     }
 
     .container-insta-tela-grande {
-        display: block;
         display: flex;
+        justify-content: space-between;
+    }
+
+    .container-insta-tela-grande p {
+        width: 200px;
+    }
+
+    .container-redes {
+        display: flex;
+        gap: 35px;
+        width: 150px;
     }
 
     .container-insta {
         margin-right: 0px;
         margin-top: -40px;
     }
-    .container-insta img{
+
+    .container-insta img {
         width: 80px;
+    }
+
+    .container-email img {
+        width: 70px;
+        margin-top: -31px;
+        cursor: pointer;
     }
 
 }

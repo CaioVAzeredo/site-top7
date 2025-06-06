@@ -10,10 +10,9 @@ export class RodapeComponent {
   btnInstagram(){
     window.open("https://www.instagram.com/top7esportes/", "_blank")
   }
-  btnTermosDeUso(){
-    alert("termos de uso");
+
+  btnEmail(){
+    window.open("mailto:caio.viana.39@gmail.com")
   }
-  btnPoliticaDePrivacidade(){
-    alert("politica de privacidade");
-  }
+
 }
