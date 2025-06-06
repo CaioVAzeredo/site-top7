@@ -254,7 +254,7 @@
     "numero": "5561998571076",
     "grade": [
       {
-        "nivel": "Fundamental II e Ensino médio",
+        "nivel": "Anos Finais e Ensino Médio",
         "horarios": [
           {
             "horario": "13h20 às 14h10",
@@ -304,12 +304,10 @@
             "qui": "",
             "sex": ""
           }
-          
         ]
       }
     ]
-  }
-  ,
+  },
   {
     "id": 4,
     "imagem": "/assets/acm.png",
@@ -362,8 +360,7 @@
         ]
       }
     ]
-  }
-  ,
+  },
   {
     "id": 5,
     "imagem": "/assets/as.png",
@@ -495,118 +492,84 @@
     "numero": "556198772756",
     "grade": [
       {
-        "nivel": "Educação Infantil",
+        "nivel": "Educação Infantil / Anos Iniciais",
         "horarios": [
           {
-            "horario": "13h30 às 14h30",
-            "seg": "Judô, Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Judô, Ginástica Artística",
-            "qui": "Futsal",
-            "sex": "Judô, Ginástica Artística"
+            "horario": "12h às 12h50",
+            "seg": "Ginástica Rítmica",
+            "ter": "Capoeira, Ballet",
+            "qua": "",
+            "qui": "Ginástica Rítmica, Capoeira, Ballet",
+            "sex": ""
           },
           {
-            "horario": "13h30 às 14h30",
-            "seg": "Ginástica Artística",
+            "horario": "13h às 13h50",
+            "seg": "Judô",
+            "ter": "Circo",
+            "qua": "Judô",
+            "qui": "Circo",
+            "sex": ""
+          },
+          {
+            "horario": "14h40 às 13h30",
+            "seg": "",
             "ter": "Futsal",
-            "qua": "Ginástica Artística",
+            "qua": "",
             "qui": "Futsal",
             "sex": ""
           },
           {
-            "horario": "13h30 às 14h30",
-            "seg": "Judô, Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Judô, Ginástica Artística",
-            "qui": "Futsal",
-            "sex": "Judô, Ginástica Artística"
+            "horario": "17h às 17h50",
+            "seg": "",
+            "ter": "Basquetebol",
+            "qua": "",
+            "qui": "Basquetebol",
+            "sex": ""
           }
         ]
       },
       {
-        "nivel": "Fundamental I",
+        "nivel": "Anos Finais e Ensino Médio",
         "horarios": [
           {
-            "horario": "13h30 às 14h30",
-            "seg": "Judô, Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Judô, Ginástica Artística",
-            "qui": "Futsal",
-            "sex": "Judô, Ginástica Artística"
-          },
-          {
-            "horario": "13h30 às 14h30",
-            "seg": "Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Ginástica Artística",
-            "qui": "Futsal",
+            "horario": "13h30 às 15h10",
+            "seg": "",
+            "ter": "",
+            "qua": "",
+            "qui": "Robótica Avançada",
             "sex": ""
           },
           {
-            "horario": "13h30 às 14h30",
-            "seg": "Judô, Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Judô, Ginástica Artística",
-            "qui": "Futsal",
-            "sex": "Judô, Ginástica Artística"
-          }
-        ]
-      },
-      {
-        "nivel": "Fundamental II",
-        "horarios": [
-          {
-            "horario": "13h30 às 14h30",
-            "seg": "Judô, Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Judô, Ginástica Artística",
-            "qui": "Futsal",
-            "sex": "Judô, Ginástica Artística"
-          },
-          {
-            "horario": "13h30 às 14h30",
-            "seg": "Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Ginástica Artística",
-            "qui": "Futsal",
+            "horario": "14h às 15h",
+            "seg": "Jiu-Jitsu",
+            "ter": "",
+            "qua": "Jiu-Jitsu",
+            "qui": "",
             "sex": ""
           },
           {
-            "horario": "13h30 às 14h30",
-            "seg": "Judô, Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Judô, Ginástica Artística",
-            "qui": "Futsal",
-            "sex": "Judô, Ginástica Artística"
-          }
-        ]
-      },
-      {
-        "nivel": "Ensino Médio",
-        "horarios": [
-          {
-            "horario": "13h30 às 14h30",
-            "seg": "Judô, Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Judô, Ginástica Artística",
-            "qui": "Futsal",
-            "sex": "Judô, Ginástica Artística"
-          },
-          {
-            "horario": "13h30 às 14h30",
-            "seg": "Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Ginástica Artística",
-            "qui": "Futsal",
+            "horario": "14h10 às 16h10",
+            "seg": "",
+            "ter": "Xadrez",
+            "qua": "",
+            "qui": "",
             "sex": ""
           },
           {
-            "horario": "13h30 às 14h30",
-            "seg": "Judô, Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Judô, Ginástica Artística",
-            "qui": "Futsal",
-            "sex": "Judô, Ginástica Artística"
+            "horario": "16h às 16h50",
+            "seg": "Judô",
+            "ter": "",
+            "qua": "Judô",
+            "qui": "",
+            "sex": ""
+          },
+          {
+            "horario": "16h30 às 18h",
+            "seg": "Teatro",
+            "ter": "",
+            "qua": "Teatro",
+            "qui": "",
+            "sex": ""
           }
         ]
       }
