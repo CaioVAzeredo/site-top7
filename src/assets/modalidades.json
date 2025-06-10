@@ -129,7 +129,6 @@
           }
         ]
       }
-      
     ]
   },
   {
@@ -142,6 +141,14 @@
         "nivel": "Anos Finais / Ensino Médio",
         "horarios": [
           {
+            "horario": "12h às 12h50",
+            "seg": "",
+            "ter": "Circo",
+            "qua": "",
+            "qui": "Circo",
+            "sex": ""
+          },
+          {
             "horario": "13h20 às 14h10",
             "seg": "Robótica",
             "ter": "",
@@ -150,18 +157,18 @@
             "sex": ""
           },
           {
-            "horario": "14h10 às 15h00",
-            "seg": "Xadrez",
-            "ter": "",
-            "qua": "",
-            "qui": "",
-            "sex": ""
-          },
-          {
             "horario": "14h às 15h30",
             "seg": "Teatro",
             "ter": "",
             "qua": "Teatro",
+            "qui": "",
+            "sex": ""
+          },
+          {
+            "horario": "14h10 às 15h00",
+            "seg": "Xadrez",
+            "ter": "",
+            "qua": "",
             "qui": "",
             "sex": ""
           },
@@ -188,6 +195,30 @@
             "qua": "Xadrez",
             "qui": "",
             "sex": ""
+          },
+          {
+            "horario": "18h às 18h50",
+            "seg": "Ballet, Taekwondo",
+            "ter": "Ginástica Rítmica, Judô, Circo, Voleibol",
+            "qua": "",
+            "qui": "Ginástica Rítmica, Judô, Circo, Ballet, Taekwondo",
+            "sex": "Voleibol"
+          },
+          {
+            "horario": "18h10 às 19h",
+            "seg": "Futsal",
+            "ter": "",
+            "qua": "Futsal",
+            "qui": "",
+            "sex": ""
+          },
+          {
+            "horario": "19h às 19h50",
+            "seg": "",
+            "ter": "Judô, Circo",
+            "qua": "",
+            "qui": "Judô, Circo",
+            "sex": ""
           }
         ]
       }
@@ -199,52 +230,61 @@
     "titulo": "Águas Cláras Manacá",
     "numero": "556196405103",
     "grade": [
+  {
+    "nivel": "Anos Finais / Ensino médio",
+    "horarios": [
       {
-        "nivel": "Anos Finais / Ensino médio",
-        "horarios": [
-          {
-            "horario": "14h às 15h30",
-            "seg": "Teatro",
-            "ter": "",
-            "qua": "Teatro",
-            "qui": "",
-            "sex": ""
-          },
-          {
-            "horario": "15h às 16h40",
-            "seg": "",
-            "ter": "",
-            "qua": "",
-            "qui": "",
-            "sex": "Robótica"
-          },
-          {
-            "horario": "14h às 15h",
-            "seg": "",
-            "ter": "Violão",
-            "qua": "",
-            "qui": "Violão",
-            "sex": ""
-          },
-          {
-            "horario": "15h50 às 17h30",
-            "seg": "Xadrez",
-            "ter": "",
-            "qua": "",
-            "qui": "",
-            "sex": ""
-          },
-          {
-            "horario": "15h30 às 16h30",
-            "seg": "",
-            "ter": "Jiu Jitsu",
-            "qua": "",
-            "qui": "Jiu Jitsu",
-            "sex": ""
-          }
-        ]
+        "horario": "14h às 15h",
+        "seg": "",
+        "ter": "Violão",
+        "qua": "",
+        "qui": "Violão",
+        "sex": ""
+      },
+      {
+        "horario": "14h às 15h30",
+        "seg": "Teatro",
+        "ter": "",
+        "qua": "Teatro",
+        "qui": "",
+        "sex": ""
+      },
+      {
+        "horario": "15h às 16h40",
+        "seg": "",
+        "ter": "",
+        "qua": "",
+        "qui": "",
+        "sex": "Robótica"
+      },
+      {
+        "horario": "15h30 às 16h30",
+        "seg": "",
+        "ter": "Jiu Jitsu",
+        "qua": "",
+        "qui": "Jiu Jitsu",
+        "sex": ""
+      },
+      {
+        "horario": "15h50 às 17h30",
+        "seg": "Xadrez",
+        "ter": "",
+        "qua": "",
+        "qui": "",
+        "sex": ""
+      },
+      {
+        "horario": "18h às 18h50",
+        "seg": "Circo / Judô",
+        "ter": "Futsal",
+        "qua": "Circo / Judô",
+        "qui": "Futsal",
+        "sex": ""
       }
     ]
+  }
+]
+
   },
   {
     "id": 5,
