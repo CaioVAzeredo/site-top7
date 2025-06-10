@@ -9,9 +9,10 @@
     margin-top: -55px;
     margin-bottom: 60px;
     position: relative;
+    width: 80px;
     /* necessário para o z-index funcionar */
-    display: flex;/* 
-    z-index: 10000; */
+    display: flex;
+    z-index: 10000;
 }
 
 
