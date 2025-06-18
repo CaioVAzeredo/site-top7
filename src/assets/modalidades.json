@@ -260,57 +260,20 @@
         "nivel": "",
         "horarios": [
           {
-            "horario": "13h30 às 14h30",
-            "seg": "Judô, Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Judô, Ginástica Artística",
-            "qui": "Futsal",
-            "sex": "Judô, Ginástica Artística"
+            "horario": "13h20 às 14h30",
+            "seg": "",
+            "ter": "",
+            "qua": "Futsal",
+            "qui": "",
+            "sex": "Futsal"
           },
           {
-            "horario": "13h30 às 14h30",
-            "seg": "Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Ginástica Artística",
-            "qui": "Futsal",
+            "horario": "13h20 às 14h20",
+            "seg": "Ginástica Rítmica",
+            "ter": "",
+            "qua": "Ginástica Rítmica",
+            "qui": "",
             "sex": ""
-          },
-          {
-            "horario": "13h30 às 14h30",
-            "seg": "Judô, Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Judô, Ginástica Artística",
-            "qui": "Futsal",
-            "sex": "Judô, Ginástica Artística"
-          }
-        ]
-      },
-      {
-        "nivel": "Anos Finais / Ensino Médio",
-        "horarios": [
-          {
-            "horario": "13h30 às 14h30",
-            "seg": "Judô, Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Judô, Ginástica Artística",
-            "qui": "Futsal",
-            "sex": "Judô, Ginástica Artística"
-          },
-          {
-            "horario": "13h30 às 14h30",
-            "seg": "Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Ginástica Artística",
-            "qui": "Futsal",
-            "sex": ""
-          },
-          {
-            "horario": "13h30 às 14h30",
-            "seg": "Judô, Ginástica Artística",
-            "ter": "Futsal",
-            "qua": "Judô, Ginástica Artística",
-            "qui": "Futsal",
-            "sex": "Judô, Ginástica Artística"
           }
         ]
       }
