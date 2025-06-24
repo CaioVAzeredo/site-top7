@@ -1,22 +1,22 @@
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit, OnDestroy {
-  imagensPequenas = [
-    '/assets/banner-tela-pequena.png',
-    '/assets/colonia-de-ferias-tela-pequena.png'
+  imagens = [
+    { src: '/assets/banner-tela-grande.png', title: 'Banner Grande', link: '' },
+    { src: '/assets/colonia-de-ferias-tela-grande.png', title: 'Colônia de Férias', link: 'https://docs.google.com/forms/d/e/1FAIpQLScwX8qnPyt03wioC4b4ZimVc-HlrMnm9BqvGBWKUlQr-793Xw/viewform?usp=header' }
   ];
 
-  imagens = [
-    '/assets/banner-tela-grande.png',
-    '/assets/colonia-de-ferias-tela-grande.png'
+  imagensPequenas = [
+    { src: '/assets/banner-tela-pequena.png', title: 'Banner Pequeno', link: '' },
+    { src: '/assets/colonia-de-ferias-tela-pequena.png', title: 'Colônia Pequena', link: 'https://docs.google.com/forms/d/e/1FAIpQLScwX8qnPyt03wioC4b4ZimVc-HlrMnm9BqvGBWKUlQr-793Xw/viewform?usp=header' }
   ];
 
   indiceAtual = 0;
@@ -46,17 +46,14 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
 
   proximo() {
-    if (this.imagens.length > 0) {
-      this.indiceAtual = (this.indiceAtual + 1) % this.imagens.length;
-    }
+    this.indiceAtual = (this.indiceAtual + 1) % this.imagens.length;
   }
 
   anterior() {
-    if (this.imagens.length > 0) {
-      this.indiceAtual = (this.indiceAtual - 1 + this.imagens.length) % this.imagens.length;
-    }
+    this.indiceAtual = (this.indiceAtual - 1 + this.imagens.length) % this.imagens.length;
   }
-  clickColocniadeFerias() {
-    
+
+  irParaSlide(index: number) {
+    this.indiceAtual = index;
   }
 }

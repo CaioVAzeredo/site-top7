@@ -1,26 +1,46 @@
 <section class="banner-tela-grande">
     <div class="carrossel">
-        <div class="slides">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScwX8qnPyt03wioC4b4ZimVc-HlrMnm9BqvGBWKUlQr-793Xw/viewform?usp=header">
-                <img [src]="imagens[1]" alt="Slide">
-            </a>
-        </div>
-        <!--         <div class="controles">
-            <button (click)="anterior()">&#10094;</button>
-            <button (click)="proximo()">&#10095;</button>
-        </div> -->
+      <button class="carousel-btn prev" (click)="anterior()">‹</button>
+  
+      <div class="slides">
+        <a [href]="imagens[indiceAtual].link" target="_self">
+          <img [src]="imagens[indiceAtual].src" alt="{{imagens[indiceAtual].title}}">
+        </a>
+      </div>
+  
+      <button class="carousel-btn next" (click)="proximo()">›</button>
+  
+      <div class="carousel-indicators">
+        <button 
+          *ngFor="let img of imagens; let i = index" 
+          class="indicator" 
+          [class.active]="i === indiceAtual"
+          (click)="irParaSlide(i)">
+        </button>
+      </div>
     </div>
-</section>
-<section class="banner-tela-pequena">
+  </section>
+  
+  <section class="banner-tela-pequena">
     <div class="carrossel">
-        <div class="slides">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScwX8qnPyt03wioC4b4ZimVc-HlrMnm9BqvGBWKUlQr-793Xw/viewform?usp=header">
-                <img [src]="imagensPequenas[1]" alt="Slide">
-            </a>
-        </div>
-        <!--         <div class="controles">
-            <button (click)="anterior()">&#10094;</button>
-            <button (click)="proximo()">&#10095;</button>
-        </div> -->
+      <button class="carousel-btn prev" (click)="anterior()">‹</button>
+  
+      <div class="slides">
+        <a [href]="imagensPequenas[indiceAtual].link" target="_self">
+          <img [src]="imagensPequenas[indiceAtual].src" alt="{{imagensPequenas[indiceAtual].title}}">
+        </a>
+      </div>
+  
+      <button class="carousel-btn next" (click)="proximo()">›</button>
+  
+      <div class="carousel-indicators">
+        <button 
+          *ngFor="let img of imagensPequenas; let i = index" 
+          class="indicator" 
+          [class.active]="i === indiceAtual"
+          (click)="irParaSlide(i)">
+        </button>
+      </div>
     </div>
-</section>
+  </section>
+  
