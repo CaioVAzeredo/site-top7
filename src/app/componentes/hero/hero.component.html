@@ -1,46 +1,41 @@
 <section class="banner-tela-grande">
-    <div class="carrossel">
-      <button class="carousel-btn prev" (click)="anterior()">‹</button>
-  
-      <div class="slides">
-        <a [href]="imagens[indiceAtual].link" target="_self">
-          <img [src]="imagens[indiceAtual].src" alt="{{imagens[indiceAtual].title}}">
-        </a>
-      </div>
-  
-      <button class="carousel-btn next" (click)="proximo()">›</button>
-  
-      <div class="carousel-indicators">
-        <button 
-          *ngFor="let img of imagens; let i = index" 
-          class="indicator" 
-          [class.active]="i === indiceAtual"
-          (click)="irParaSlide(i)">
-        </button>
-      </div>
+  <div class="carrossel">
+    <button class="carousel-btn prev" (click)="anterior()">‹</button>
+
+    <div class="slides" [style.transform]="'translateX(-' + (indiceAtual * 100) + 'vw)'">
+      <a *ngFor="let img of imagens" [href]="img.link" target="_self">
+        <img [src]="img.src" [alt]="img.title">
+      </a>
     </div>
-  </section>
-  
-  <section class="banner-tela-pequena">
-    <div class="carrossel">
-      <button class="carousel-btn prev" (click)="anterior()">‹</button>
-  
-      <div class="slides">
-        <a [href]="imagensPequenas[indiceAtual].link" target="_self">
-          <img [src]="imagensPequenas[indiceAtual].src" alt="{{imagensPequenas[indiceAtual].title}}">
-        </a>
-      </div>
-  
-      <button class="carousel-btn next" (click)="proximo()">›</button>
-  
-      <div class="carousel-indicators">
-        <button 
-          *ngFor="let img of imagensPequenas; let i = index" 
-          class="indicator" 
-          [class.active]="i === indiceAtual"
-          (click)="irParaSlide(i)">
-        </button>
-      </div>
+
+
+    <button class="carousel-btn next" (click)="proximo()">›</button>
+
+    <div class="carousel-indicators">
+      <button *ngFor="let img of imagens; let i = index" class="indicator" [class.active]="i === indiceAtual"
+        (click)="irParaSlide(i)">
+      </button>
     </div>
-  </section>
-  
+  </div>
+</section>
+
+<section class="banner-tela-pequena">
+  <div class="carrossel">
+    <button class="carousel-btn prev" (click)="anterior()">‹</button>
+
+    <div class="slides" [style.transform]="'translateX(-' + (indiceAtual * 100) + 'vw)'">
+      <a *ngFor="let img of imagensPequenas" [href]="img.link" target="_self">
+        <img [src]="img.src" [alt]="img.title">
+      </a>
+    </div>
+
+
+    <button class="carousel-btn next" (click)="proximo()">›</button>
+
+    <div class="carousel-indicators">
+      <button *ngFor="let img of imagensPequenas; let i = index" class="indicator" [class.active]="i === indiceAtual"
+        (click)="irParaSlide(i)">
+      </button>
+    </div>
+  </div>
+</section>

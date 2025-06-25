@@ -83,6 +83,12 @@ li a {
 
 .material-icons {
     color: var(--cor-azul-escuro);
+    user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media (min-width: 975px) {

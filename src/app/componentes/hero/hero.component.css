@@ -1,149 +1,123 @@
-
 .banner-tela-pequena img {
-    width: 100vw;
-    z-index: unset;
+  width: 100vw;
+  z-index: unset;
 }
 
 .banner-tela-grande {
-    display: none;
-    z-index: unset;
-
-}
-
-.slides {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.controles {
-    position: absolute;
-    top: 35%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.controles button {
-    margin: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    transform: translateY(-50%);
-}
-
-.controles button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: unset;
 }
 
 .carrossel {
-    position: relative;
-    overflow: hidden;
-    max-width: 100%;
-    text-align: center;
-  }
-  
-  .slides img {
-    width: 100%;
-    height: auto;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 1;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  text-align: center;
+}
 
-  }
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slides a {
+  flex-shrink: 0;
+  width: 100vw;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1;
   
-  .carousel-btn.prev {
-    left: 10px;
-  }
-  
-  .carousel-btn.next {
-    right: 10px;
-  }
-  
-  .carousel-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .carousel-indicators {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 5px;
-  }
-  
-  .indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    cursor: pointer;
-  }
-  
-  .indicator.active {
-    background-color: white;
-  }
-  
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: white;
+}
 
 @media (min-width: 768px) {
+  .banner-tela-pequena {
+      display: none;
+  }
 
-    .banner-tela-pequena {
-        display: none;
-    }
+  .banner-tela-grande {
+      display: block;
+      margin: 0 auto;
+  }
 
-    .banner-tela-grande {
-        display: block;
-        margin: 0 auto;
-    }
+  .banner-tela-grande img {
+      width: 100%;
+      object-fit: cover;
+  }
 
-    .banner-tela-grande img {
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .controles {
-        top: 35%;
-    }
-    .carousel-btn{
-        margin-left: 50px;
-        margin-right: 50px;
-            }
+  .carousel-btn {
+      margin-left: 50px;
+      margin-right: 50px;
+  }
 }
 
 @media (min-width: 975px) {
-    .controles {
-        top: 400px;
-    }
-    .carousel-btn{
-        margin-left: 50px;
-        margin-right: 50px;
-            }
-    
+  .carousel-btn {
+      margin-left: 50px;
+      margin-right: 50px;
+  }
+
+  .carousel-indicators {
+      top: auto;
+  }
 }
 
-
 @media (min-width: 1500px) {
-    .banner-tela-grande img {
-        width: 1500px;
-    }
+  .banner-tela-grande img {
+      width: 1500px;
+  }
 
-    .controles {
-        top: 50%;
-    }
+  .carousel-btn {
+      top: 50%;
+  }
 }
