@@ -12,7 +12,7 @@ export class RodapeComponent {
   }
 
   btnEmail(){
-    window.open("mailto:caio.viana.39@gmail.com")
+    window.open("mailto:top7esportes@gmail.com")
   }
 
 }
