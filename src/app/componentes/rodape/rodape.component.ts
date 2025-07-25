@@ -15,4 +15,7 @@ export class RodapeComponent {
     window.open("mailto:caio.viana.39@gmail.com")
   }
 
+  btnSiteCaio(){
+    window.open("https://meu-portifolio-caio.vercel.app", "_blank")
+  }
 }

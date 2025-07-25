@@ -4,7 +4,15 @@
     padding-bottom: 50px;
 }
 
-
+.container-feito-por{
+    text-align: center;
+    color: var(--cor-dourado);
+    margin-top: 100px;
+    margin-bottom: -40px;
+}
+.container-feito-por strong{
+    cursor: pointer;
+}
 
 .container-img {
 
