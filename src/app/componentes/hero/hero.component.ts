@@ -1,5 +1,7 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import { Imagens } from './imagens';
+import { ApiService } from '../../service/api.service';
 
 @Component({
   selector: 'app-hero',
@@ -9,21 +11,15 @@ import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit, OnDestroy {
-  imagens = [
-    { src: '/assets/banner-tela-grande.png', title: 'Banner Grande', link: '' },
-    { src: '/assets/colonia-de-ferias-tela-grande.png', title: 'Colônia de Férias', link: 'https://docs.google.com/forms/d/e/1FAIpQLScwX8qnPyt03wioC4b4ZimVc-HlrMnm9BqvGBWKUlQr-793Xw/viewform?usp=header' }
-  ];
+  imagens: Imagens[] = [];
+  imagensPequenas: Imagens[] = [];
 
-  imagensPequenas = [
-    { src: '/assets/banner-tela-pequena.png', title: 'Banner Pequeno', link: '' },
-    { src: '/assets/colonia-de-ferias-tela-pequena.png', title: 'Colônia Pequena', link: 'https://docs.google.com/forms/d/e/1FAIpQLScwX8qnPyt03wioC4b4ZimVc-HlrMnm9BqvGBWKUlQr-793Xw/viewform?usp=header' }
-  ];
 
   indiceAtual = 0;
   intervalo: any;
   isBrowser: boolean;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private apiService: ApiService ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
@@ -31,6 +27,12 @@ export class HeroComponent implements OnInit, OnDestroy {
     if (this.isBrowser) {
       this.iniciarTrocaAutomatica();
     }
+    this.apiService.getImagens().subscribe(res => {
+      this.imagens = res;
+    });
+    this.apiService.getImagensPequenas().subscribe(res => {
+      this.imagensPequenas = res;
+    });
   }
 
   ngOnDestroy(): void {
