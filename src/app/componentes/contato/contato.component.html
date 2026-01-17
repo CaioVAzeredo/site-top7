@@ -3,14 +3,16 @@
         <h2>Contato</h2>
 
         <div class="container-dropdown">
-            <select id="dropdown" class="dropdown" formControlName="assunto">
-                <option value="">Escolha um assunto</option>
+            <select id="dropdown" class="dropdown" formControlName="assunto" required>
+                <option value="" disabled selected hidden>Escolha um assunto</option>
+
                 <option value="duvida">Dúvida</option>
                 <option value="reclamacao">Reclamação</option>
                 <option value="parceria">Proposta de Parceria</option>
                 <option value="sugestoes">Sugestões</option>
                 <option value="outro">Outro</option>
             </select>
+
         </div>
 
         <div class="container-nome div-container">

@@ -3,7 +3,6 @@ h2 {
 }
 
 .sobre-nos {
-    background-color: white;
     padding: 20px;
 }
 
@@ -48,7 +47,6 @@ h3 {
     }
 
     .sobre-nos {
-        background-color: #F5F5F5;
         width: 80%;
         margin: 0 auto;
     }

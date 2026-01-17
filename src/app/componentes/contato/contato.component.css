@@ -22,16 +22,25 @@ h2 {
     width: 100%;
     height: 50px;
     font-size: 16px;
-    border: none;
+    border: 2px solid #c7c7c7;
     text-align: center;
     padding: 10px;
     border-radius: 10px;
     background-color: var(--cor-fundo);
+
+    color: var(--cor-azul-escuro);
 }
 
-option {
-    border: none;
+.dropdown:invalid {
+    color: #7a7a7a;
 }
+
+.dropdown option {
+    color: var(--cor-azul-escuro);
+}
+
+
+
 
 .div-button {
     width: 60px;
@@ -70,7 +79,8 @@ option {
 .mensagem-erro {
     color: red;
 }
-.para-dar-espaco{
+
+.para-dar-espaco {
     height: 80px;
 }
 

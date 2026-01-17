@@ -45,10 +45,10 @@
 :root {
   --fonte-padrao: 'Sansation', sans-serif;
 
-  --cor-dourado: #BC943C;
-  --cor-dourado-claro: #C7A55B;
-  --cor-azul-escuro: #0C1450;
-  --cor-fundo: #f5f5f5;
+  --cor-dourado: #9A9A9A;
+  --cor-dourado-claro: #CACACA;
+  --cor-azul-escuro: #0643A5;
+  --cor-fundo: #ffffff;
 }
 
 /* ========= ESTILOS GLOBAIS ========= */

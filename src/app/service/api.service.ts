@@ -8,6 +8,7 @@ import { Imagens } from '../componentes/hero/imagens';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ApiService {
   private jsonEquipe = 'assets/equipe.json';
   private jsonModalidade = 'assets/modalidades.json';

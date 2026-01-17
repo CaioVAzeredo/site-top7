@@ -1,16 +1,55 @@
 <header class="header" id="header">
-
     <a (click)="pagHome()">
         <img src="/assets/logoazul.png" alt="LOGO TOP7" class="logo" />
     </a>
+
     <nav>
         <ul class="itens" [class.show]="menuAberto">
-            <li><a (click)="statusMenu() " (click)="pagHome()">Home</a></li>
-            <li><a href="#sobre-nos" (click)="statusMenu()">Sobre a TOP7</a></li>
-            <li><a href="#modalidades" (click)="statusMenu()">Modalidades</a></li>
-            <li><a href="#matriculas" (click)="statusMenu()">Matrículas</a></li>
-            <li><a href="#equipe" (click)="statusMenu()">Equipe</a></li>
-            <li><a href="#contato" (click)="statusMenu()">Contato</a></li>
+            <li><a (click)="fecharMenuMobile(); pagHome()">Home</a></li>
+            <li><a href="#sobre-nos" (click)="fecharMenuMobile()">Sobre a TOP7</a></li>
+            <li><a href="#modalidades" (click)="fecharMenuMobile()">Modalidades</a></li>
+
+            <!-- ESCOLAS (dropdown) -->
+            <li class="item-dropdown" [class.aberto]="dropdownEscolasAberto">
+                <button type="button" class="escolas-trigger" (click)="toggleDropdownEscolas($event)"
+                    [attr.aria-expanded]="dropdownEscolasAberto">
+                    Escolas
+                    <span class="caret" [class.aberto]="dropdownEscolasAberto"></span>
+                </button>
+
+                <div class="dropdown-escolas" *ngIf="dropdownEscolasAberto" (click)="$event.stopPropagation()">
+                    <button type="button" class="grupo-titulo" (click)="toggleGrupo('Ideal')">
+                        Ideal
+                        <span class="seta-grupo" [class.aberto]="grupoAberto === 'Ideal'"></span>
+                    </button>
+
+                    <div class="grupo-lista" *ngIf="grupoAberto === 'Ideal'">
+                        <button type="button" class="item-escola" *ngFor="let escola of getEscolasDoGrupo('Ideal')"
+                            (click)="selecionarEscola(escola)">
+                            {{ escola.nome }}
+                        </button>
+                    </div>
+
+                    <div class="linha-separador"></div>
+
+                    <button type="button" class="grupo-titulo" (click)="toggleGrupo('Sigma')">
+                        Sigma
+                        <span class="seta-grupo" [class.aberto]="grupoAberto === 'Sigma'"></span>
+                    </button>
+
+                    <div class="grupo-lista" *ngIf="grupoAberto === 'Sigma'">
+                        <button type="button" class="item-escola" *ngFor="let escola of getEscolasDoGrupo('Sigma')"
+                            (click)="selecionarEscola(escola)">
+                            {{ escola.nome }}
+                        </button>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="#matriculas" (click)="fecharMenuMobile()">Matrículas</a></li>
+            <li><a href="#equipe" (click)="fecharMenuMobile()">Equipe</a></li>
+            <li><a href="#contato" (click)="fecharMenuMobile()">Contato</a></li>
+            <li><a href="https://drive.google.com/drive/folders/1rO-btVcTDqPwEnH6ztDOmbjHgju_FDPk?usp=drive_link" (click)="fecharMenuMobile()">Festivais</a></li>
         </ul>
     </nav>
 
@@ -18,7 +57,5 @@
         <span class="material-icons" (click)="statusMenu()">
             {{ menuAberto ? 'close' : 'menu' }}
         </span>
-        <!-- <img src="/assets/cart.png" alt="cart" class="cart" (click)="cart()" /> -->
     </div>
-
 </header>
