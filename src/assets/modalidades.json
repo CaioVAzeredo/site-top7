@@ -5,29 +5,28 @@
     "titulo": "Taguatinga- QNG 31",
     "numero": "556196361274",
     "grade": [
-  {
-    "nivel": "",
-    "horarios": [
       {
-        "horario": "17h às 17h50",
-        "seg": "",
-        "ter": "Ginástica Rítmica",
-        "qua": "",
-        "qui": "Ginástica Rítmica",
-        "sex": ""
-      },
-      {
-        "horario": "18h às 18h50",
-        "seg": "",
-        "ter": "Futsal, Taekwondo, Ginástica Rítmica",
-        "qua": "Judô, Vôlei",
-        "qui": "Futsal, Vôlei, Taekwondo, Ginástica Rítmica",
-        "sex": ""
+        "nivel": "",
+        "horarios": [
+          {
+            "horario": "17h às 17h50",
+            "seg": "",
+            "ter": "Ginástica Rítmica",
+            "qua": "",
+            "qui": "Ginástica Rítmica",
+            "sex": ""
+          },
+          {
+            "horario": "18h às 18h50",
+            "seg": "",
+            "ter": "Futsal, Taekwondo, Ginástica Rítmica",
+            "qua": "Judô, Vôlei",
+            "qui": "Futsal, Vôlei, Taekwondo, Ginástica Rítmica",
+            "sex": ""
+          }
+        ]
       }
     ]
-  }
-]
-
   },
   {
     "id": 2,
@@ -194,61 +193,60 @@
     "titulo": "Águas Claras Manacá",
     "numero": "556196405103",
     "grade": [
-  {
-    "nivel": "",
-    "horarios": [
       {
-        "horario": "14h às 15h",
-        "seg": "",
-        "ter": "Violão",
-        "qua": "",
-        "qui": "Violão",
-        "sex": ""
-      },
-      {
-        "horario": "14h às 15h30",
-        "seg": "Teatro",
-        "ter": "",
-        "qua": "Teatro",
-        "qui": "",
-        "sex": ""
-      },
-      {
-        "horario": "15h às 16h40",
-        "seg": "",
-        "ter": "",
-        "qua": "",
-        "qui": "",
-        "sex": "Robótica"
-      },
-      {
-        "horario": "15h30 às 16h30",
-        "seg": "",
-        "ter": "Jiu Jitsu",
-        "qua": "",
-        "qui": "Jiu Jitsu",
-        "sex": ""
-      },
-      {
-        "horario": "15h50 às 17h30",
-        "seg": "Xadrez",
-        "ter": "",
-        "qua": "",
-        "qui": "",
-        "sex": ""
-      },
-      {
-        "horario": "18h às 18h50",
-        "seg": "Circo / Judô",
-        "ter": "Futsal",
-        "qua": "Circo / Judô",
-        "qui": "Futsal",
-        "sex": ""
+        "nivel": "",
+        "horarios": [
+          {
+            "horario": "14h às 15h",
+            "seg": "",
+            "ter": "Violão",
+            "qua": "",
+            "qui": "Violão",
+            "sex": ""
+          },
+          {
+            "horario": "14h às 15h30",
+            "seg": "Teatro",
+            "ter": "",
+            "qua": "Teatro",
+            "qui": "",
+            "sex": ""
+          },
+          {
+            "horario": "15h às 16h40",
+            "seg": "",
+            "ter": "",
+            "qua": "",
+            "qui": "",
+            "sex": "Robótica"
+          },
+          {
+            "horario": "15h30 às 16h30",
+            "seg": "",
+            "ter": "Jiu Jitsu",
+            "qua": "",
+            "qui": "Jiu Jitsu",
+            "sex": ""
+          },
+          {
+            "horario": "15h50 às 17h30",
+            "seg": "Xadrez",
+            "ter": "",
+            "qua": "",
+            "qui": "",
+            "sex": ""
+          },
+          {
+            "horario": "18h às 18h50",
+            "seg": "Circo / Judô",
+            "ter": "Futsal",
+            "qua": "Circo / Judô",
+            "qui": "Futsal",
+            "sex": ""
+          }
+        ]
       }
     ]
-  }
-]
-
   },
   {
     "id": 5,
@@ -375,44 +373,44 @@
     "titulo": "Jardim Botânico",
     "numero": "556199941748",
     "grade": [
-  {
-    "nivel": "",
-    "horarios": [
       {
-        "horario": "12h às 12h50",
-        "seg": "Capoeira",
-        "ter": "",
-        "qua": "Capoeira",
-        "qui": "",
-        "sex": ""
-      },
-      {
-        "horario": "13h20 às 14h10",
-        "seg": "",
-        "ter": "Ginástica Rítmica, Voleibol",
-        "qua": "Judô",
-        "qui": "Ginástica Rítmica",
-        "sex": "Judô, Voleibol"
-      },
-      {
-        "horario": "15h às 16h30",
-        "seg": "",
-        "ter": "Teatro",
-        "qua": "",
-        "qui": "Teatro",
-        "sex": ""
-      },
-      {
-        "horario": "18h às 18h50",
-        "seg": "Futsal",
-        "ter": "",
-        "qua": "Futsal",
-        "qui": "",
-        "sex": ""
+        "nivel": "",
+        "horarios": [
+          {
+            "horario": "12h às 12h50",
+            "seg": "Capoeira",
+            "ter": "",
+            "qua": "Capoeira",
+            "qui": "",
+            "sex": ""
+          },
+          {
+            "horario": "13h20 às 14h10",
+            "seg": "",
+            "ter": "Ginástica Rítmica, Voleibol",
+            "qua": "Judô",
+            "qui": "Ginástica Rítmica",
+            "sex": "Judô, Voleibol"
+          },
+          {
+            "horario": "15h às 16h30",
+            "seg": "",
+            "ter": "Teatro",
+            "qua": "",
+            "qui": "Teatro",
+            "sex": ""
+          },
+          {
+            "horario": "18h às 18h50",
+            "seg": "Futsal",
+            "ter": "",
+            "qua": "Futsal",
+            "qui": "",
+            "sex": ""
+          }
+        ]
       }
     ]
   }
 ]
 
-  }
-]
