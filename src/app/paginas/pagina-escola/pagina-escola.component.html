@@ -1,0 +1,11 @@
+<app-cabecalho></app-cabecalho>
+
+<div *ngIf="escola" style="text-align:center; padding: 24px 16px;">
+    <img [src]="escola.logo" [alt]="escola.nome" style="max-width: 320px; width: 90%; height: auto;">
+    <h2 style="margin: 12px 0 0;">{{ escola.nome }}</h2>
+</div>
+
+<app-modalidades [escolaId]="escolaId" class="scroll-animar"></app-modalidades>
+
+<app-rodape></app-rodape>
+<app-botao-subir></app-botao-subir>

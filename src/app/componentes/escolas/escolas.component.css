@@ -41,6 +41,7 @@
 
     transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
     will-change: transform;
+    border: none;
 }
 
 .logo-box:hover {

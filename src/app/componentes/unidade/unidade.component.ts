@@ -4,13 +4,15 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-unidade',
+  standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './unidade.component.html',
   styleUrl: './unidade.component.css'
 })
 export class UnidadeComponent {
+  @Input() id!: string;
   @Input() imagem: string = '';
   @Input() titulo: string = '';
-  @Input() id: number = 0;
 
+  @Input() link: any[] | null = null;
 }

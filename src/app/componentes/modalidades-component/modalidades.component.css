@@ -6,14 +6,15 @@
 }
 
 @media (min-width: 768px) {
-    h2 {
+    .modalidades h2 {
         font-size: 34px;
-        line-height: 0.5; 
+        line-height: 0.5;
     }
-    p{
-        font-size: 24px; 
+
+    .modalidades p {
+        font-size: 24px;
         line-height: 0.1;
-        margin-bottom: 100px; 
+        margin-bottom: 100px;
     }
 
     .container-modalidades {
@@ -23,5 +24,12 @@
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 150px;
         align-items: start;
+        justify-items: center;
+        /* ✅ centraliza os cards no grid */
+    }
+
+    .item {
+        display: flex;
+        justify-content: center;
     }
 }

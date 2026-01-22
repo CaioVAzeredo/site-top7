@@ -3,7 +3,7 @@
     {
       "id": "ideal",
       "nome": "Colégio Ideal",
-      "logo": "/assets/ideal.png",
+      "logo": "/assets/ideal-logo.png",
       "unidades": [
         {
           "id": 1,
@@ -424,7 +424,7 @@
     {
       "id": "sigma",
       "nome": "Sigma",
-      "logo": "/assets/sigma.png",
+      "logo": "/assets/sigma-logo.png",
       "unidades": [
         {
           "id": "sigma-asa-sul",

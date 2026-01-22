@@ -1,67 +1,48 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+
 import { ApiService } from '../../service/api.service';
-import { Unidade } from '../../componentes/unidade/unidade';
+import { NivelGrade } from '../../models/escolas.model';
+
 import { CabecalhoComponent } from "../../componentes/cabecalho/cabecalho.component";
 import { RodapeComponent } from "../../componentes/rodape/rodape.component";
 import { WppComponent } from "../../componentes/wpp/wpp.component";
 import { BotaoSubirComponent } from "../../componentes/botao-subir/botao-subir.component";
-import { Horario } from './horario';
-import { CommonModule } from '@angular/common';
-import { ButtonComponentComponent } from "../../componentes/button-component/button-component.component";
-
 
 @Component({
   selector: 'app-pagina-modalidade',
+  standalone: true,
+  imports: [CommonModule, RouterLink, CabecalhoComponent, RodapeComponent, WppComponent, BotaoSubirComponent],
   templateUrl: './pagina-modalidade.component.html',
   styleUrls: ['./pagina-modalidade.component.css'],
-  imports: [CabecalhoComponent,
-    RodapeComponent,
-    WppComponent,
-    BotaoSubirComponent,
-    CommonModule,
-  RouterLink]
 })
 export class PaginaModalidadeComponent implements OnInit {
-  id: number = 0;
+  escolaId = '';
+  unidadeId = '';
+
   imagem: string = '';
   titulo: string = '';
   numero: string = '';
-  grade: { nivel: string; horarios: Horario[] }[] = [];
+  grade: NivelGrade[] = [];
 
-  constructor(
-    private route: ActivatedRoute,
-    private apiService: ApiService
-  ) { }
+  constructor(private route: ActivatedRoute, private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.escolaId = params.get('escolaId') ?? '';
+      this.unidadeId = params.get('unidadeId') ?? '';
 
-    this.route.params.subscribe(params => {
-      this.id = +params['id'];
-      this.carregarModalidade();
-      if (typeof window !== 'undefined') {
-        window.scrollTo(0, 0);
-      }
+      this.apiService.getUnidade(this.escolaId, this.unidadeId).subscribe(unidade => {
+        if (!unidade) return;
 
-    });
-  }
+        this.imagem = unidade.imagem;
+        this.titulo = unidade.titulo;
+        this.numero = unidade.numero;
+        this.grade = unidade.grade;
+      });
 
-  voltar() {
-
-  }
-
-  carregarModalidade(): void {
-    this.apiService.getDadosModalidade().subscribe((modalidades: Unidade[]) => {
-      const modalidade = modalidades.find((unidade: Unidade) => unidade.id === this.id);
-
-      if (modalidade) {
-        this.imagem = modalidade.imagem;
-        this.titulo = modalidade.titulo;
-        this.numero = modalidade.numero;
-
-        this.grade = modalidade.grade;
-
-      }
+      if (typeof window !== 'undefined') window.scrollTo(0, 0);
     });
   }
 }

@@ -1,7 +1,10 @@
-<section class="container-imagens" [routerLink]="['/modalidade', id]">
-    <img [src]="imagem" class="div-img" [alt]="titulo">
-    <div class="modal-button">
-        <p class="titulo">{{titulo}}</p>
-        <p class="btn-saibamais" [routerLink]="['/modalidade', id]">Saiba mais</p>
+<a class="unidade-card" [routerLink]="link ? link : ['/modalidade', id]">
+    <div class="unidade-img">
+        <img [src]="imagem" [alt]="titulo" />
     </div>
-</section>
+
+    <div class="unidade-body">
+        <p class="unidade-titulo">{{ titulo }}</p>
+        <span class="unidade-cta">Saiba mais</span>
+    </div>
+</a>

@@ -1,13 +1,10 @@
-<section class="escolas-page">
-    <h1 class="titulo">Escolas</h1>
+<section class="escolas-page escolas">
+    <h2 class="titulo">Escolas</h2>
 
-    <div class="logos">
-        <div class="logo-box">
-            <img class="logo" src="../../../assets/ideal-logo.png" alt="Colégio Ideal" />
-        </div>
-
-        <div class="logo-box">
-            <img class="logo" src="../../../assets/sigma-logo.png" alt="Sigma" />
-        </div>
+    <div class="logos lista-escolas">
+        <button type="button" class="logo-box card-escola" *ngFor="let escola of escolas; trackBy: trackByEscolaId"
+            [routerLink]="['/escolas', escola.id]">
+            <img [src]="escola.logo" [alt]="escola.nome" />
+        </button>
     </div>
 </section>
