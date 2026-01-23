@@ -325,15 +325,73 @@ li a {
    MOBILE: dropdown vira bloco dentro do menu
    ========================= */
 @media (max-width: 974px) {
-    .dropdown-escolas {
-        position: static;
+
+    /* cada item do menu ocupa a largura toda (mantém centralizado) */
+    .itens li {
         width: 100%;
-        max-width: 100%;
-        box-shadow: none;
-        margin-top: 10px;
+        margin: 0;
+        padding: 6px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* No mobile, quando aberto, mantém borda também (igual desktop) */
+    /* links e botão "Escolas" com área clicável boa e centralizados */
+    .itens li a,
+    .itens li .escolas-trigger {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 16px;
+    }
+
+    .item-dropdown {
+        width: 100%;
+    }
+
+    /* ✅ NO MOBILE: ao abrir, NÃO fica azul */
+    .item-dropdown.aberto .escolas-trigger {
+        color: var(--cor-dourado);
+        /* mantém o “cinza” do menu */
+        box-shadow: inset 0 0 0 1px transparent;
+        /* remove borda azul */
+    }
+
+    /* hover no mobile também não muda pra azul */
+    .item-dropdown.aberto .escolas-trigger:hover {
+        color: var(--cor-dourado);
+    }
+
+    /* ✅ dropdown vira “card” proporcional e bonito, e EMPURRA o de baixo */
+    .dropdown-escolas {
+        position: static !important;
+        width: min(360px, 92%);
+        max-width: 92%;
+        margin: 10px auto 0;
+        /* centraliza o card */
+        padding: 8px 0;
+
+        background: #ffffff;
+        border: 1px solid #e6e6e6;
+        border-radius: 12px;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    /* itens dentro do dropdown (melhor espaçamento) */
+    .grupo-titulo {
+        font-size: 17px;
+        padding: 14px 16px;
+    }
+
+    .item-escola {
+        font-size: 17px;
+        padding: 14px 16px;
+    }
+
+    .linha-separador {
+        margin: 6px 0;
+    }
+
+    /* no mobile, quando abrir, o botão ocupa a largura toda (fica organizado) */
     .item-dropdown.aberto .escolas-trigger {
         width: 100%;
         justify-content: space-between;

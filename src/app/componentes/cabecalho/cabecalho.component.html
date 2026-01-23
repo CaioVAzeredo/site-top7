@@ -7,9 +7,9 @@
         <ul class="itens" [class.show]="menuAberto">
             <li><a (click)="fecharMenuMobile(); pagHome()">Home</a></li>
             <li><a href="#sobre-nos" (click)="fecharMenuMobile()">Sobre a TOP7</a></li>
-
+            <li><a href="#escolas-page" (click)="fecharMenuMobile()">Escolas</a></li>
             <!-- ESCOLAS (dropdown) -->
-            <li class="item-dropdown" [class.aberto]="dropdownEscolasAberto">
+            <!-- <li class="item-dropdown" [class.aberto]="dropdownEscolasAberto">
                 <button type="button" class="escolas-trigger" (click)="toggleDropdownEscolas($event)"
                     [attr.aria-expanded]="dropdownEscolasAberto">
                     Escolas
@@ -43,11 +43,12 @@
                         </button>
                     </div>
                 </div>
-            </li>
+            </li> -->
 
             <li><a href="#equipe" (click)="fecharMenuMobile()">Equipe</a></li>
-            <li><a href="#contato" (click)="fecharMenuMobile()">Contato</a></li>
-            <li><a href="https://drive.google.com/drive/folders/1rO-btVcTDqPwEnH6ztDOmbjHgju_FDPk?usp=drive_link" (click)="fecharMenuMobile()">Festivais</a></li>
+            <!-- <li><a href="#contato" (click)="fecharMenuMobile()">Contato</a></li> -->
+            <li><a href="https://drive.google.com/drive/folders/1rO-btVcTDqPwEnH6ztDOmbjHgju_FDPk?usp=drive_link"
+                    (click)="fecharMenuMobile()">Festivais</a></li>
         </ul>
     </nav>
 

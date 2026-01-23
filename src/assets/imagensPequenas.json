@@ -1,7 +1,35 @@
 [
     {
-    "src": "/assets/banner-tela-pequena.png", 
-    "title": "Banner Pequeno", 
-    "link": "" 
-    }    
+        "src": "/assets/ajb-ideal-pequeno.png",
+        "title": "Banner Grande",
+        "link": ""
+    },
+   
+    {
+        "src": "/assets/amc-ideal-pequeno.png",
+        "title": "Banner Grande",
+        "link": ""
+    },
+    
+    {
+        "src": "/assets/an-ideal-pequeno.png",
+        "title": "Banner Grande",
+        "link": ""
+    },
+   
+    {
+        "src": "/assets/as-ideal-pequeno.png",
+        "title": "Banner Grande",
+        "link": ""
+    },
+    {
+        "src": "/assets/tg31-ideal-pequeno.png",
+        "title": "Banner Grande",
+        "link": ""
+    },
+    {
+        "src": "/assets/jb-ideal-pequeno.png",
+        "title": "esse",
+        "link": ""
+    }
 ]

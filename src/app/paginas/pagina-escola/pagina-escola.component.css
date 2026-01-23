@@ -1,0 +1,18 @@
+.botao-voltar {
+    color: var(--cor-azul-escuro);
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: -5px;
+    margin-bottom: 60px;
+    position: relative;
+    width: 80px;
+    display: flex;
+    z-index: 10000;
+}
+
+
+.botao-voltar p {
+    margin-top: 3px;
+    margin-left: 5px;
+
+}

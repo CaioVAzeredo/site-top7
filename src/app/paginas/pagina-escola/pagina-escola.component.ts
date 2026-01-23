@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 import { ApiService } from '../../service/api.service';
 import { Escola } from '../../models/escolas.model';
@@ -13,7 +13,7 @@ import { ModalidadesComponent } from '../../componentes/modalidades-component/mo
 @Component({
   selector: 'app-pagina-escola',
   standalone: true,
-  imports: [CommonModule, CabecalhoComponent, RodapeComponent, BotaoSubirComponent, ModalidadesComponent],
+  imports: [CommonModule, CabecalhoComponent, RodapeComponent, BotaoSubirComponent, ModalidadesComponent, RouterLink],
   templateUrl: './pagina-escola.component.html',
   styleUrl: './pagina-escola.component.css'
 })

@@ -1,8 +1,12 @@
 <app-cabecalho></app-cabecalho>
 
+<a [routerLink]="['/']" class="botao-voltar">
+    <span class="material-icons">arrow_back</span>
+    <p>Voltar</p>
+</a>
+
 <div *ngIf="escola" style="text-align:center; padding: 24px 16px;">
     <img [src]="escola.logo" [alt]="escola.nome" style="max-width: 320px; width: 90%; height: auto;">
-    <h2 style="margin: 12px 0 0;">{{ escola.nome }}</h2>
 </div>
 
 <app-modalidades [escolaId]="escolaId" class="scroll-animar"></app-modalidades>

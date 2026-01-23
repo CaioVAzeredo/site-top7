@@ -5,22 +5,71 @@
   <p>Voltar</p>
 </a>
 
-<h2 class="titulo-principal">{{ titulo }}</h2>
+<h2 class="titulo-principal titulo-principal-tela-grande">{{ titulo }}</h2>
 
-<div class="container-imagem">
-  <img [src]="imagem" alt="{{ titulo }}" class="imagem-modalidade">
+<div class="container-imagem imagem-modalidade-tela-grande">
+  <img [src]="imagem" alt="{{ titulo }}" class="imagem-modalidade" />
 </div>
 
 <h2 class="titulo-atividade">Grades de atividades</h2>
 <p class="paragrafo">Veja as atividades de cada turma</p>
 
-<div *ngFor="let item of grade" class="lista-horarios">
-  <h2 class="titulo-secundario">{{ item.nivel || 'Geral' }}</h2>
+<!-- MOBILE -->
+<section class="modal-tela-pequena">
+  <div *ngFor="let item of grade" class="lista-horarios">
+    <h2 class="titulo-secundario">{{ item.nivel || 'Geral' }}</h2>
 
-  <div *ngFor="let horario of item.horarios" class="blocos-horario">
-    <p class="horario">{{ horario.horario }}</p>
+    <div *ngFor="let horario of item.horarios" class="blocos-horario">
+      <p class="horario">{{ horario.horario }}</p>
 
+      <ul class="scroll-horarios">
+        <li class="container-dias-semana">
+          <ul>
+            <li>Seg</li>
+          </ul>
+          <p>{{ horario.seg }}</p>
+        </li>
+
+        <li class="container-dias-semana">
+          <ul>
+            <li>Ter</li>
+          </ul>
+          <p>{{ horario.ter }}</p>
+        </li>
+
+        <li class="container-dias-semana">
+          <ul>
+            <li>Qua</li>
+          </ul>
+          <p>{{ horario.qua }}</p>
+        </li>
+
+        <li class="container-dias-semana">
+          <ul>
+            <li>Qui</li>
+          </ul>
+          <p>{{ horario.qui }}</p>
+        </li>
+
+        <li class="container-dias-semana">
+          <ul>
+            <li>Sex</li>
+          </ul>
+          <p>{{ horario.sex }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- DESKTOP -->
+<section class="grade-container">
+  <div *ngFor="let item of grade" class="bloco-nivel">
+    <h2 class="titulo-nivel">{{ item.nivel || 'Geral' }}</h2>
+
+    <!-- Header aparece UMA vez -->
     <div class="linha header">
+      <div class="celula inicio">Horário</div>
       <div class="celula">Seg</div>
       <div class="celula">Ter</div>
       <div class="celula">Qua</div>
@@ -28,7 +77,9 @@
       <div class="celula">Sex</div>
     </div>
 
-    <div class="linha">
+    <!-- Cada horário vira UMA linha -->
+    <div *ngFor="let horario of item.horarios" class="linha">
+      <div class="celula inicio">{{ horario.horario }}</div>
       <div class="celula">{{ horario.seg }}</div>
       <div class="celula">{{ horario.ter }}</div>
       <div class="celula">{{ horario.qua }}</div>
@@ -36,8 +87,8 @@
       <div class="celula">{{ horario.sex }}</div>
     </div>
   </div>
-</div>
+</section>
 
 <app-rodape></app-rodape>
-<app-wpp [numero]="numero"></app-wpp>
+<!-- <app-wpp [numero]="numero"></app-wpp> -->
 <app-botao-subir></app-botao-subir>
