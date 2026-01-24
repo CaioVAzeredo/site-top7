@@ -1,54 +1,90 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-type EscolaMenu = { nome: string; rota?: string; ancora?: string };
+interface Horario {
+  horario: string;
+  seg: string;
+  ter: string;
+  qua: string;
+  qui: string;
+  sex: string;
+}
+
+interface GradeItem {
+  nivel: string;
+  horarios: Horario[];
+}
+
+interface Unidade {
+  id: number | string;
+  imagem: string;
+  titulo: string;
+  numero: string;
+  grade: GradeItem[];
+}
+
+interface Escola {
+  id: string;
+  nome: string;
+  logo: string;
+  unidades: Unidade[];
+}
+
+interface EscolasJson {
+  escolas: Escola[];
+}
 
 @Component({
   selector: 'app-cabecalho',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './cabecalho.component.html',
   styleUrl: './cabecalho.component.css'
 })
-export class CabecalhoComponent {
-  constructor(private router: Router) { }
+export class CabecalhoComponent implements OnInit {
+  constructor(
+    private router: Router,
+    private http: HttpClient,
+    private eRef: ElementRef
+  ) { }
 
   menuAberto = false;
-
   dropdownEscolasAberto = false;
-  grupoAberto: 'Ideal' | 'Sigma' | null = null;
+  grupoAberto: string | null = null;
 
+  escolas: Escola[] = [];
 
-  private gruposEscolas: Record<'Ideal' | 'Sigma', EscolaMenu[]> = {
-    Ideal: [
-      { nome: 'Taguatinga - QNG 31' },
-      { nome: 'Taguatinga - QNG 26' },
-      { nome: 'Águas Claras Jequitibá' },
-      { nome: 'Águas Claras Manacá' },
-      { nome: 'Asa Sul' },
-      { nome: 'Asa Norte' },
-      { nome: 'Jardim Botânico' }
-    ],
-    Sigma: [
-      { nome: 'Águas Claras' },
-      { nome: 'Asa Sul' },
-      { nome: 'Asa Norte' }
-    ]
-  };
+  ngOnInit(): void {
+    this.carregarEscolas();
+  }
+
+  private carregarEscolas() {
+    this.http.get<EscolasJson>('assets/novas-modalidades.json').subscribe({
+      next: (data) => {
+        this.escolas = data?.escolas ?? [];
+      },
+      error: (err) => {
+        console.error('Erro ao carregar JSON de escolas:', err);
+        this.escolas = [];
+      }
+    });
+  }
 
   statusMenu() {
     this.menuAberto = !this.menuAberto;
 
-    // se fechar o menu mobile, fecha o dropdown
     if (!this.menuAberto) {
       this.dropdownEscolasAberto = false;
+      this.grupoAberto = null;
     }
   }
 
   fecharMenuMobile() {
     if (this.menuAberto) this.menuAberto = false;
     this.dropdownEscolasAberto = false;
+    this.grupoAberto = null;
   }
 
   pagHome() {
@@ -61,47 +97,44 @@ export class CabecalhoComponent {
 
     this.dropdownEscolasAberto = !this.dropdownEscolasAberto;
 
-    // ✅ quando abrir, começa com tudo fechado
     if (this.dropdownEscolasAberto) {
       this.grupoAberto = null;
     }
   }
 
-
-  toggleGrupo(grupo: 'Ideal' | 'Sigma') {
-    this.grupoAberto = this.grupoAberto === grupo ? null : grupo;
+  toggleGrupo(escolaId: string) {
+    this.grupoAberto = this.grupoAberto === escolaId ? null : escolaId;
   }
 
-
-  getEscolasDoGrupo(grupo: 'Ideal' | 'Sigma') {
-    return this.gruposEscolas[grupo] ?? [];
+  getTituloGrupo(escola: Escola): string {
+    if (escola.id === 'ideal') return 'Ideal';
+    if (escola.id === 'sigma') return 'Sigma';
+    return escola.nome;
   }
 
-  selecionarEscola(escola: EscolaMenu) {
+  selecionarUnidade(escolaId: string, unidadeId: number | string) {
     this.dropdownEscolasAberto = false;
     this.menuAberto = false;
+    this.grupoAberto = null;
 
-    if (escola.rota) {
-      this.router.navigateByUrl(escola.rota);
-      return;
-    }
-
-    if (escola.ancora) {
-      const el = document.getElementById(escola.ancora);
-      el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      return;
-    }
-
-    console.log('Escola selecionada:', escola.nome);
+    this.router.navigate(['/modalidade', escolaId, unidadeId]);
   }
 
-  @HostListener('document:click')
-  onClickFora() {
-    this.dropdownEscolasAberto = false;
+  // ✅ fecha somente se clicar fora do componente
+  @HostListener('document:click', ['$event'])
+  onClickFora(event: MouseEvent) {
+    const target = event.target as Node | null;
+    if (!target) return;
+
+    if (!this.eRef.nativeElement.contains(target)) {
+      this.dropdownEscolasAberto = false;
+      this.grupoAberto = null;
+    }
   }
 
   @HostListener('document:keydown.escape')
   onEsc() {
     this.dropdownEscolasAberto = false;
+    this.grupoAberto = null;
   }
 }

@@ -4,6 +4,16 @@
       "id": "ideal",
       "nome": "Colégio Ideal",
       "logo": "/assets/ideal-logo.png",
+      "matriculas": {
+        "mensalidade": 186,
+        "uniforme": 130,
+        "patchJudo": 50,
+        "camisaAvulso": 70,
+        "shortAvulso": 70,
+        "observacoes": [
+          "Os uniformes de treinamento do judô, taekwondo e ballet são tratados e adquiridos diretamente com o professor."
+        ]
+      },
       "unidades": [
         {
           "id": 1,
@@ -424,6 +434,17 @@
       "id": "sigma",
       "nome": "Sigma",
       "logo": "/assets/sigma-logo.png",
+      "matriculas": {
+        "mensalidade": 270,
+        "sigmaClub": 108,
+        "uniforme": 130,
+        "patchJudo": 50,
+        "camisaAvulso": 70,
+        "shortAvulso": 70,
+        "observacoes": [
+          "Os uniformes de treinamento do judô, taekwondo e ballet são tratados e adquiridos diretamente com o professor."
+        ]
+      },
       "unidades": [
         {
           "id": "sigma-asa-sul",

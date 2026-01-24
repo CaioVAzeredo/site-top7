@@ -20,13 +20,24 @@ export interface UnidadeDaEscola {
     grade: NivelGrade[];
 }
 
-export interface Escola {
-    id: string;            // "ideal" | "sigma"
-    nome: string;
-    logo: string;
-    unidades: UnidadeDaEscola[];
-}
-
 export interface EscolasResponse {
     escolas: Escola[];
+}
+
+export interface MatriculasInfo {
+    mensalidade: number;
+    sigmaClub?: number;
+    uniforme: number;
+    patchJudo: number;
+    camisaAvulso: number;
+    shortAvulso: number;
+    observacoes?: string[];
+}
+
+export interface Escola {
+    id: string;
+    nome: string;
+    logo: string;
+    matriculas?: MatriculasInfo; // ✅ novo
+    unidades: any[];
 }

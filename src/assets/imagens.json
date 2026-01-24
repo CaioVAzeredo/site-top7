@@ -1,35 +1,47 @@
 [
     {
-    "src": "/assets/ajb-ideal-grande.png", 
-    "title": "Banner Grande", 
-    "link": "" 
-    },
-   
-    {
-    "src": "/assets/amc-ideal-grande.png", 
-    "title": "Banner Grande", 
-    "link": "" 
-    },
-   
-    {
-    "src": "/assets/an-ideal-grande.png", 
-    "title": "Banner Grande", 
-    "link": "" 
-    },
-   
-    {
-    "src": "/assets/as-ideal-grande.png", 
-    "title": "Banner Grande", 
-    "link": "" 
+        "src": "/assets/ajb-ideal-grande.png",
+        "title": "Banner Grande",
+        "link": ""
     },
     {
-    "src": "/assets/tg31-ideal-grande.png", 
-    "title": "Banner Grande", 
-    "link": "" 
+        "src": "/assets/as-sigma-grande.png",
+        "title": "Banner Grande",
+        "link": ""
     },
     {
-    "src": "/assets/jb-ideal-grande.png", 
-    "title": "Banner Grande", 
-    "link": "" 
+        "src": "/assets/amc-ideal-grande.png",
+        "title": "Banner Grande",
+        "link": ""
+    },
+    {
+        "src": "/assets/an-sigma-grande.png",
+        "title": "Banner Grande",
+        "link": ""
+    },
+    {
+        "src": "/assets/an-ideal-grande.png",
+        "title": "Banner Grande",
+        "link": ""
+    },
+    {
+        "src": "/assets/ac-sigma-grande.png",
+        "title": "Banner Grande",
+        "link": ""
+    },
+    {
+        "src": "/assets/as-ideal-grande.png",
+        "title": "Banner Grande",
+        "link": ""
+    },
+    {
+        "src": "/assets/tg31-ideal-grande.png",
+        "title": "Banner Grande",
+        "link": ""
+    },
+    {
+        "src": "/assets/jb-ideal-grande.png",
+        "title": "Banner Grande",
+        "link": ""
     }
 ]

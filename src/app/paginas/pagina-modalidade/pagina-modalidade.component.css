@@ -2,24 +2,7 @@
     display: block;
 }
 
-.botao-voltar {
-    color: var(--cor-azul-escuro);
-    text-decoration: none;
-    margin-left: 20px;
-    margin-top: -5px;
-    margin-bottom: 60px;
-    position: relative;
-    width: 80px;
-    display: flex;
-    z-index: 10000;
-}
 
-
-.botao-voltar p {
-    margin-top: 3px;
-    margin-left: 5px;
-
-}
 
 
 .grade-container {
@@ -105,8 +88,32 @@ img {
     overflow-x: auto;
     width: 100%;
 }
+.botao-voltar {
+    display: block;
+    color: var(--cor-azul-escuro);
+    text-decoration: none;
+    margin-left: 15px;
+    margin-top: -53px;
+    margin-bottom: 60px;
+    position: relative;
+    width: 80px;
+    display: flex;
+    z-index: 10000;
+}
+
+
+.botao-voltar p {
+    margin-top: 3px;
+    margin-left: 5px;
+    
+}
 
 @media (min-width: 768px) {
+
+    .botao-voltar {
+        display: none;
+    }
+
     .titulo-principal-tela-grande {
         font-size: 34px;
     }

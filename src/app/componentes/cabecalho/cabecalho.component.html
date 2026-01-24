@@ -7,9 +7,9 @@
         <ul class="itens" [class.show]="menuAberto">
             <li><a (click)="fecharMenuMobile(); pagHome()">Home</a></li>
             <li><a href="#sobre-nos" (click)="fecharMenuMobile()">Sobre a TOP7</a></li>
-            <li><a href="#escolas-page" (click)="fecharMenuMobile()">Escolas</a></li>
+
             <!-- ESCOLAS (dropdown) -->
-            <!-- <li class="item-dropdown" [class.aberto]="dropdownEscolasAberto">
+            <li class="item-dropdown" [class.aberto]="dropdownEscolasAberto">
                 <button type="button" class="escolas-trigger" (click)="toggleDropdownEscolas($event)"
                     [attr.aria-expanded]="dropdownEscolasAberto">
                     Escolas
@@ -17,38 +17,33 @@
                 </button>
 
                 <div class="dropdown-escolas" *ngIf="dropdownEscolasAberto" (click)="$event.stopPropagation()">
-                    <button type="button" class="grupo-titulo" (click)="toggleGrupo('Ideal')">
-                        Ideal
-                        <span class="seta-grupo" [class.aberto]="grupoAberto === 'Ideal'"></span>
-                    </button>
-
-                    <div class="grupo-lista" *ngIf="grupoAberto === 'Ideal'">
-                        <button type="button" class="item-escola" *ngFor="let escola of getEscolasDoGrupo('Ideal')"
-                            (click)="selecionarEscola(escola)">
-                            {{ escola.nome }}
+                    <ng-container *ngFor="let escola of escolas; let last = last">
+                        <button type="button" class="grupo-titulo" [class.aberto]="grupoAberto === escola.id"
+                            (click)="toggleGrupo(escola.id)">
+                            {{ getTituloGrupo(escola) }}
+                            <span class="seta-grupo" [class.aberto]="grupoAberto === escola.id"></span>
                         </button>
-                    </div>
 
-                    <div class="linha-separador"></div>
+                        <div class="grupo-lista" *ngIf="grupoAberto === escola.id">
+                            <button type="button" class="item-escola" *ngFor="let unidade of escola.unidades"
+                                (click)="selecionarUnidade(escola.id, unidade.id)">
+                                {{ unidade.titulo }}
+                            </button>
+                        </div>
 
-                    <button type="button" class="grupo-titulo" (click)="toggleGrupo('Sigma')">
-                        Sigma
-                        <span class="seta-grupo" [class.aberto]="grupoAberto === 'Sigma'"></span>
-                    </button>
-
-                    <div class="grupo-lista" *ngIf="grupoAberto === 'Sigma'">
-                        <button type="button" class="item-escola" *ngFor="let escola of getEscolasDoGrupo('Sigma')"
-                            (click)="selecionarEscola(escola)">
-                            {{ escola.nome }}
-                        </button>
-                    </div>
+                        <!-- separador azul entre Ideal e Sigma -->
+                        <div class="linha-separador" *ngIf="!last"></div>
+                    </ng-container>
                 </div>
-            </li> -->
+            </li>
 
             <li><a href="#equipe" (click)="fecharMenuMobile()">Equipe</a></li>
-            <!-- <li><a href="#contato" (click)="fecharMenuMobile()">Contato</a></li> -->
-            <li><a href="https://drive.google.com/drive/folders/1rO-btVcTDqPwEnH6ztDOmbjHgju_FDPk?usp=drive_link"
-                    (click)="fecharMenuMobile()">Festivais</a></li>
+            <li>
+                <a href="https://drive.google.com/drive/folders/1rO-btVcTDqPwEnH6ztDOmbjHgju_FDPk?usp=drive_link"
+                    (click)="fecharMenuMobile()">
+                    Festivais
+                </a>
+            </li>
         </ul>
     </nav>
 

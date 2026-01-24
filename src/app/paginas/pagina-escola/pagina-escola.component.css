@@ -16,3 +16,27 @@
     margin-left: 5px;
 
 }
+
+.scroll-horarios {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.botao-voltar {
+    display: block;
+    color: var(--cor-azul-escuro);
+    text-decoration: none;
+    margin-left: 15px;
+    margin-top: -53px;
+    margin-bottom: 60px;
+    position: relative;
+    width: 80px;
+    display: flex;
+    z-index: 10000;
+}
+
+@media (min-width: 768px) {
+    .botao-voltar {
+        display: none;
+    }
+}

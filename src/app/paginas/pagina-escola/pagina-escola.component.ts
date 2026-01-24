@@ -9,11 +9,12 @@ import { CabecalhoComponent } from '../../componentes/cabecalho/cabecalho.compon
 import { RodapeComponent } from '../../componentes/rodape/rodape.component';
 import { BotaoSubirComponent } from '../../componentes/botao-subir/botao-subir.component';
 import { ModalidadesComponent } from '../../componentes/modalidades-component/modalidades.component';
+import { MatriculasComponent } from "../../componentes/matriculas/matriculas.component";
 
 @Component({
   selector: 'app-pagina-escola',
   standalone: true,
-  imports: [CommonModule, CabecalhoComponent, RodapeComponent, BotaoSubirComponent, ModalidadesComponent, RouterLink],
+  imports: [CommonModule, CabecalhoComponent, RodapeComponent, BotaoSubirComponent, ModalidadesComponent, RouterLink, MatriculasComponent],
   templateUrl: './pagina-escola.component.html',
   styleUrl: './pagina-escola.component.css'
 })
