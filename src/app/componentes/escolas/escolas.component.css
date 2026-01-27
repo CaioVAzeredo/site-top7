@@ -1,5 +1,5 @@
 .escolas-page {
-    background: var(--cor-dourado-claro);
+    background-color: var(--cor-dourado-claro);
     padding: 32px 24px;
     /* menos espaço em cima/baixo */
 }
@@ -57,7 +57,7 @@
 /* imagem encaixada dentro do card */
 .logo-box img {
     width: 250%;
-    height: 300%;
+    height: 100%;
     object-fit: contain;
 }
 

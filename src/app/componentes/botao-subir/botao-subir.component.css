@@ -6,9 +6,9 @@
     display: flex;
     cursor: pointer;
     background-color: var(--cor-azul-escuro);
-    border: 1px solid var(--cor-dourado);
+    border: 1px solid var(--cor-dourado-claro);
     border-radius: 30px;
-    color: var(--cor-dourado);
+    color: var(--cor-dourado-claro);
     opacity: 1;
 
     transition: opacity 0.3s ease;

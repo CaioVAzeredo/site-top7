@@ -6,7 +6,7 @@
 
 .container-feito-por{
     text-align: center;
-    color: var(--cor-dourado);
+    color: var(--cor-dourado-claro);
     margin-top: 100px;
     margin-bottom: -40px;
 }
@@ -50,7 +50,7 @@
 }
 
 p {
-    color: var(--cor-dourado);
+    color: var(--cor-dourado-claro);
     text-align: center;
     margin: 15px 0 15px 0;
 }

@@ -7,22 +7,18 @@
     z-index: 1000;
 }
 
-/* hover igual ao dos links */
 .escolas-trigger:hover {
     color: var(--cor-dourado-claro);
 }
 
-/* se estiver ABERTO, mantém azul (pra não "piscar" dourado ao passar o mouse) */
 .item-dropdown.aberto .escolas-trigger:hover {
     color: var(--cor-azul-escuro);
 }
 
-/* Hover dos grupos: Ideal e Sigma (só texto) */
 .grupo-titulo:hover {
     color: var(--cor-dourado-claro);
 }
 
-/* Hover dos itens (as escolas) (só texto) */
 .item-escola:hover {
     color: var(--cor-dourado-claro);
 }
@@ -75,6 +71,45 @@ li {
 li a {
     text-decoration: none;
     color: var(--cor-dourado);
+}
+
+/* =========================
+   ANIMAÇÃO: linha cresce (esquerda -> direita) ao passar o mouse no <li>
+   ========================= */
+.itens>li>a,
+.itens>li>.escolas-trigger {
+    position: relative;
+}
+
+/* linha */
+.itens>li>a::after,
+.itens>li>.escolas-trigger::after {
+    content: "";
+    position: absolute;
+
+    /* acompanha o padding lateral do link/botão */
+    left: 14px;
+    right: 14px;
+
+    bottom: 6px;
+    height: 2px;
+    background: var(--cor-dourado-claro);
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 250ms ease;
+}
+
+/* hover no <li> faz a linha crescer */
+.itens>li:hover>a::after,
+.itens>li:hover>.escolas-trigger::after {
+    transform: scaleX(1);
+}
+
+/* acessibilidade (teclado) */
+.itens>li>a:focus-visible::after,
+.itens>li>.escolas-trigger:focus-visible::after {
+    transform: scaleX(1);
 }
 
 /* =========================
@@ -207,7 +242,6 @@ li a {
     padding-bottom: 22px;
 }
 
-/* ✅ Mantém branco mesmo no hover */
 .grupo-titulo.aberto:hover {
     color: #ffffff !important;
 }
@@ -376,5 +410,54 @@ li a {
     .item-dropdown.aberto .escolas-trigger {
         width: 100%;
         justify-content: space-between;
+    }
+}
+
+/* =========================================================
+   DESKTOP: manter azul no hover + linha animada (esq -> dir)
+   COLE NO FINAL DO CSS
+   ========================================================= */
+@media (min-width: 975px) {
+
+    /* 1) NÃO mudar a cor no hover (mantém azul) */
+    .itens li a:hover,
+    .itens li .escolas-trigger:hover {
+        color: var(--cor-azul-escuro) !important;
+    }
+
+    /* (se o dropdown estiver aberto, também não muda) */
+    .item-dropdown.aberto .escolas-trigger:hover {
+        color: var(--cor-azul-escuro) !important;
+    }
+
+    /* 2) Preparar link/botão para a linha */
+    .itens>li>a,
+    .itens>li>.escolas-trigger {
+        position: relative;
+    }
+
+    /* 3) A linha (usa a cor do texto = azul) */
+    .itens>li>a::after,
+    .itens>li>.escolas-trigger::after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        /* ajuste fino */
+        right: 10px;
+        /* ajuste fino */
+        bottom: -6px;
+        /* deixa a linha abaixo do texto */
+        height: 2px;
+        background: currentColor;
+        /* <- fica azul */
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 250ms ease;
+    }
+
+    /* 4) Hover no LI faz a linha crescer */
+    .itens>li:hover>a::after,
+    .itens>li:hover>.escolas-trigger::after {
+        transform: scaleX(1);
     }
 }
