@@ -13,7 +13,7 @@ export class ApiService {
   private jsonImagensPequenas = 'assets/imagensPequenas.json';
 
   // ✅ JSON NOVO (aninhado)
-  private jsonEscolas = 'assets/novas-modalidades.json';
+  private jsonEscolas = '/assets/novas-modalidades.json';
 
   private url = 'http://localhost:8080/api/contato';
 
