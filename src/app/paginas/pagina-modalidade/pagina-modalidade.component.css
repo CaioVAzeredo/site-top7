@@ -88,6 +88,7 @@ img {
     overflow-x: auto;
     width: 100%;
 }
+
 .botao-voltar {
     display: block;
     color: var(--cor-azul-escuro);
@@ -105,7 +106,35 @@ img {
 .botao-voltar p {
     margin-top: 3px;
     margin-left: 5px;
-    
+
+}
+
+
+.container-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 30px 0 80px;
+}
+
+.container-botoes .aba-btn {
+    font-family: 'Sansation';
+    background-color: #ffffff;
+    color: #0643A5;
+    border: 2px solid #0643A5;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container-botoes .aba-btn.ativa {
+    background-color: #0643A5;
+    color: #ffffff;
+}
+
+.container-botoes .aba-btn:active {
+    transform: scale(0.98);
 }
 
 @media (min-width: 768px) {

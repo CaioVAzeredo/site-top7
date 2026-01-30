@@ -27,6 +27,11 @@ export class PaginaModalidadeComponent implements OnInit {
   grade: NivelGrade[] = [];
 
   constructor(private route: ActivatedRoute, private apiService: ApiService) { }
+  abaAtiva: 'grade' | 'uniformes' = 'grade';
+
+  setAba(aba: 'grade' | 'uniformes') {
+    this.abaAtiva = aba;
+  }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {

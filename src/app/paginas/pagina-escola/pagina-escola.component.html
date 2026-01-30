@@ -7,8 +7,22 @@
 <div *ngIf="escola" style="text-align:center; padding: 24px 16px;">
     <img [src]="escola.logo" [alt]="escola.nome" style="max-width: 320px; width: 90%; height: auto;">
 </div>
-<app-modalidades [escolaId]="escolaId" class="scroll-animar"></app-modalidades>
-<app-matriculas [escolaId]="escolaId"></app-matriculas>
+
+<div class="container-botoes">
+    <button type="button" class="aba-btn" [class.ativa]="abaAtiva === 'unidade'" (click)="setAba('unidade')">
+        Unidades
+    </button>
+
+    <button type="button" class="aba-btn" [class.ativa]="abaAtiva === 'adesao'" (click)="setAba('adesao')">
+        Adesão e mensalidade
+    </button>
+</div>
+<div *ngIf="abaAtiva === 'unidade'">
+    <app-modalidades [escolaId]="escolaId" class="scroll-animar"></app-modalidades>
+</div>
+<div *ngIf="abaAtiva === 'adesao'">
+    <app-matriculas [escolaId]="escolaId"></app-matriculas>
+</div>
 
 
 <app-rodape></app-rodape>

@@ -19,10 +19,15 @@ import { MatriculasComponent } from "../../componentes/matriculas/matriculas.com
   styleUrl: './pagina-escola.component.css'
 })
 export class PaginaEscolaComponent implements OnInit {
+  abaAtiva: 'unidade' | 'adesao' = 'unidade';
+
+  setAba(aba: 'adesao' | 'unidade') {
+    this.abaAtiva = aba;
+  }
   escolaId = '';
   escola: Escola | null = null;
 
-  constructor(private route: ActivatedRoute, private apiService: ApiService) {}
+  constructor(private route: ActivatedRoute, private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
