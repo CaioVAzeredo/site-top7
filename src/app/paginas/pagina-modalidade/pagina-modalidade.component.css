@@ -2,9 +2,6 @@
     display: block;
 }
 
-
-
-
 .grade-container {
     display: none;
 }
@@ -245,4 +242,279 @@ img {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+/* =========================
+   UNIFORMES (IGUAL AO PRINT)
+   ========================= */
+
+.uniformes-grid {
+    max-width: 980px;
+    margin: 0 auto 90px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+/* =========================
+   SETAS (FRENTE / COSTA)
+   ========================= */
+
+.uniforme-img-wrapper {
+    position: relative;
+    /* necessário pras setas ficarem em cima */
+}
+
+.uniforme-seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: rgba(255, 255, 255, 0.88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0;
+}
+
+.uniforme-seta.esquerda {
+    left: 10px;
+}
+
+.uniforme-seta.direita {
+    right: 10px;
+}
+
+.uniforme-seta .material-icons {
+    font-size: 26px;
+    color: var(--cor-azul-escuro);
+    line-height: 1;
+}
+
+.uniforme-seta:hover {
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.uniforme-seta:active {
+    transform: translateY(-50%) scale(0.96);
+}
+
+/* melhor toque no mobile */
+@media (max-width: 767px) {
+    .uniforme-seta {
+        width: 48px;
+        height: 48px;
+    }
+
+    .uniforme-seta .material-icons {
+        font-size: 30px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .uniformes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.uniforme-card {
+    background: #f4f4f4;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.uniforme-img-wrapper {
+    background: #d9d9d9;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* quadrado perfeito */
+}
+
+.uniforme-img-wrapper .uniforme-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.uniforme-info {
+    padding: 12px 14px 16px;
+    text-align: left;
+}
+
+.uniforme-desc {
+    margin: 0 0 8px;
+    font-size: 12px;
+    color: var(--cor-azul-escuro);
+    line-height: 1.25;
+}
+
+.uniforme-preco {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--cor-azul-escuro);
+}
+
+.uniforme-avulso {
+    margin: 0;
+    font-size: 10px;
+    color: #d30000;
+    line-height: 1.25;
+}
+
+.uniformes-vazio {
+    text-align: center;
+    color: var(--cor-azul-escuro);
+    margin: 30px 0 90px;
+}
+
+/* =========================
+   CLICK NA FOTO
+   ========================= */
+.uniforme-img {
+    cursor: pointer;
+}
+
+/* =========================
+   MODAL (LIGHTBOX)
+   ========================= */
+.uniforme-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    z-index: 999999;
+}
+
+.uniforme-modal {
+    width: min(980px, 100%);
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.uniforme-modal-fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.92);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.uniforme-modal-fechar .material-icons {
+    color: var(--cor-azul-escuro);
+    font-size: 22px;
+}
+
+.uniforme-modal-corpo {
+    position: relative;
+    background: #0b0b0b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* ✅ override do seu img global (pra não ficar height:100% e cover) */
+.uniforme-modal-img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 75vh;
+    object-fit: contain !important;
+    display: block;
+    background: #0b0b0b;
+}
+
+.uniforme-modal-rodape {
+    padding: 12px 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.uniforme-modal-desc {
+    margin: 0;
+    font-size: 13px;
+    color: var(--cor-azul-escuro);
+}
+
+.uniforme-modal-contador {
+    margin: 0;
+    font-size: 12px;
+    color: var(--cor-azul-escuro);
+    opacity: 0.8;
+}
+
+/* setas do modal */
+.uniforme-modal-seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.uniforme-modal-seta.esquerda {
+    left: 10px;
+}
+
+.uniforme-modal-seta.direita {
+    right: 10px;
+}
+
+.uniforme-modal-seta .material-icons {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.uniforme-modal-seta:hover {
+    background: rgba(255, 255, 255, 0.26);
+}
+
+.uniforme-modal-seta:active {
+    transform: translateY(-50%) scale(0.96);
+}
+
+@media (max-width: 767px) {
+    .uniforme-modal-img {
+        max-height: 70vh;
+    }
+
+    .uniforme-modal-seta {
+        width: 52px;
+        height: 52px;
+    }
+
+    .uniforme-modal-seta .material-icons {
+        font-size: 34px;
+    }
 }

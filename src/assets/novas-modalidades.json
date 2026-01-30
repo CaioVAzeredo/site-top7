@@ -598,22 +598,22 @@
             {
               "descricao": "Uniforme completo sigma asa sul - Masculino",
               "foto-frente": "/assets/uniformes/sigma/nao-basquete/masculino/as/sigma-as-frente.png",
-              "foto-costa": "/assets/uniformes/sigma/nao-basquete/masculino/as/sigma-as-costa.png"
+              "foto-costa": "/assets/uniformes/sigma/nao-basquete/masculino/as/sigma-as-costas.png"
             },
             {
               "descricao": "Uniforme completo basquete sigma asa sul - Masculino",
               "foto-frente": "/assets/uniformes/sigma/basquete/masculino/as/sigma-as-frente-basquete.png",
-              "foto-costa": "/assets/uniformes/sigma/basquete/masculino/as/sigma-as-costa-basquete.png"
+              "foto-costa": "/assets/uniformes/sigma/basquete/masculino/as/sigma-as-costas-basquete.png"
             },
             {
               "descricao": "Uniforme completo sigma asa sul - Feminino",
-              "foto-frente": "/assets/uniformes/sigma/nao-basquete/feminino/as/sigma-as-frente.png",
-              "foto-costa": "/assets/uniformes/sigma/nao-basquete/feminino/as/sigma-as-costa.png"
+              "foto-frente": "/assets/uniformes/sigma/nao-basquete/feminino/as/sigma-as-frente-feminino.png",
+              "foto-costa": "/assets/uniformes/sigma/nao-basquete/feminino/as/sigma-as-costa-feminino.png"
             },
             {
               "descricao": "Uniforme completo basquete sigma asa sul - Feminino",
-              "foto-frente": "/assets/uniformes/sigma/basquete/feminino/as/sigma-as-frente-basquete.png",
-              "foto-costa": "/assets/uniformes/sigma/basquete/feminino/as/sigma-as-costa-basquete.png"
+              "foto-frente": "/assets/uniformes/sigma/basquete/feminino/as/sigma-as-frente-basquete-feminino.png",
+              "foto-costa": "/assets/uniformes/sigma/basquete/feminino/as/sigma-as-costas-basquete-feminino.png"
             }
           ]
         },
@@ -705,22 +705,22 @@
             {
               "descricao": "Uniforme completo sigma asa norte - Masculino",
               "foto-frente": "/assets/uniformes/sigma/nao-basquete/masculino/an/sigma-an-frente.png",
-              "foto-costa": "/assets/uniformes/sigma/nao-basquete/masculino/an/sigma-an-costa.png"
+              "foto-costa": "/assets/uniformes/sigma/nao-basquete/masculino/an/sigma-an-costas.png"
             },
             {
               "descricao": "Uniforme completo basquete sigma asa norte - Masculino",
               "foto-frente": "/assets/uniformes/sigma/basquete/masculino/an/sigma-an-frente-basquete.png",
-              "foto-costa": "/assets/uniformes/sigma/basquete/masculino/an/sigma-an-costa-basquete.png"
+              "foto-costa": "/assets/uniformes/sigma/basquete/masculino/an/sigma-an-costas-basquete.png"
             },
             {
               "descricao": "Uniforme completo sigma asa norte - Feminino",
-              "foto-frente": "/assets/uniformes/sigma/nao-basquete/feminino/an/sigma-an-frente.png",
-              "foto-costa": "/assets/uniformes/sigma/nao-basquete/feminino/an/sigma-an-costa.png"
+              "foto-frente": "/assets/uniformes/sigma/nao-basquete/feminino/an/sigma-an-frente-feminino.png",
+              "foto-costa": "/assets/uniformes/sigma/nao-basquete/feminino/an/sigma-an-costa-feminino.png"
             },
             {
               "descricao": "Uniforme completo basquete sigma asa norte - Feminino",
-              "foto-frente": "/assets/uniformes/sigma/basquete/feminino/an/sigma-an-frente-basquete.png",
-              "foto-costa": "/assets/uniformes/sigma/basquete/feminino/an/sigma-an-costa-basquete.png"
+              "foto-frente": "/assets/uniformes/sigma/basquete/feminino/an/sigma-an-frente-basquete-feminino.png",
+              "foto-costa": "/assets/uniformes/sigma/basquete/feminino/an/sigma-an-costas-basquete-feminino.png"
             }
           ]
         },
@@ -828,17 +828,17 @@
             {
               "descricao": "Uniforme completo sigma Águas Claras - Masculino",
               "foto-frente": "/assets/uniformes/sigma/nao-basquete/masculino/ac/sigma-ac-frente.png",
-              "foto-costa": "/assets/uniformes/sigma/nao-basquete/masculino/ac/sigma-ac-costa.png"
+              "foto-costa": "/assets/uniformes/sigma/nao-basquete/masculino/ac/sigma-ac-costas.png"
             },
             {
               "descricao": "Uniforme completo basquete sigma Águas Claras - Masculino",
               "foto-frente": "/assets/uniformes/sigma/basquete/masculino/ac/sigma-ac-frente-basquete.png",
-              "foto-costa": "/assets/uniformes/sigma/basquete/masculino/ac/sigma-ac-costa-basquete.png"
+              "foto-costa": "/assets/uniformes/sigma/basquete/masculino/ac/sigma-ac-costas-basquete.png"
             },
             {
               "descricao": "Uniforme completo sigma Águas Claras - Feminino",
               "foto-frente": "/assets/uniformes/sigma/nao-basquete/feminino/ac/sigma-ac-frente-feminino.png",
-              "foto-costa": "/assets/uniformes/sigma/nao-basquete/feminino/ac/sigma-ac-costa-feminino.png"
+              "foto-costa": "/assets/uniformes/sigma/nao-basquete/feminino/ac/sigma-ac-costas-feminino.png"
             },
             {
               "descricao": "Uniforme completo basquete sigma Águas Claras - Feminino",

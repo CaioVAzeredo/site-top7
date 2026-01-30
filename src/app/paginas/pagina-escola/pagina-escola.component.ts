@@ -14,7 +14,7 @@ import { MatriculasComponent } from "../../componentes/matriculas/matriculas.com
 @Component({
   selector: 'app-pagina-escola',
   standalone: true,
-  imports: [CommonModule, CabecalhoComponent, RodapeComponent, BotaoSubirComponent, ModalidadesComponent, RouterLink, MatriculasComponent],
+  imports: [CommonModule, CabecalhoComponent, RodapeComponent, BotaoSubirComponent, ModalidadesComponent, RouterLink],
   templateUrl: './pagina-escola.component.html',
   styleUrl: './pagina-escola.component.css'
 })

@@ -10,7 +10,6 @@
   <img [src]="imagem" alt="{{ titulo }}" class="imagem-modalidade" />
 </div>
 
-
 <div class="container-botoes">
   <button type="button" class="aba-btn" [class.ativa]="abaAtiva === 'grade'" (click)="setAba('grade')">
     Grades de atividades
@@ -19,11 +18,14 @@
   <button type="button" class="aba-btn" [class.ativa]="abaAtiva === 'uniformes'" (click)="setAba('uniformes')">
     Uniformes
   </button>
+
+  <button type="button" class="aba-btn" [class.ativa]="abaAtiva === 'adesao'" (click)="setAba('adesao')">
+    Adesão e mensalidade
+  </button>
 </div>
 
+<!-- ✅ ABA: GRADE -->
 <div *ngIf="abaAtiva === 'grade'">
-
-
   <h2 class="titulo-atividade">Grades de atividades</h2>
   <p class="paragrafo">Veja as atividades de cada turma</p>
 
@@ -80,7 +82,6 @@
     <div *ngFor="let item of grade" class="bloco-nivel">
       <h2 class="titulo-nivel">{{ item.nivel || 'Geral' }}</h2>
 
-      <!-- Header aparece UMA vez -->
       <div class="linha header">
         <div class="celula inicio">Horário</div>
         <div class="celula">Seg</div>
@@ -90,7 +91,6 @@
         <div class="celula">Sex</div>
       </div>
 
-      <!-- Cada horário vira UMA linha -->
       <div *ngFor="let horario of item.horarios" class="linha">
         <div class="celula inicio">{{ horario.horario }}</div>
         <div class="celula">{{ horario.seg }}</div>
@@ -103,11 +103,85 @@
   </section>
 </div>
 
+<!-- ✅ ABA: ADESÃO -->
+<div *ngIf="abaAtiva === 'adesao'">
+  <app-matriculas [escolaId]="escolaId"></app-matriculas>
+</div>
+
+<!-- ✅ ABA: UNIFORMES (IGUAL AO PRINT) -->
+<!-- ✅ ABA: UNIFORMES -->
 <div *ngIf="abaAtiva === 'uniformes'">
-  
   <h2 class="titulo-atividade">Uniformes</h2>
   <p class="paragrafo">Veja os uniformes disponíveis</p>
+
+  <section class="uniformes-grid" *ngIf="uniformes.length > 0; else semUniformes">
+    <article class="uniforme-card" *ngFor="let u of uniformes; let i = index">
+      <div class="uniforme-img-wrapper">
+        <ng-container *ngIf="getFotos(u) as fotos">
+          <img class="uniforme-img" [src]="getFotoAtual(u, i) || ''" [alt]="u.descricao"
+            (click)="openUniformeModal(u, i)" (error)="onUniformeImgError(i, fotos.length)"
+            (load)="onUniformeImgLoad(i)" />
+
+          <!-- ✅ setas no card -->
+          <button *ngIf="fotos.length > 1" type="button" class="uniforme-seta esquerda"
+            (click)="changeFoto(i, fotos.length, -1)" aria-label="Foto anterior">
+            <span class="material-icons">chevron_left</span>
+          </button>
+
+          <button *ngIf="fotos.length > 1" type="button" class="uniforme-seta direita"
+            (click)="changeFoto(i, fotos.length, 1)" aria-label="Próxima foto">
+            <span class="material-icons">chevron_right</span>
+          </button>
+        </ng-container>
+      </div>
+
+      <div class="uniforme-info">
+        <p class="uniforme-desc">{{ u.descricao }}</p>
+        <p class="uniforme-preco">R$ {{ formatBRL(precoUniforme) }}</p>
+        <p class="uniforme-avulso">
+          Valor da camisa avulsa e short avulso é de R${{ formatBRL(precoAvulso) }}.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <ng-template #semUniformes>
+    <p class="uniformes-vazio">Nenhum uniforme cadastrado para esta unidade.</p>
+  </ng-template>
 </div>
+
+<!-- ✅ MODAL (Lightbox) -->
+<div class="uniforme-modal-backdrop" *ngIf="modalAberto" (click)="closeUniformeModal()">
+  <div class="uniforme-modal" role="dialog" aria-modal="true" (click)="$event.stopPropagation()">
+    <button type="button" class="uniforme-modal-fechar" aria-label="Fechar" (click)="closeUniformeModal()">
+      <span class="material-icons">close</span>
+    </button>
+
+    <div class="uniforme-modal-corpo">
+      <img class="uniforme-modal-img" [src]="modalFotos[modalIndex]" [alt]="modalDescricao" />
+
+      <button *ngIf="modalFotos.length > 1" type="button" class="uniforme-modal-seta esquerda"
+        aria-label="Foto anterior" (click)="modalPrev()">
+        <span class="material-icons">chevron_left</span>
+      </button>
+
+      <button *ngIf="modalFotos.length > 1" type="button" class="uniforme-modal-seta direita" aria-label="Próxima foto"
+        (click)="modalNext()">
+        <span class="material-icons">chevron_right</span>
+      </button>
+    </div>
+
+    <div class="uniforme-modal-rodape">
+      <p class="uniforme-modal-desc">{{ modalDescricao }}</p>
+      <p class="uniforme-modal-contador" *ngIf="modalFotos.length > 1">
+        {{ modalIndex + 1 }} / {{ modalFotos.length }}
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
 <app-rodape></app-rodape>
 <!-- <app-wpp [numero]="numero"></app-wpp> -->
 <app-botao-subir></app-botao-subir>
