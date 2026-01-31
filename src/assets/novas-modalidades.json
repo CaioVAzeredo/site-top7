@@ -17,7 +17,7 @@
       "unidades": [
         {
           "id": 1,
-          "imagem": "/assets/tag31.png",
+          "imagem": "/assets/tag31.webp",
           "titulo": "Taguatinga- QNG 31",
           "numero": "556196361274",
           "grade": [
@@ -46,7 +46,7 @@
         },
         {
           "id": 2,
-          "imagem": "/assets/tag26.png",
+          "imagem": "/assets/tag26.webp",
           "titulo": "Taguatinga- QNG 26",
           "numero": "000000000",
           "grade": [
@@ -112,7 +112,7 @@
         },
         {
           "id": 3,
-          "imagem": "/assets/acj.png",
+          "imagem": "/assets/acj.webp",
           "titulo": "Águas Claras Jequitibá",
           "numero": "5561998571076",
           "grade": [
@@ -205,7 +205,7 @@
         },
         {
           "id": 4,
-          "imagem": "/assets/acm.png",
+          "imagem": "/assets/acm.webp",
           "titulo": "Águas Claras Manacá",
           "numero": "556196405103",
           "grade": [
@@ -266,7 +266,7 @@
         },
         {
           "id": 5,
-          "imagem": "/assets/as.png",
+          "imagem": "/assets/as.webp",
           "titulo": "Asa Sul",
           "numero": "000000000",
           "grade": [
@@ -295,7 +295,7 @@
         },
         {
           "id": 6,
-          "imagem": "/assets/an.png",
+          "imagem": "/assets/an.webp",
           "titulo": "Asa Norte",
           "numero": "556198772756",
           "grade": [
@@ -385,7 +385,7 @@
         },
         {
           "id": 7,
-          "imagem": "/assets/jb.png",
+          "imagem": "/assets/jb.webp",
           "titulo": "Jardim Botânico",
           "numero": "556199941748",
           "grade": [
@@ -448,7 +448,7 @@
       "unidades": [
         {
           "id": "sigma-asa-sul",
-          "imagem": "/assets/sigma-asa-sul.png",
+          "imagem": "/assets/sigma-asa-sul.webp",
           "titulo": "Sigma - Asa Sul",
           "numero": "",
           "grade": [
