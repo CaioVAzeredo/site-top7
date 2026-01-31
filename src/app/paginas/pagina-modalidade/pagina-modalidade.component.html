@@ -112,7 +112,8 @@
 <!-- ✅ ABA: UNIFORMES -->
 <div *ngIf="abaAtiva === 'uniformes'">
   <h2 class="titulo-atividade">Uniformes</h2>
-  <p class="paragrafo">Veja os uniformes disponíveis</p>
+  <p class="paragrafo">{{ getTextoUniformes() }}</p>
+
 
   <section class="uniformes-grid" *ngIf="uniformes.length > 0; else semUniformes">
     <article class="uniforme-card" *ngFor="let u of uniformes; let i = index">

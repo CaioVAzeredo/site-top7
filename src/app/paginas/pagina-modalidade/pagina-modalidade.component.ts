@@ -57,7 +57,12 @@ export class PaginaModalidadeComponent implements OnInit {
   modalIndex = 0;
   modalDescricao = '';
 
-  constructor(private route: ActivatedRoute, private apiService: ApiService) {}
+  constructor(private route: ActivatedRoute, private apiService: ApiService) { }
+  getTextoUniformes(): string {
+    return this.escolaId === 'ideal'
+      ? 'Compras apenas na secretaria'
+      : 'Compras apenas na recepção';
+  }
 
   setAba(aba: 'grade' | 'uniformes' | 'adesao') {
     this.abaAtiva = aba;

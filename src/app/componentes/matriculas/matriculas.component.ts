@@ -27,7 +27,11 @@ export class MatriculasComponent implements OnChanges {
   matriculas: MatriculasInfo | null = null;
 
   constructor(private apiService: ApiService) { }
-
+  getTextoUniformes(): string {
+    return this.escolaId === 'ideal'
+      ? 'Compras apenas na secretaria'
+      : 'Compras apenas na recepção';
+  }
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['escolaId']) {
       this.carregarDados();
