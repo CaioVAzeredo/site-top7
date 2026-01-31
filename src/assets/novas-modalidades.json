@@ -46,8 +46,13 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo Colégio Ideal Taguatinga - QNG 31 - Masculino",
-              "foto-frente": "/assets/uniformes/ideal/masculino/tg31/ideal-tg31-frente.png",
-              "foto-costa": "/assets/uniformes/ideal/masculino/tg31/ideal-tg31-costas.png"
+              "foto-frente": "/assets/uniformes/ideal/masculino/tg31/ideal-tg31-frente.webp",
+              "foto-costa": "/assets/uniformes/ideal/masculino/tg31/ideal-tg31-costas.webp"
+            },
+            {
+              "descricao": "Uniforme completo Colégio Ideal Taguatinga - QNG 31 - Feminio",
+              "foto-frente": "/assets/uniformes/ideal/feminino/tg31/ideal-tg31-frente-feminino.webp",
+              "foto-costa": "/assets/uniformes/ideal/feminino/tg31/ideal-tg31-costas-feminino.webp"
             }
           ]
         },
@@ -119,8 +124,13 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo Colégio Ideal Taguatinga - QNG 26 - Masculino",
-              "foto-frente": "/assets/uniformes/ideal/masculino/tg31/ideal-tg31-frente.png",
-              "foto-costa": "/assets/uniformes/ideal/masculino/tg31/ideal-tg31-costas.png"
+              "foto-frente": "/assets/uniformes/ideal/masculino/tg31/ideal-tg31-frente.webp",
+              "foto-costa": "/assets/uniformes/ideal/masculino/tg31/ideal-tg31-costas.webp"
+            },
+            {
+              "descricao": "Uniforme completo Colégio Ideal Taguatinga - QNG 26 - Feminio",
+              "foto-frente": "/assets/uniformes/ideal/feminino/tg31/ideal-tg31-frente-feminino.webp",
+              "foto-costa": "/assets/uniformes/ideal/feminino/tg31/ideal-tg31-costas-feminino.webp"
             }
           ]
         },
@@ -219,8 +229,13 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo Colégio Ideal Águas Claras Jequitibá - Masculino",
-              "foto-frente": "/assets/uniformes/ideal/masculino/ajb/ideal-ajb-frente.png",
-              "foto-costa": "/assets/uniformes/ideal/masculino/ajb/ideal-ajb-costas.png"
+              "foto-frente": "/assets/uniformes/ideal/masculino/ajb/ideal-ajb-frente.webp",
+              "foto-costa": "/assets/uniformes/ideal/masculino/ajb/ideal-ajb-costas.webp"
+            },
+            {
+              "descricao": "Uniforme completo Colégio Ideal Taguatinga - Águas Claras Jequitibá - Feminio",
+              "foto-frente": "/assets/uniformes/ideal/feminino/ajb/ideal-ajb-frente-feminino.webp",
+              "foto-costa": "/assets/uniformes/ideal/feminino/ajb/ideal-ajb-costas-feminino.webp"
             }
           ]
         },
@@ -287,8 +302,13 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo Colégio Ideal Águas Claras Manacá - Masculino",
-              "foto-frente": "/assets/uniformes/ideal/masculino/am/ideal-am-frente.png",
-              "foto-costa": "/assets/uniformes/ideal/masculino/am/ideal-am-costas.png"
+              "foto-frente": "/assets/uniformes/ideal/masculino/am/ideal-am-frente.webp",
+              "foto-costa": "/assets/uniformes/ideal/masculino/am/ideal-am-costas.webp"
+            },
+            {
+              "descricao": "Uniforme completo Colégio Ideal Taguatinga - Águas Claras Manacá - Feminio",
+              "foto-frente": "/assets/uniformes/ideal/feminino/am/ideal-am-frente-feminino.webp",
+              "foto-costa": "/assets/uniformes/ideal/feminino/am/ideal-am-costas-feminino.webp"
             }
           ]
         },
@@ -323,8 +343,13 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo Colégio Ideal Asa Sul - Masculino",
-              "foto-frente": "/assets/uniformes/ideal/masculino/as/ideal-as-frente.png",
-              "foto-costa": "/assets/uniformes/ideal/masculino/as/ideal-as-costas.png"
+              "foto-frente": "/assets/uniformes/ideal/masculino/as/ideal-as-frente.webp",
+              "foto-costa": "/assets/uniformes/ideal/masculino/as/ideal-as-costas.webp"
+            },
+            {
+              "descricao": "Uniforme completo Colégio Ideal Taguatinga Asa Sul - Feminio",
+              "foto-frente": "/assets/uniformes/ideal/feminino/as/ideal-as-frente-feminino.webp",
+              "foto-costa": "/assets/uniformes/ideal/feminino/as/ideal-as-costas-feminino.webp"
             }
           ]
         },
@@ -420,8 +445,13 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo Colégio Ideal Asa Norte - Masculino",
-              "foto-frente": "/assets/uniformes/ideal/masculino/an/ideal-an-frente.png",
-              "foto-costa": "/assets/uniformes/ideal/masculino/an/ideal-an-costas.png"
+              "foto-frente": "/assets/uniformes/ideal/masculino/an/ideal-an-frente.webp",
+              "foto-costa": "/assets/uniformes/ideal/masculino/an/ideal-an-costas.webp"
+            },
+            {
+              "descricao": "Uniforme completo Colégio Ideal Asa Norte - Feminio",
+              "foto-frente": "/assets/uniformes/ideal/feminino/an/ideal-an-frente-feminino.webp",
+              "foto-costa": "/assets/uniformes/ideal/feminino/an/ideal-an-costas-feminino.webp"
             }
           ]
         },
@@ -472,8 +502,13 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo Colégio Ideal Jardim Botânico - Masculino",
-              "foto-frente": "/assets/uniformes/ideal/masculino/jb/ideal-jb-frente.png",
-              "foto-costa": "/assets/uniformes/ideal/masculino/jb/ideal-jb-costas.png"
+              "foto-frente": "/assets/uniformes/ideal/masculino/jb/ideal-jb-frente.webp",
+              "foto-costa": "/assets/uniformes/ideal/masculino/jb/ideal-jb-costas.webp"
+            },
+            {
+              "descricao": "Uniforme completo Colégio Ideal Jardim Botânico - Feminio",
+              "foto-frente": "/assets/uniformes/ideal/feminino/jb/ideal-jb-frente-feminino.webp",
+              "foto-costa": "/assets/uniformes/ideal/feminino/jb/ideal-jb-costas-feminino.webp"
             }
           ]
         }
