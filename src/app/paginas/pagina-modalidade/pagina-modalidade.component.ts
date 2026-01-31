@@ -25,7 +25,6 @@ type Uniforme = {
     RouterLink,
     CabecalhoComponent,
     RodapeComponent,
-    WppComponent,
     BotaoSubirComponent,
     MatriculasComponent,
   ],

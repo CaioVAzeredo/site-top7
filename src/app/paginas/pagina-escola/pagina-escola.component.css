@@ -63,7 +63,7 @@
     z-index: 10000;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 975px) {
     .botao-voltar {
         display: none;
     }

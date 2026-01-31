@@ -136,10 +136,6 @@ img {
 
 @media (min-width: 768px) {
 
-    .botao-voltar {
-        display: none;
-    }
-
     .titulo-principal-tela-grande {
         font-size: 34px;
     }
@@ -351,21 +347,21 @@ img {
 
 .uniforme-desc {
     margin: 0 0 8px;
-    font-size: 12px;
+    font-size: 17px;
     color: var(--cor-azul-escuro);
     line-height: 1.25;
 }
 
 .uniforme-preco {
     margin: 0 0 8px;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--cor-azul-escuro);
 }
 
 .uniforme-avulso {
     margin: 0;
-    font-size: 10px;
+    font-size: 13px;
     color: #d30000;
     line-height: 1.25;
 }
@@ -517,4 +513,47 @@ img {
     .uniforme-modal-seta .material-icons {
         font-size: 34px;
     }
+
+
+}
+
+@media (max-width: 675px) {
+    .container-botoes {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 18px 0 36px;
+            padding: 30px 12px;
+    
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            white-space: nowrap;
+        }
+    
+        .container-botoes .aba-btn {
+            flex: 0 0 auto;
+            white-space: nowrap;
+            font-size: 14px;
+            padding: 8px 12px;
+            line-height: 1.1;
+        }
+
+        .container-botoes::-webkit-scrollbar {
+            height: 10px;
+        }
+
+}
+@media (max-width: 464px) {
+    .container-botoes {
+            display: flex;
+            justify-content: flex-start;
+        }
+}
+
+
+@media (min-width: 975px) {
+    .botao-voltar {
+        display: none;
+    }
+
 }
