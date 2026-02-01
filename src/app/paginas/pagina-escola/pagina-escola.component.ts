@@ -9,25 +9,39 @@ import { CabecalhoComponent } from '../../componentes/cabecalho/cabecalho.compon
 import { RodapeComponent } from '../../componentes/rodape/rodape.component';
 import { BotaoSubirComponent } from '../../componentes/botao-subir/botao-subir.component';
 import { ModalidadesComponent } from '../../componentes/modalidades-component/modalidades.component';
-import { MatriculasComponent } from "../../componentes/matriculas/matriculas.component";
 
 @Component({
   selector: 'app-pagina-escola',
   standalone: true,
-  imports: [CommonModule, CabecalhoComponent, RodapeComponent, BotaoSubirComponent, ModalidadesComponent, RouterLink],
+  imports: [
+    CommonModule,
+    CabecalhoComponent,
+    RodapeComponent,
+    BotaoSubirComponent,
+    ModalidadesComponent,
+    RouterLink
+  ],
   templateUrl: './pagina-escola.component.html',
-  styleUrl: './pagina-escola.component.css'
+  styleUrls: ['./pagina-escola.component.css'],
 })
 export class PaginaEscolaComponent implements OnInit {
   abaAtiva: 'unidade' | 'adesao' = 'unidade';
 
-  setAba(aba: 'adesao' | 'unidade') {
-    this.abaAtiva = aba;
-  }
   escolaId = '';
   escola: Escola | null = null;
 
-  constructor(private route: ActivatedRoute, private apiService: ApiService) { }
+  // ✅ loading por componente
+  carregandoEscola = true;
+
+  // ✅ loading da logo (não mostra carregando)
+  logoImgLoaded = false;
+  logoImgError = false;
+
+  constructor(private route: ActivatedRoute, private apiService: ApiService) {}
+
+  setAba(aba: 'adesao' | 'unidade') {
+    this.abaAtiva = aba;
+  }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -38,8 +52,37 @@ export class PaginaEscolaComponent implements OnInit {
   }
 
   private carregarEscola(): void {
-    this.apiService.getEscolas().subscribe(escolas => {
-      this.escola = escolas.find(e => e.id === this.escolaId) ?? null;
+    this.carregandoEscola = true;
+
+    // reset estados da imagem
+    this.logoImgLoaded = false;
+    this.logoImgError = false;
+
+    this.apiService.getEscolas().subscribe({
+      next: escolas => {
+        this.escola = escolas.find(e => e.id === this.escolaId) ?? null;
+
+        // ao trocar escola, volta a mostrar skeleton da logo até carregar
+        this.logoImgLoaded = false;
+        this.logoImgError = false;
+
+        this.carregandoEscola = false;
+      },
+      error: () => {
+        this.escola = null;
+        this.carregandoEscola = false;
+      }
     });
+  }
+
+  // ✅ eventos da logo
+  onLogoLoad() {
+    this.logoImgLoaded = true;
+    this.logoImgError = false;
+  }
+
+  onLogoError() {
+    this.logoImgError = true;
+    this.logoImgLoaded = false;
   }
 }

@@ -1,12 +1,33 @@
 <app-cabecalho></app-cabecalho>
+
 <a [routerLink]="['/escolas', escolaId]" class="botao-voltar">
   <span class="material-icons">arrow_back</span>
 </a>
 
-<h2 class="titulo-principal titulo-principal-tela-grande">{{ titulo }}</h2>
+<!-- TÍTULO (skeleton enquanto dados não chegam) -->
+<h2 class="titulo-principal titulo-principal-tela-grande">
+  <ng-container *ngIf="!carregandoUnidade; else tituloSkeleton">
+    {{ titulo }}
+  </ng-container>
 
+  <ng-template #tituloSkeleton>
+    <span class="skeleton skeleton-text skeleton-title"></span>
+  </ng-template>
+</h2>
+
+<!-- IMAGEM PRINCIPAL (não aparece carregando) -->
 <div class="container-imagem imagem-modalidade-tela-grande">
-  <img [src]="imagem" alt="{{ titulo }}" class="imagem-modalidade" />
+  <!-- skeleton por trás enquanto carrega -->
+  <div class="img-skeleton" *ngIf="!heroImgLoaded && !heroImgError"></div>
+
+  <!-- fallback se der erro -->
+  <div class="img-fallback" *ngIf="heroImgError">
+    <span class="material-icons">broken_image</span>
+    <p>Imagem indisponível</p>
+  </div>
+
+  <img *ngIf="imagem && !heroImgError" [src]="imagem" [alt]="titulo" class="imagem-modalidade" (load)="onHeroImgLoad()"
+    (error)="onHeroImgError()" [class.img-hidden]="!heroImgLoaded" [class.img-visible]="heroImgLoaded" />
 </div>
 
 <div class="container-botoes">
@@ -28,125 +49,160 @@
   <h2 class="titulo-atividade">Grades de atividades</h2>
   <p class="paragrafo">Veja as atividades de cada turma</p>
 
-  <!-- MOBILE -->
-  <section class="modal-tela-pequena">
-    <div *ngFor="let item of grade" class="lista-horarios">
-      <h2 class="titulo-secundario">{{ item.nivel || 'Geral' }}</h2>
+  <!-- skeleton enquanto carrega unidade -->
+  <ng-container *ngIf="!carregandoUnidade; else gradeSkeleton">
+    <!-- MOBILE -->
+    <section class="modal-tela-pequena">
+      <div *ngFor="let item of grade; trackBy: trackByIndex" class="lista-horarios">
+        <h2 class="titulo-secundario">{{ item.nivel || 'Geral' }}</h2>
 
-      <div *ngFor="let horario of item.horarios" class="blocos-horario">
-        <p class="horario">{{ horario.horario }}</p>
+        <div *ngFor="let horario of item.horarios; trackBy: trackByIndex" class="blocos-horario">
+          <p class="horario">{{ horario.horario }}</p>
 
-        <ul class="scroll-horarios">
-          <li class="container-dias-semana">
-            <ul>
-              <li>Seg</li>
-            </ul>
-            <p>{{ horario.seg }}</p>
-          </li>
+          <ul class="scroll-horarios">
+            <li class="container-dias-semana">
+              <ul>
+                <li>Seg</li>
+              </ul>
+              <p>{{ horario.seg }}</p>
+            </li>
 
-          <li class="container-dias-semana">
-            <ul>
-              <li>Ter</li>
-            </ul>
-            <p>{{ horario.ter }}</p>
-          </li>
+            <li class="container-dias-semana">
+              <ul>
+                <li>Ter</li>
+              </ul>
+              <p>{{ horario.ter }}</p>
+            </li>
 
-          <li class="container-dias-semana">
-            <ul>
-              <li>Qua</li>
-            </ul>
-            <p>{{ horario.qua }}</p>
-          </li>
+            <li class="container-dias-semana">
+              <ul>
+                <li>Qua</li>
+              </ul>
+              <p>{{ horario.qua }}</p>
+            </li>
 
-          <li class="container-dias-semana">
-            <ul>
-              <li>Qui</li>
-            </ul>
-            <p>{{ horario.qui }}</p>
-          </li>
+            <li class="container-dias-semana">
+              <ul>
+                <li>Qui</li>
+              </ul>
+              <p>{{ horario.qui }}</p>
+            </li>
 
-          <li class="container-dias-semana">
-            <ul>
-              <li>Sex</li>
-            </ul>
-            <p>{{ horario.sex }}</p>
-          </li>
-        </ul>
+            <li class="container-dias-semana">
+              <ul>
+                <li>Sex</li>
+              </ul>
+              <p>{{ horario.sex }}</p>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- DESKTOP -->
-  <section class="grade-container">
-    <div *ngFor="let item of grade" class="bloco-nivel">
-      <h2 class="titulo-nivel">{{ item.nivel || 'Geral' }}</h2>
+    <!-- DESKTOP -->
+    <section class="grade-container">
+      <div *ngFor="let item of grade; trackBy: trackByIndex" class="bloco-nivel">
+        <h2 class="titulo-nivel">{{ item.nivel || 'Geral' }}</h2>
 
-      <div class="linha header">
-        <div class="celula inicio">Horário</div>
-        <div class="celula">Seg</div>
-        <div class="celula">Ter</div>
-        <div class="celula">Qua</div>
-        <div class="celula">Qui</div>
-        <div class="celula">Sex</div>
+        <div class="linha header">
+          <div class="celula inicio">Horário</div>
+          <div class="celula">Seg</div>
+          <div class="celula">Ter</div>
+          <div class="celula">Qua</div>
+          <div class="celula">Qui</div>
+          <div class="celula">Sex</div>
+        </div>
+
+        <div *ngFor="let horario of item.horarios; trackBy: trackByIndex" class="linha">
+          <div class="celula inicio">{{ horario.horario }}</div>
+          <div class="celula">{{ horario.seg }}</div>
+          <div class="celula">{{ horario.ter }}</div>
+          <div class="celula">{{ horario.qua }}</div>
+          <div class="celula">{{ horario.qui }}</div>
+          <div class="celula">{{ horario.sex }}</div>
+        </div>
       </div>
+    </section>
+  </ng-container>
 
-      <div *ngFor="let horario of item.horarios" class="linha">
-        <div class="celula inicio">{{ horario.horario }}</div>
-        <div class="celula">{{ horario.seg }}</div>
-        <div class="celula">{{ horario.ter }}</div>
-        <div class="celula">{{ horario.qua }}</div>
-        <div class="celula">{{ horario.qui }}</div>
-        <div class="celula">{{ horario.sex }}</div>
-      </div>
-    </div>
-  </section>
+  <ng-template #gradeSkeleton>
+    <div class="skeleton-block skeleton-grade"></div>
+    <div class="skeleton-block skeleton-grade"></div>
+    <div class="skeleton-block skeleton-grade"></div>
+  </ng-template>
 </div>
 
 <!-- ✅ ABA: ADESÃO -->
 <div *ngIf="abaAtiva === 'adesao'">
-  <app-matriculas [escolaId]="escolaId"></app-matriculas>
+  <ng-container *ngIf="!carregandoUnidade; else adesaoSkeleton">
+    <app-matriculas [escolaId]="escolaId"></app-matriculas>
+  </ng-container>
+
+  <ng-template #adesaoSkeleton>
+    <div class="skeleton-block skeleton-adesao"></div>
+  </ng-template>
 </div>
 
-<!-- ✅ ABA: UNIFORMES (IGUAL AO PRINT) -->
 <!-- ✅ ABA: UNIFORMES -->
 <div *ngIf="abaAtiva === 'uniformes'">
   <h2 class="titulo-atividade">Uniformes</h2>
   <p class="paragrafo">{{ getTextoUniformes() }}</p>
 
+  <ng-container *ngIf="!carregandoUnidade; else uniformesSkeleton">
+    <section class="uniformes-grid" *ngIf="uniformes.length > 0; else semUniformes">
+      <article class="uniforme-card" *ngFor="let u of uniformes; let i = index; trackBy: trackByIndex">
+        <div class="uniforme-img-wrapper">
+          <ng-container *ngIf="getFotos(u) as fotos">
+            <!-- skeleton enquanto a imagem do card não carregou -->
+            <div class="img-skeleton" *ngIf="!isUniformeImgLoaded(i) && !isUniformeImgError(i)"></div>
 
-  <section class="uniformes-grid" *ngIf="uniformes.length > 0; else semUniformes">
-    <article class="uniforme-card" *ngFor="let u of uniformes; let i = index">
-      <div class="uniforme-img-wrapper">
-        <ng-container *ngIf="getFotos(u) as fotos">
-          <img class="uniforme-img" [src]="getFotoAtual(u, i) || ''" [alt]="u.descricao"
-            (click)="openUniformeModal(u, i)" (error)="onUniformeImgError(i, fotos.length)"
-            (load)="onUniformeImgLoad(i)" />
+            <!-- fallback se der erro -->
+            <div class="img-fallback card-fallback" *ngIf="isUniformeImgError(i)">
+              <span class="material-icons">broken_image</span>
+              <p>Sem foto</p>
+            </div>
 
-          <!-- ✅ setas no card -->
-          <button *ngIf="fotos.length > 1" type="button" class="uniforme-seta esquerda"
-            (click)="changeFoto(i, fotos.length, -1)" aria-label="Foto anterior">
-            <span class="material-icons">chevron_left</span>
-          </button>
+            <img class="uniforme-img" *ngIf="(getFotoAtual(u, i) || '') && !isUniformeImgError(i)"
+              [src]="getFotoAtual(u, i) || ''" [alt]="u.descricao" (click)="openUniformeModal(u, i)"
+              (error)="onUniformeImgError(i, fotos.length)" (load)="onUniformeImgLoad(i)"
+              [class.img-hidden]="!isUniformeImgLoaded(i)" [class.img-visible]="isUniformeImgLoaded(i)" />
 
-          <button *ngIf="fotos.length > 1" type="button" class="uniforme-seta direita"
-            (click)="changeFoto(i, fotos.length, 1)" aria-label="Próxima foto">
-            <span class="material-icons">chevron_right</span>
-          </button>
-        </ng-container>
+            <!-- ✅ setas no card -->
+            <button *ngIf="fotos.length > 1" type="button" class="uniforme-seta esquerda"
+              (click)="changeFoto(i, fotos.length, -1)" aria-label="Foto anterior">
+              <span class="material-icons">chevron_left</span>
+            </button>
+
+            <button *ngIf="fotos.length > 1" type="button" class="uniforme-seta direita"
+              (click)="changeFoto(i, fotos.length, 1)" aria-label="Próxima foto">
+              <span class="material-icons">chevron_right</span>
+            </button>
+          </ng-container>
+        </div>
+
+        <div class="uniforme-info">
+          <p class="uniforme-desc">{{ u.descricao }}</p>
+          <p class="uniforme-preco">R$ {{ formatBRL(precoUniforme) }}</p>
+          <p class="uniforme-avulso">
+            Valor da camisa avulsa e short avulso é de R${{ formatBRL(precoAvulso) }}.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <ng-template #semUniformes>
+      <p class="uniformes-vazio">Nenhum uniforme cadastrado para esta unidade.</p>
+    </ng-template>
+  </ng-container>
+
+  <ng-template #uniformesSkeleton>
+    <div class="uniformes-grid">
+      <div class="skeleton-card" *ngFor="let _ of [1,2,3]">
+        <div class="skeleton-block skeleton-img"></div>
+        <div class="skeleton-block skeleton-line"></div>
+        <div class="skeleton-block skeleton-line small"></div>
       </div>
-
-      <div class="uniforme-info">
-        <p class="uniforme-desc">{{ u.descricao }}</p>
-        <p class="uniforme-preco">R$ {{ formatBRL(precoUniforme) }}</p>
-        <p class="uniforme-avulso">
-          Valor da camisa avulsa e short avulso é de R${{ formatBRL(precoAvulso) }}.
-        </p>
-      </div>
-    </article>
-  </section>
-
-  <ng-template #semUniformes>
-    <p class="uniformes-vazio">Nenhum uniforme cadastrado para esta unidade.</p>
+    </div>
   </ng-template>
 </div>
 
@@ -158,7 +214,18 @@
     </button>
 
     <div class="uniforme-modal-corpo">
-      <img class="uniforme-modal-img" [src]="modalFotos[modalIndex]" [alt]="modalDescricao" />
+      <!-- skeleton do modal enquanto carrega -->
+      <div class="img-skeleton modal-skeleton" *ngIf="!modalImgLoaded && !modalImgError"></div>
+
+      <!-- fallback do modal -->
+      <div class="img-fallback modal-fallback" *ngIf="modalImgError">
+        <span class="material-icons">broken_image</span>
+        <p>Imagem indisponível</p>
+      </div>
+
+      <img class="uniforme-modal-img" *ngIf="modalFotos[modalIndex] && !modalImgError" [src]="modalFotos[modalIndex]"
+        [alt]="modalDescricao" (load)="onModalImgLoad()" (error)="onModalImgError()"
+        [class.img-hidden]="!modalImgLoaded" [class.img-visible]="modalImgLoaded" />
 
       <button *ngIf="modalFotos.length > 1" type="button" class="uniforme-modal-seta esquerda"
         aria-label="Foto anterior" (click)="modalPrev()">
@@ -179,8 +246,6 @@
     </div>
   </div>
 </div>
-
-
 
 <app-rodape></app-rodape>
 <!-- <app-wpp [numero]="numero"></app-wpp> -->

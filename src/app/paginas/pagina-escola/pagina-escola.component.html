@@ -1,15 +1,45 @@
 <app-cabecalho></app-cabecalho>
 
 <a [routerLink]="['/']" class="botao-voltar">
-    <span class="material-icons">arrow_back</span>
+  <span class="material-icons">arrow_back</span>
 </a>
 
-<div *ngIf="escola" style="text-align:center; padding: 24px 16px;">
-    <img [src]="escola.logo" [alt]="escola.nome" style="max-width: 320px; width: 90%; height: auto;">
+<!-- LOGO (não mostra carregando) -->
+<div class="logo-area">
+  <!-- skeleton enquanto busca a escola -->
+  <ng-container *ngIf="!carregandoEscola && escola; else logoSkeleton">
+    <div class="logo-wrapper">
+      <!-- skeleton por trás enquanto carrega a imagem -->
+      <div class="img-skeleton" *ngIf="!logoImgLoaded && !logoImgError"></div>
+
+      <!-- fallback se quebrar -->
+      <div class="img-fallback" *ngIf="logoImgError">
+        <span class="material-icons">broken_image</span>
+        <p>Logo indisponível</p>
+      </div>
+
+      <img
+        class="logo-img"
+        [src]="escola.logo"
+        [alt]="escola.nome"
+        (load)="onLogoLoad()"
+        (error)="onLogoError()"
+        [class.img-hidden]="!logoImgLoaded"
+        [class.img-visible]="logoImgLoaded"
+      />
+    </div>
+  </ng-container>
+
+  <ng-template #logoSkeleton>
+    <div class="logo-wrapper">
+      <div class="skeleton-block logo-skeleton"></div>
+    </div>
+  </ng-template>
 </div>
 
+<!-- ABA UNIDADE -->
 <div *ngIf="abaAtiva === 'unidade'">
-    <app-modalidades [escolaId]="escolaId" class="scroll-animar"></app-modalidades>
+  <app-modalidades [escolaId]="escolaId" class="scroll-animar"></app-modalidades>
 </div>
 
 <app-rodape></app-rodape>
