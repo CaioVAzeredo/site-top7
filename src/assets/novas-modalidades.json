@@ -46,13 +46,13 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo Colégio Ideal Taguatinga - QNG 31 - Masculino",
-              "foto-frente": "/assets/uniformes/ideal/masculino/tg31/ideal-tg31-frente.webp",
-              "foto-costa": "/assets/uniformes/ideal/masculino/tg31/ideal-tg31-costas.webp"
+              "foto-frente": "assets/ideal-tg31-frente.webp",
+              "foto-costa": "assets/ideal-tg31-costas.webp"
             },
             {
               "descricao": "Uniforme completo Colégio Ideal Taguatinga - QNG 31 - Feminio",
-              "foto-frente": "/assets/uniformes/ideal/feminino/tg31/ideal-tg31-frente-feminino.webp",
-              "foto-costa": "/assets/uniformes/ideal/feminino/tg31/ideal-tg31-costas-feminino.webp"
+              "foto-frente": "assets/ideal-tg31-frente-feminino.webp",
+              "foto-costa": "assets/ideal-tg31-costas-feminino.webp"
             }
           ]
         },
@@ -124,13 +124,13 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo Colégio Ideal Taguatinga - QNG 26 - Masculino",
-              "foto-frente": "/assets/uniformes/ideal/masculino/tg31/ideal-tg31-frente.webp",
-              "foto-costa": "/assets/uniformes/ideal/masculino/tg31/ideal-tg31-costas.webp"
+              "foto-frente": "assets/ideal-tg31-frente.webp",
+              "foto-costa": "assets/ideal-tg31-costas.webp"
             },
             {
               "descricao": "Uniforme completo Colégio Ideal Taguatinga - QNG 26 - Feminio",
-              "foto-frente": "/assets/uniformes/ideal/feminino/tg31/ideal-tg31-frente-feminino.webp",
-              "foto-costa": "/assets/uniformes/ideal/feminino/tg31/ideal-tg31-costas-feminino.webp"
+              "foto-frente": "assets/ideal-tg31-frente-feminino.webp",
+              "foto-costa": "assets/ideal-tg31-costas-feminino.webp"
             }
           ]
         },
@@ -229,13 +229,13 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo Colégio Ideal Águas Claras Jequitibá - Masculino",
-              "foto-frente": "/assets/uniformes/ideal/masculino/ajb/ideal-ajb-frente.webp",
-              "foto-costa": "/assets/uniformes/ideal/masculino/ajb/ideal-ajb-costas.webp"
+              "foto-frente": "assets/ideal-ajb-frente.webp",
+              "foto-costa": "assets/ideal-ajb-costas.webp"
             },
             {
               "descricao": "Uniforme completo Colégio Ideal Taguatinga - Águas Claras Jequitibá - Feminio",
-              "foto-frente": "/assets/uniformes/ideal/feminino/ajb/ideal-ajb-frente-feminino.webp",
-              "foto-costa": "/assets/uniformes/ideal/feminino/ajb/ideal-ajb-costas-feminino.webp"
+              "foto-frente": "assets/ideal-ajb-frente-feminino.webp",
+              "foto-costa": "assets/ideal-ajb-costas-feminino.webp"
             }
           ]
         },
@@ -302,13 +302,13 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo Colégio Ideal Águas Claras Manacá - Masculino",
-              "foto-frente": "/assets/uniformes/ideal/masculino/am/ideal-am-frente.webp",
-              "foto-costa": "/assets/uniformes/ideal/masculino/am/ideal-am-costas.webp"
+              "foto-frente": "assets/ideal-am-frente.webp",
+              "foto-costa": "assets/ideal-am-costas.webp"
             },
             {
               "descricao": "Uniforme completo Colégio Ideal Taguatinga - Águas Claras Manacá - Feminio",
-              "foto-frente": "/assets/uniformes/ideal/feminino/am/ideal-am-frente-feminino.webp",
-              "foto-costa": "/assets/uniformes/ideal/feminino/am/ideal-am-costas-feminino.webp"
+              "foto-frente": "assets/ideal-am-frente-feminino.webp",
+              "foto-costa": "assets/ideal-am-costas-feminino.webp"
             }
           ]
         },
@@ -343,13 +343,13 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo Colégio Ideal Asa Sul - Masculino",
-              "foto-frente": "/assets/uniformes/ideal/masculino/as/ideal-as-frente.webp",
-              "foto-costa": "/assets/uniformes/ideal/masculino/as/ideal-as-costas.webp"
+              "foto-frente": "assets/ideal-as-frente.webp",
+              "foto-costa": "assets/ideal-as-costas.webp"
             },
             {
               "descricao": "Uniforme completo Colégio Ideal Taguatinga Asa Sul - Feminio",
-              "foto-frente": "/assets/uniformes/ideal/feminino/as/ideal-as-frente-feminino.webp",
-              "foto-costa": "/assets/uniformes/ideal/feminino/as/ideal-as-costas-feminino.webp"
+              "foto-frente": "assets/ideal-as-frente-feminino.webp",
+              "foto-costa": "assets/ideal-as-costas-feminino.webp"
             }
           ]
         },
@@ -445,13 +445,13 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo Colégio Ideal Asa Norte - Masculino",
-              "foto-frente": "/assets/uniformes/ideal/masculino/an/ideal-an-frente.webp",
-              "foto-costa": "/assets/uniformes/ideal/masculino/an/ideal-an-costas.webp"
+              "foto-frente": "assets/ideal-an-frente.webp",
+              "foto-costa": "assets/ideal-an-costas.webp"
             },
             {
               "descricao": "Uniforme completo Colégio Ideal Asa Norte - Feminio",
-              "foto-frente": "/assets/uniformes/ideal/feminino/an/ideal-an-frente-feminino.webp",
-              "foto-costa": "/assets/uniformes/ideal/feminino/an/ideal-an-costas-feminino.webp"
+              "foto-frente": "assets/ideal-an-frente-feminino.webp",
+              "foto-costa": "assets/ideal-an-costas-feminino.webp"
             }
           ]
         },
@@ -502,13 +502,13 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo Colégio Ideal Jardim Botânico - Masculino",
-              "foto-frente": "/assets/uniformes/ideal/masculino/jb/ideal-jb-frente.webp",
-              "foto-costa": "/assets/uniformes/ideal/masculino/jb/ideal-jb-costas.webp"
+              "foto-frente": "assets/ideal-jb-frente.webp",
+              "foto-costa": "assets/ideal-jb-costas.webp"
             },
             {
               "descricao": "Uniforme completo Colégio Ideal Jardim Botânico - Feminio",
-              "foto-frente": "/assets/uniformes/ideal/feminino/jb/ideal-jb-frente-feminino.webp",
-              "foto-costa": "/assets/uniformes/ideal/feminino/jb/ideal-jb-costas-feminino.webp"
+              "foto-frente": "assets/ideal-jb-frente-feminino.webp",
+              "foto-costa": "assets/ideal-jb-costas-feminino.webp"
             }
           ]
         }
@@ -681,23 +681,23 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo sigma asa sul - Masculino",
-              "foto-frente": "/assets/uniformes/sigma/nao-basquete/masculino/as/sigma-as-frente.webp",
-              "foto-costa": "/assets/uniformes/sigma/nao-basquete/masculino/as/sigma-as-costas.webp"
+              "foto-frente": "assets/sigma-as-frente.webp",
+              "foto-costa": "assets/sigma-as-costas.webp"
             },
             {
               "descricao": "Uniforme completo basquete sigma asa sul - Masculino",
-              "foto-frente": "/assets/uniformes/sigma/basquete/masculino/as/sigma-as-frente-basquete.webp",
-              "foto-costa": "/assets/uniformes/sigma/basquete/masculino/as/sigma-as-costas-basquete.webp"
+              "foto-frente": "assets/sigma-as-frente-basquete.webp",
+              "foto-costa": "assets/sigma-as-costas-basquete.webp"
             },
             {
               "descricao": "Uniforme completo sigma asa sul - Feminino",
-              "foto-frente": "/assets/uniformes/sigma/nao-basquete/feminino/as/sigma-as-frente-feminino.webp",
-              "foto-costa": "/assets/uniformes/sigma/nao-basquete/feminino/as/sigma-as-costa-feminino.webp"
+              "foto-frente": "assets/sigma-as-frente-feminino.webp",
+              "foto-costa": "assets/sigma-as-costa-feminino.webp"
             },
             {
               "descricao": "Uniforme completo basquete sigma asa sul - Feminino",
-              "foto-frente": "/assets/uniformes/sigma/basquete/feminino/as/sigma-as-frente-basquete-feminino.webp",
-              "foto-costa": "/assets/uniformes/sigma/basquete/feminino/as/sigma-as-costas-basquete-feminino.webp"
+              "foto-frente": "assets/sigma-as-frente-basquete-feminino.webp",
+              "foto-costa": "assets/sigma-as-costas-basquete-feminino.webp"
             }
           ]
         },
@@ -788,23 +788,23 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo sigma asa norte - Masculino",
-              "foto-frente": "/assets/uniformes/sigma/nao-basquete/masculino/an/sigma-an-frente.webp",
-              "foto-costa": "/assets/uniformes/sigma/nao-basquete/masculino/an/sigma-an-costas.webp"
+              "foto-frente": "assets/sigma-an-frente.webp",
+              "foto-costa": "assets/sigma-an-costas.webp"
             },
             {
               "descricao": "Uniforme completo basquete sigma asa norte - Masculino",
-              "foto-frente": "/assets/uniformes/sigma/basquete/masculino/an/sigma-an-frente-basquete.webp",
-              "foto-costa": "/assets/uniformes/sigma/basquete/masculino/an/sigma-an-costas-basquete.webp"
+              "foto-frente": "assets/sigma-an-frente-basquete.webp",
+              "foto-costa": "assets/sigma-an-costas-basquete.webp"
             },
             {
               "descricao": "Uniforme completo sigma asa norte - Feminino",
-              "foto-frente": "/assets/uniformes/sigma/nao-basquete/feminino/an/sigma-an-frente-feminino.webp",
-              "foto-costa": "/assets/uniformes/sigma/nao-basquete/feminino/an/sigma-an-costa-feminino.webp"
+              "foto-frente": "assets/sigma-an-frente-feminino.webp",
+              "foto-costa": "assets/sigma-an-costa-feminino.webp"
             },
             {
               "descricao": "Uniforme completo basquete sigma asa norte - Feminino",
-              "foto-frente": "/assets/uniformes/sigma/basquete/feminino/an/sigma-an-frente-basquete-feminino.webp",
-              "foto-costa": "/assets/uniformes/sigma/basquete/feminino/an/sigma-an-costas-basquete-feminino.webp"
+              "foto-frente": "assets/sigma-an-frente-basquete-feminino.webp",
+              "foto-costa": "assets/sigma-an-costas-basquete-feminino.webp"
             }
           ]
         },
@@ -911,23 +911,23 @@
           "uniformes": [
             {
               "descricao": "Uniforme completo sigma Águas Claras - Masculino",
-              "foto-frente": "/assets/uniformes/sigma/nao-basquete/masculino/ac/sigma-ac-frente.webp",
-              "foto-costa": "/assets/uniformes/sigma/nao-basquete/masculino/ac/sigma-ac-costas.webp"
+              "foto-frente": "assets/sigma-ac-frente.webp",
+              "foto-costa": "assets/sigma-ac-costas.webp"
             },
             {
               "descricao": "Uniforme completo basquete sigma Águas Claras - Masculino",
-              "foto-frente": "/assets/uniformes/sigma/basquete/masculino/ac/sigma-ac-frente-basquete.webp",
-              "foto-costa": "/assets/uniformes/sigma/basquete/masculino/ac/sigma-ac-costas-basquete.webp"
+              "foto-frente": "assets/sigma-ac-frente-basquete.webp",
+              "foto-costa": "assets/sigma-ac-costas-basquete.webp"
             },
             {
               "descricao": "Uniforme completo sigma Águas Claras - Feminino",
-              "foto-frente": "/assets/uniformes/sigma/nao-basquete/feminino/ac/sigma-ac-frente-feminino.webp",
-              "foto-costa": "/assets/uniformes/sigma/nao-basquete/feminino/ac/sigma-ac-costas-feminino.webp"
+              "foto-frente": "assets/sigma-ac-frente-feminino.webp",
+              "foto-costa": "assets/sigma-ac-costas-feminino.webp"
             },
             {
               "descricao": "Uniforme completo basquete sigma Águas Claras - Feminino",
-              "foto-frente": "/assets/uniformes/sigma/basquete/feminino/ac/sigma-ac-frente-basquete-feminino.webp",
-              "foto-costa": "/assets/uniformes/sigma/basquete/feminino/ac/sigma-ac-costas-basquete-feminino.webp"
+              "foto-frente": "assets/sigma-ac-frente-basquete-feminino.webp",
+              "foto-costa": "assets/sigma-ac-costas-basquete-feminino.webp"
             }
           ]
         }
