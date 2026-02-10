@@ -1,3 +1,5 @@
+/* hero.component.css */
+
 .banner-tela-pequena img {
   width: 100vw;
   z-index: unset;
@@ -32,6 +34,25 @@
   display: block;
 }
 
+/* ✅ wrapper do slide pra skeleton/fallback */
+.slide-link {
+  display: block;
+}
+
+.slide-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #d9d9d9;
+
+  /* garante área para skeleton enquanto carrega */
+  min-height: 180px;
+}
+
+/* =========================
+   ✅ BOTÕES / INDICATORS (seu)
+   ========================= */
+
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -42,8 +63,7 @@
   padding: 10px;
   font-size: 30px;
   cursor: pointer;
-  z-index: 1;
-  
+  z-index: 10; /* acima do skeleton/foto */
 }
 
 .carousel-btn.prev {
@@ -65,6 +85,7 @@
   transform: translateX(-50%);
   display: flex;
   gap: 5px;
+  z-index: 10;
 }
 
 .indicator {
@@ -80,45 +101,105 @@
   background-color: white;
 }
 
+/* =========================
+   ✅ SKELETON + FADE (mesma lógica)
+   ========================= */
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.img-skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #dcdcdc 25%, #eeeeee 37%, #dcdcdc 63%);
+  background-size: 800px 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* não mostrar imagem carregando */
+.img-hidden {
+  opacity: 0 !important;
+}
+
+.img-visible {
+  opacity: 1 !important;
+  transition: opacity 220ms ease;
+}
+
+/* fallback bonito */
+.img-fallback {
+  position: absolute;
+  inset: 0;
+  background: #d9d9d9;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #0643A5;
+  text-align: center;
+  padding: 10px;
+}
+
+.img-fallback .material-icons {
+  font-size: 38px;
+}
+
+.img-fallback p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* =========================
+   ✅ RESPONSIVO (seu)
+   ========================= */
 @media (min-width: 768px) {
   .banner-tela-pequena {
-      display: none;
+    display: none;
   }
 
   .banner-tela-grande {
-      display: block;
-      margin: 0 auto;
+    display: block;
+    margin: 0 auto;
   }
 
   .banner-tela-grande img {
-      width: 100%;
-      margin: 0 auto;
-      object-fit: cover;
+    width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
   }
 
   .carousel-btn {
-      margin-left: 50px;
-      margin-right: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 }
 
 @media (min-width: 975px) {
   .carousel-btn {
-      margin-left: 50px;
-      margin-right: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
   .carousel-indicators {
-      top: auto;
+    top: auto;
   }
 }
 
 @media (min-width: 1500px) {
   .banner-tela-grande img {
-      width: 1500px;
+    width: 1500px;
   }
 
   .carousel-btn {
-      top: 50%;
+    top: 50%;
   }
 }

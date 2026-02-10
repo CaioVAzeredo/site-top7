@@ -18,6 +18,10 @@ import { ApiService } from '../../service/api.service';
 export class ContatoComponent implements OnInit {
   contatoForm!: FormGroup;
 
+  // ✅ novas mensagens
+  sucessoMsg: string | null = null;
+  erroMsg: string | null = null;
+
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
@@ -33,20 +37,46 @@ export class ContatoComponent implements OnInit {
     });
   }
 
+  private limparMensagens() {
+    this.sucessoMsg = null;
+    this.erroMsg = null;
+  }
+
   salvarContato() {
+    // limpa mensagens anteriores ao tentar enviar
+    this.limparMensagens();
+
     if (this.contatoForm.valid) {
       this.apiService.enviarDados(this.contatoForm.value).subscribe({
         next: (resposta) => {
           console.log('Dados enviados com sucesso!', resposta);
+
+          this.sucessoMsg = 'Mensagem enviada com sucesso! ';
           this.contatoForm.reset();
+
+          // opcional: some sozinho depois de 4s
+          setTimeout(() => {
+            this.sucessoMsg = null;
+          }, 4000);
         },
         error: (error) => {
           console.log('Erro ao enviar', error);
-          alert('Erro ao enviar os dados. Tente novamente mais tarde.');
+
+          this.erroMsg = 'Erro ao enviar a mensagem. Tente novamente mais tarde. ';
+
+          // opcional: some sozinho depois de 6s
+          setTimeout(() => {
+            this.erroMsg = null;
+          }, 6000);
         }
-      })
+      });
     } else {
       this.contatoForm.markAllAsTouched();
+      this.erroMsg = 'Preencha corretamente os campos antes de enviar. ';
+
+      setTimeout(() => {
+        this.erroMsg = null;
+      }, 4000);
     }
   }
 }

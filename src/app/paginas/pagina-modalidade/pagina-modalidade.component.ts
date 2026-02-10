@@ -1,5 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  TemplateRef,
+  ViewChild,
+} from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 
 import { ApiService } from '../../service/api.service';
@@ -15,6 +22,9 @@ type Uniforme = {
   ['foto-frente']?: string;
   ['foto-costa']?: string;
 };
+
+type Aba = 'grade' | 'uniformes' | 'adesao';
+type AnimDir = 'forward' | 'back';
 
 @Component({
   selector: 'app-pagina-modalidade',
@@ -44,7 +54,7 @@ export class PaginaModalidadeComponent implements OnInit {
   precoUniforme = 130;
   precoAvulso = 70;
 
-  abaAtiva: 'grade' | 'uniformes' | 'adesao' = 'grade';
+  abaAtiva: Aba = 'grade';
 
   // ✅ LOADING POR COMPONENTE
   carregandoUnidade = true;
@@ -70,10 +80,62 @@ export class PaginaModalidadeComponent implements OnInit {
   modalImgLoaded = false;
   modalImgError = false;
 
-  constructor(private route: ActivatedRoute, private apiService: ApiService) { }
+  /* =========================
+   * ✅ SLIDE DAS ABAS (CSS PURO)
+   * ========================= */
+  animando = false;
+  abaEntrando: Aba | null = null;
+  animDir: AnimDir = 'forward';
+  lockedHeight: string | null = null;
+  private animFallbackTimer: any = null;
+
+  @ViewChild('tabsViewport') tabsViewport?: ElementRef<HTMLElement>;
+
+  @ViewChild('tplGrade', { static: true }) tplGrade!: TemplateRef<any>;
+  @ViewChild('tplUniformes', { static: true }) tplUniformes!: TemplateRef<any>;
+  @ViewChild('tplAdesao', { static: true }) tplAdesao!: TemplateRef<any>;
+
+  constructor(private route: ActivatedRoute, private apiService: ApiService) {}
 
   trackByIndex(index: number) {
     return index;
+  }
+
+  private abaIndex(aba: Aba): number {
+    if (aba === 'grade') return 0;
+    if (aba === 'uniformes') return 1;
+    return 2;
+  }
+
+  getTemplate(aba: Aba | null): TemplateRef<any> {
+    if (aba === 'uniformes') return this.tplUniformes;
+    if (aba === 'adesao') return this.tplAdesao;
+    return this.tplGrade;
+  }
+
+  private lockCurrentHeight() {
+    const el = this.tabsViewport?.nativeElement;
+    if (!el) return;
+    const h = el.getBoundingClientRect().height;
+    if (h > 0) this.lockedHeight = `${h}px`;
+  }
+
+  onTabAnimationEnd(ev?: AnimationEvent) {
+    // garante que só finalize no fim da animação do container de entrada
+    if (ev && ev.animationName && !ev.animationName.startsWith('tab-')) return;
+
+    if (!this.animando) return;
+
+    if (this.animFallbackTimer) {
+      clearTimeout(this.animFallbackTimer);
+      this.animFallbackTimer = null;
+    }
+
+    // finaliza troca
+    this.abaAtiva = this.abaEntrando ?? this.abaAtiva;
+    this.abaEntrando = null;
+    this.animando = false;
+    this.lockedHeight = null;
   }
 
   getTextoUniformes(): string {
@@ -82,8 +144,33 @@ export class PaginaModalidadeComponent implements OnInit {
       : 'Compras apenas na recepção';
   }
 
-  setAba(aba: 'grade' | 'uniformes' | 'adesao') {
-    this.abaAtiva = aba;
+  setAba(aba: Aba) {
+    if (aba === this.abaAtiva) return;
+    if (this.animando) return;
+
+    // ✅ se sair de uniformes, fecha modal
+    if (this.abaAtiva === 'uniformes' && aba !== 'uniformes') {
+      this.closeUniformeModal();
+    }
+
+    // trava altura pra não “pular”
+    this.lockCurrentHeight();
+
+    const oldIndex = this.abaIndex(this.abaAtiva);
+    const newIndex = this.abaIndex(aba);
+
+    // ✅ direção "no sentido dos botões"
+    // e conforme você pediu:
+    // grade -> uniformes (vai pra direita) = slide esquerda -> direita (forward)
+    this.animDir = newIndex > oldIndex ? 'forward' : 'back';
+
+    this.animando = true;
+    this.abaEntrando = aba;
+
+    // fallback caso animationend não dispare (raro)
+    this.animFallbackTimer = setTimeout(() => {
+      this.onTabAnimationEnd();
+    }, 350);
   }
 
   ngOnInit(): void {
@@ -119,6 +206,12 @@ export class PaginaModalidadeComponent implements OnInit {
         // fecha modal se trocar unidade
         this.closeUniformeModal();
 
+        // ✅ começa em grade
+        this.abaAtiva = 'grade';
+        this.animando = false;
+        this.abaEntrando = null;
+        this.lockedHeight = null;
+
         this.carregandoUnidade = false;
       });
 
@@ -143,7 +236,6 @@ export class PaginaModalidadeComponent implements OnInit {
    * UNIFORMES
    * ========================= */
 
-  // fotos disponíveis (frente/costa)
   getFotos(u: Uniforme): string[] {
     return [u['foto-frente'], u['foto-costa']].filter(Boolean) as string[];
   }
@@ -169,20 +261,16 @@ export class PaginaModalidadeComponent implements OnInit {
     const current = this.fotoIndex[i] ?? 0;
     this.fotoIndex[i] = (current + delta + total) % total;
 
-    // ✅ ao trocar, força loading (pra não aparecer carregando)
     this.uniformeImgLoaded[i] = false;
     this.uniformeImgError[i] = false;
   }
 
-  // se uma foto quebrar, tenta automaticamente a outra
   onUniformeImgError(i: number, total: number) {
     const tries = this.erroTentativas[i] ?? 0;
 
-    // tenta a próxima se existir
     if (total > 1 && tries < total - 1) {
       this.erroTentativas[i] = tries + 1;
 
-      // continua mostrando skeleton
       this.uniformeImgLoaded[i] = false;
       this.uniformeImgError[i] = false;
 
@@ -190,7 +278,6 @@ export class PaginaModalidadeComponent implements OnInit {
       return;
     }
 
-    // falhou geral -> mostra fallback (sem quebrado)
     this.uniformeImgError[i] = true;
     this.uniformeImgLoaded[i] = false;
     this.erroTentativas[i] = 0;
@@ -217,7 +304,6 @@ export class PaginaModalidadeComponent implements OnInit {
 
     this.modalAberto = true;
 
-    // ✅ loader do modal
     this.modalImgLoaded = false;
     this.modalImgError = false;
 
@@ -252,7 +338,6 @@ export class PaginaModalidadeComponent implements OnInit {
 
     this.modalIndex = (this.modalIndex - 1 + total) % total;
 
-    // ✅ não mostra carregando
     this.modalImgLoaded = false;
     this.modalImgError = false;
   }
@@ -263,12 +348,10 @@ export class PaginaModalidadeComponent implements OnInit {
 
     this.modalIndex = (this.modalIndex + 1) % total;
 
-    // ✅ não mostra carregando
     this.modalImgLoaded = false;
     this.modalImgError = false;
   }
 
-  // ✅ teclas no modal: ESC fecha, ← → alterna
   @HostListener('document:keydown', ['$event'])
   onKeydown(ev: KeyboardEvent) {
     if (!this.modalAberto) return;

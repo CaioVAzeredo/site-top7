@@ -1,18 +1,40 @@
+<!-- hero.component.html -->
 <section class="banner-tela-grande">
   <div class="carrossel">
     <button class="carousel-btn prev" (click)="anterior()">‹</button>
 
     <div class="slides" [style.transform]="'translateX(-' + (indiceAtual * 100) + 'vw)'">
-      <a *ngFor="let img of imagens" [href]="img.link" target="_self">
-        <img [src]="img.src" [alt]="img.title">
+      <a *ngFor="let img of imagens; let i = index" [href]="img.link" target="_self" class="slide-link">
+        <div class="slide-wrapper">
+          <!-- skeleton por trás enquanto carrega -->
+          <div class="img-skeleton" *ngIf="!isSlideLoaded(i) && !isSlideError(i)"></div>
+
+          <!-- fallback se quebrar -->
+          <div class="img-fallback" *ngIf="isSlideError(i)">
+            <span class="material-icons">broken_image</span>
+            <p>Imagem indisponível</p>
+          </div>
+
+          <img
+            *ngIf="img?.src && !isSlideError(i)"
+            [src]="img.src"
+            [alt]="img.title"
+            (load)="onSlideLoad(i)"
+            (error)="onSlideError(i)"
+            [class.img-hidden]="!isSlideLoaded(i)"
+            [class.img-visible]="isSlideLoaded(i)"
+          />
+        </div>
       </a>
     </div>
-
 
     <button class="carousel-btn next" (click)="proximo()">›</button>
 
     <div class="carousel-indicators">
-      <button *ngFor="let img of imagens; let i = index" class="indicator" [class.active]="i === indiceAtual"
+      <button
+        *ngFor="let img of imagens; let i = index"
+        class="indicator"
+        [class.active]="i === indiceAtual"
         (click)="irParaSlide(i)">
       </button>
     </div>
@@ -24,16 +46,37 @@
     <button class="carousel-btn prev" (click)="anterior()">‹</button>
 
     <div class="slides" [style.transform]="'translateX(-' + (indiceAtual * 100) + 'vw)'">
-      <a *ngFor="let img of imagensPequenas" [href]="img.link" target="_self">
-        <img [src]="img.src" [alt]="img.title">
+      <a *ngFor="let img of imagensPequenas; let i = index" [href]="img.link" target="_self" class="slide-link">
+        <div class="slide-wrapper">
+          <!-- skeleton por trás enquanto carrega -->
+          <div class="img-skeleton" *ngIf="!isSlideLoadedSmall(i) && !isSlideErrorSmall(i)"></div>
+
+          <!-- fallback se quebrar -->
+          <div class="img-fallback" *ngIf="isSlideErrorSmall(i)">
+            <span class="material-icons">broken_image</span>
+            <p>Imagem indisponível</p>
+          </div>
+
+          <img
+            *ngIf="img?.src && !isSlideErrorSmall(i)"
+            [src]="img.src"
+            [alt]="img.title"
+            (load)="onSlideLoadSmall(i)"
+            (error)="onSlideErrorSmall(i)"
+            [class.img-hidden]="!isSlideLoadedSmall(i)"
+            [class.img-visible]="isSlideLoadedSmall(i)"
+          />
+        </div>
       </a>
     </div>
-
 
     <button class="carousel-btn next" (click)="proximo()">›</button>
 
     <div class="carousel-indicators">
-      <button *ngFor="let img of imagensPequenas; let i = index" class="indicator" [class.active]="i === indiceAtual"
+      <button
+        *ngFor="let img of imagensPequenas; let i = index"
+        class="indicator"
+        [class.active]="i === indiceAtual"
         (click)="irParaSlide(i)">
       </button>
     </div>

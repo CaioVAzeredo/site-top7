@@ -39,6 +39,11 @@
                 Campo obrigatório
             </div>
         </div>
+        <!-- Mensagens de retorno -->
+        <div class="mensagem-retorno" *ngIf="sucessoMsg || erroMsg">
+            <p class="msg-sucesso" *ngIf="sucessoMsg">{{ sucessoMsg }}</p>
+            <p class="msg-erro" *ngIf="erroMsg">{{ erroMsg }}</p>
+        </div>
 
         <div class="div-button">
             <app-button-component texto="Enviar" type="submit" class="btn"></app-button-component>

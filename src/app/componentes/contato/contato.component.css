@@ -84,6 +84,33 @@ h2 {
     height: 80px;
 }
 
+.mensagem-retorno {
+    width: 80%;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+.msg-sucesso,
+.msg-erro {
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: 2px solid transparent;
+}
+
+.msg-sucesso {
+    background: #e8fff1;
+    color: #0f5132;
+    border-color: #b7f0cf;
+}
+
+.msg-erro {
+    background: #ffe8e8;
+    color: #842029;
+    border-color: #f5b5b5;
+}
+
+
 @media (min-width: 768px) {
     h2 {
         font-size: 34px;

@@ -686,3 +686,90 @@ img {
     height: 14px;
     opacity: 0.9;
 }
+
+/* pagina-modalidade.component.css */
+/* ✅ ADICIONE ISSO (pode colocar perto do CSS das abas) */
+
+.tabs-viewport {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* cada aba vira “pane” animável */
+.tab-pane {
+    width: 100%;
+    position: relative;
+    /* fica relative fora da animação */
+}
+
+/* =========================
+   ✅ SLIDE DAS ABAS (CSS PURO)
+   ========================= */
+
+.tabs-viewport {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* camada padrão (sem animação) */
+.tab-layer.static {
+  position: relative;
+  width: 100%;
+}
+
+/* camadas animadas ficam sobrepostas */
+.tab-layer.leave,
+.tab-layer.enter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  will-change: transform;
+}
+
+/* ✅ Você pediu: indo para a direita = esquerda -> direita */
+.tab-layer.enter.forward {
+  animation: tab-enter-from-left 280ms ease forwards;
+}
+.tab-layer.leave.forward {
+  animation: tab-leave-to-right 280ms ease forwards;
+}
+
+/* voltando (indo para a esquerda) = direita -> esquerda */
+.tab-layer.enter.back {
+  animation: tab-enter-from-right 280ms ease forwards;
+}
+.tab-layer.leave.back {
+  animation: tab-leave-to-left 280ms ease forwards;
+}
+
+@keyframes tab-enter-from-left {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0%); }
+}
+
+@keyframes tab-leave-to-right {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(100%); }
+}
+
+@keyframes tab-enter-from-right {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0%); }
+}
+
+@keyframes tab-leave-to-left {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tab-layer.enter.forward,
+  .tab-layer.leave.forward,
+  .tab-layer.enter.back,
+  .tab-layer.leave.back {
+    animation: none !important;
+  }
+}

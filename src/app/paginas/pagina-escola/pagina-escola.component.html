@@ -1,3 +1,4 @@
+<!-- pagina-escola.component.html -->
 <app-cabecalho></app-cabecalho>
 
 <a [routerLink]="['/']" class="botao-voltar">
@@ -10,15 +11,17 @@
   <ng-container *ngIf="!carregandoEscola && escola; else logoSkeleton">
     <div class="logo-wrapper">
       <!-- skeleton por trás enquanto carrega a imagem -->
-      <div class="img-skeleton" *ngIf="!logoImgLoaded && !logoImgError"></div>
+      <div class="img-skeleton" *ngIf="escola?.logo && !logoImgLoaded && !logoImgError"></div>
 
-      <!-- fallback se quebrar -->
-      <div class="img-fallback" *ngIf="logoImgError">
+      <!-- fallback se não tiver logo OU se quebrar -->
+      <div class="img-fallback" *ngIf="!escola?.logo || logoImgError">
         <span class="material-icons">broken_image</span>
         <p>Logo indisponível</p>
       </div>
 
+      <!-- img só aparece se tiver URL e não estiver em erro -->
       <img
+        *ngIf="escola?.logo && !logoImgError"
         class="logo-img"
         [src]="escola.logo"
         [alt]="escola.nome"

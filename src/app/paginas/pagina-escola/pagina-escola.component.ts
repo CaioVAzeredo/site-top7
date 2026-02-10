@@ -1,3 +1,4 @@
+// pagina-escola.component.ts
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -19,7 +20,7 @@ import { ModalidadesComponent } from '../../componentes/modalidades-component/mo
     RodapeComponent,
     BotaoSubirComponent,
     ModalidadesComponent,
-    RouterLink
+    RouterLink,
   ],
   templateUrl: './pagina-escola.component.html',
   styleUrls: ['./pagina-escola.component.css'],
@@ -44,7 +45,7 @@ export class PaginaEscolaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe((params) => {
       this.escolaId = params.get('escolaId') ?? '';
       this.carregarEscola();
       if (typeof window !== 'undefined') window.scrollTo(0, 0);
@@ -54,15 +55,15 @@ export class PaginaEscolaComponent implements OnInit {
   private carregarEscola(): void {
     this.carregandoEscola = true;
 
-    // reset estados da imagem
+    // reset estados da imagem (volta skeleton por trás)
     this.logoImgLoaded = false;
     this.logoImgError = false;
 
     this.apiService.getEscolas().subscribe({
-      next: escolas => {
-        this.escola = escolas.find(e => e.id === this.escolaId) ?? null;
+      next: (escolas) => {
+        this.escola = escolas.find((e) => e.id === this.escolaId) ?? null;
 
-        // ao trocar escola, volta a mostrar skeleton da logo até carregar
+        // sempre reseta ao trocar escola
         this.logoImgLoaded = false;
         this.logoImgError = false;
 
@@ -71,7 +72,11 @@ export class PaginaEscolaComponent implements OnInit {
       error: () => {
         this.escola = null;
         this.carregandoEscola = false;
-      }
+
+        // mantém estados resetados
+        this.logoImgLoaded = false;
+        this.logoImgError = false;
+      },
     });
   }
 
