@@ -19,7 +19,7 @@ import { EscolasComponent } from '../../componentes/escolas/escolas.component';
     EscolasComponent,
     EquipeComponent,
     RodapeComponent,
-    BotaoSubirComponent],
+    BotaoSubirComponent, ContatoComponent],
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css'
 })

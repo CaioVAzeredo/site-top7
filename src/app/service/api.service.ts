@@ -15,7 +15,7 @@ export class ApiService {
   // ✅ JSON NOVO (aninhado)
   private jsonEscolas = 'assets/novas-modalidades.json';
 
-  private url = 'http://localhost:8080/api/contato';
+  private url = 'http://apitop7.caioapi.lat/api/contato';
 
   constructor(private http: HttpClient) { }
 
