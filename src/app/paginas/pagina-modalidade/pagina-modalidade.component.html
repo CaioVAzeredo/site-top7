@@ -247,68 +247,6 @@
 </ng-template>
 
 
-<!-- ✅ ABA: UNIFORMES -->
-<div *ngIf="abaAtiva === 'uniformes'">
-  <h2 class="titulo-atividade">Uniformes</h2>
-  <p class="paragrafo">{{ getTextoUniformes() }}</p>
-
-  <ng-container *ngIf="!carregandoUnidade; else uniformesSkeleton">
-    <section class="uniformes-grid" *ngIf="uniformes.length > 0; else semUniformes">
-      <article class="uniforme-card" *ngFor="let u of uniformes; let i = index; trackBy: trackByIndex">
-        <div class="uniforme-img-wrapper">
-          <ng-container *ngIf="getFotos(u) as fotos">
-            <!-- skeleton enquanto a imagem do card não carregou -->
-            <div class="img-skeleton" *ngIf="!isUniformeImgLoaded(i) && !isUniformeImgError(i)"></div>
-
-            <!-- fallback se der erro -->
-            <div class="img-fallback card-fallback" *ngIf="isUniformeImgError(i)">
-              <span class="material-icons">broken_image</span>
-              <p>Sem foto</p>
-            </div>
-
-            <img class="uniforme-img" *ngIf="(getFotoAtual(u, i) || '') && !isUniformeImgError(i)"
-              [src]="getFotoAtual(u, i) || ''" [alt]="u.descricao" (click)="openUniformeModal(u, i)"
-              (error)="onUniformeImgError(i, fotos.length)" (load)="onUniformeImgLoad(i)"
-              [class.img-hidden]="!isUniformeImgLoaded(i)" [class.img-visible]="isUniformeImgLoaded(i)" />
-
-            <!-- ✅ setas no card -->
-            <button *ngIf="fotos.length > 1" type="button" class="uniforme-seta esquerda"
-              (click)="changeFoto(i, fotos.length, -1)" aria-label="Foto anterior">
-              <span class="material-icons">chevron_left</span>
-            </button>
-
-            <button *ngIf="fotos.length > 1" type="button" class="uniforme-seta direita"
-              (click)="changeFoto(i, fotos.length, 1)" aria-label="Próxima foto">
-              <span class="material-icons">chevron_right</span>
-            </button>
-          </ng-container>
-        </div>
-
-        <div class="uniforme-info">
-          <p class="uniforme-desc">{{ u.descricao }}</p>
-          <p class="uniforme-preco">R$ {{ formatBRL(precoUniforme) }}</p>
-          <p class="uniforme-avulso">
-            Valor da camisa avulsa e short avulso é de R${{ formatBRL(precoAvulso) }}.
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <ng-template #semUniformes>
-      <p class="uniformes-vazio">Nenhum uniforme cadastrado para esta unidade.</p>
-    </ng-template>
-  </ng-container>
-
-  <ng-template #uniformesSkeleton>
-    <div class="uniformes-grid">
-      <div class="skeleton-card" *ngFor="let _ of [1,2,3]">
-        <div class="skeleton-block skeleton-img"></div>
-        <div class="skeleton-block skeleton-line"></div>
-        <div class="skeleton-block skeleton-line small"></div>
-      </div>
-    </div>
-  </ng-template>
-</div>
 
 <!-- ✅ MODAL (Lightbox) -->
 <div class="uniforme-modal-backdrop" *ngIf="modalAberto" (click)="closeUniformeModal()">

@@ -43,7 +43,6 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: #d9d9d9;
 
   /* garante área para skeleton enquanto carrega */
   min-height: 180px;

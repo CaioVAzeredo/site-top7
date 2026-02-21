@@ -15,7 +15,7 @@ export class ApiService {
   // ✅ JSON NOVO (aninhado)
   private jsonEscolas = 'assets/novas-modalidades.json';
 
-  private url = 'http://apitop7.caioapi.lat/api/contato';
+  private url = 'http://localhost:8000/api/contato';
 
   constructor(private http: HttpClient) { }
 
@@ -32,6 +32,7 @@ export class ApiService {
   }
 
   enviarDados(dados: any): Observable<any> {
+    console.log("URL: " + this.url)
     return this.http.post(this.url, dados);
   }
 
