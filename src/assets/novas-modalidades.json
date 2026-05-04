@@ -537,167 +537,146 @@
           "numero": "",
           "grade": [
             {
-              "nivel": "",
+              "nivel": "Geral",
               "horarios": [
                 {
-                  "horario": "9H30 ÀS 10H20",
-                  "seg": "FUTSAL ANOS INICIAIS, GINÁSTICA RÍTMICA (ANOS INICIAIS)",
-                  "ter": "JUDÔ, BALLET (ANOS INICIAIS)",
-                  "qua": "FUTSAL ANOS INICIAIS, GINÁSTICA RÍTMICA (ANOS INICIAIS)",
-                  "qui": "JUDÔ, BALLET (ANOS INICIAIS)",
-                  "sex": ""
-                },
-                {
-                  "horario": "10H30 ÀS 11H20",
-                  "seg": "FUTSAL (ED. INFANTIL), GINÁSTICA RÍTMICA (ED. INFANTIL)",
-                  "ter": "JUDÔ, BALLET (ED. INFANTIL)",
-                  "qua": "FUTSAL (ED. INFANTIL), GINÁSTICA RÍTMICA (ED. INFANTIL)",
-                  "qui": "JUDÔ, BALLET (ED. INFANTIL)",
-                  "sex": ""
-                },
-                {
-                  "horario": "12H ÀS 12H50",
-                  "seg": "FUTSAL 6º e 7º ANO",
-                  "ter": "",
-                  "qua": "FUTSAL 6º e 7º ANO",
-                  "qui": "",
-                  "sex": ""
-                },
-                {
-                  "horario": "12H15 ÀS 13H05",
-                  "seg": "VOLEI 6º e 9º ANO",
-                  "ter": "",
-                  "qua": "VOLEI 6º e 9º ANO",
-                  "qui": "",
-                  "sex": ""
-                },
-                {
-                  "horario": "13H10 ÀS 14H",
-                  "seg": "VOLEI FUND 1",
-                  "ter": "",
-                  "qua": "VOLEI FUND 1",
-                  "qui": "",
-                  "sex": ""
-                },
-                {
-                  "horario": "13H30 ÀS 14H20",
-                  "seg": "BASQUETE 6º ao 9º ANO, CIRCO, FUTSAL 8º e 9º ANO, FUTSAL ED. INFANTIL, GINÁSTICA RÍTMICA (ED. INFANTIL)",
-                  "ter": "FUTSAL ANOS INICIAIS, JUDÔ ED. INFANTIL, BALLET (ED. INFANTIL)",
-                  "qua": "BASQUETE 6º ao 9º ANO, CIRCO, FUTSAL 8º e 9º ANO, FUTSAL ED. INFANTIL, GINÁSTICA RÍTMICA (ED. INFANTIL)",
-                  "qui": "FUTSAL ANOS INICIAIS, JUDÔ ED. INFANTIL, BALLET (ED. INFANTIL)",
-                  "sex": ""
-                },
-                {
-                  "horario": "14H ÀS 14H50",
-                  "seg": "",
-                  "ter": "HANDEBOL 6º ao 8º ANO",
-                  "qua": "",
-                  "qui": "HANDEBOL 6º ao 8º ANO",
-                  "sex": ""
-                },
-                {
-                  "horario": "14H05 ÀS 14H55",
-                  "seg": "VOLEI ENSINO MÉDIO",
-                  "ter": "",
-                  "qua": "VOLEI ENSINO MÉDIO",
-                  "qui": "",
-                  "sex": ""
-                },
-                {
-                  "horario": "14H10 ÀS 15H",
-                  "seg": "FUTSAL ENSINO MÉDIO",
-                  "ter": "",
-                  "qua": "FUTSAL ENSINO MÉDIO",
-                  "qui": "",
-                  "sex": ""
-                },
-                {
-                  "horario": "14H20 ÀS 15H10",
-                  "seg": "",
-                  "ter": "BASQUETE ENSINO MÉDIO",
-                  "qua": "",
-                  "qui": "BASQUETE ENSINO MÉDIO",
-                  "sex": ""
-                },
-                {
                   "horario": "14H30 ÀS 15H20",
-                  "seg": "PATINAÇÃO, FUTSAL FUND 1, GINÁSTICA RÍTMICA (ANOS INICIAIS)",
-                  "ter": "JUDÔ (ANOS INICIAIS)",
-                  "qua": "PATINAÇÃO, FUTSAL FUND 1, GINÁSTICA RÍTMICA (ANOS INICIAIS)",
-                  "qui": "JUDÔ (ANOS INICIAIS)",
-                  "sex": ""
-                },
-                {
-                  "horario": "14H30 ÀS 15H30",
-                  "seg": "",
-                  "ter": "BALLET (ANOS INICIAIS)",
-                  "qua": "",
-                  "qui": "BALLET (ANOS INICIAIS)",
-                  "sex": ""
-                },
-                {
-                  "horario": "14H50 ÀS 15H40",
-                  "seg": "",
-                  "ter": "HANDEBOL 9º ANO e ENSINO MÉDIO",
-                  "qua": "",
-                  "qui": "HANDEBOL 9º ANO e ENSINO MÉDIO",
-                  "sex": ""
-                },
-                {
-                  "horario": "18H10 ÀS 19H",
-                  "seg": "FUTSAL 6º AO 9º ANO, VOLEI FUND 1",
+                  "seg": "PATINAÇÃO",
                   "ter": "",
-                  "qua": "FUTSAL 6º AO 9º ANO, VOLEI FUND 1",
+                  "qua": "PATINAÇÃO",
                   "qui": "",
-                  "sex": ""
-                },
-                {
-                  "horario": "18H20 ÀS 19H10",
-                  "seg": "GINÁSTICA RÍTMICA (ED INFANTIL)",
-                  "ter": "FUTSAL - ED. INFANTIL, JUDÔ, BALLET (ED. INFANTIL)",
-                  "qua": "GINÁSTICA RÍTMICA (ED INFANTIL)",
-                  "qui": "FUTSAL - ED. INFANTIL, JUDÔ, BALLET (ED. INFANTIL)",
                   "sex": ""
                 },
                 {
                   "horario": "19H ÀS 19H50",
-                  "seg": "BASQUETE 6º ao 9º ANO, VOLEI 6º e 9º ANO",
+                  "seg": "",
+                  "ter": "PATINAÇÃO",
+                  "qua": "",
+                  "qui": "PATINAÇÃO",
+                  "sex": ""
+                },
+                {
+                  "horario": "19H10 ÀS 20H",
+                  "seg": "",
+                  "ter": "CAPOEIRA",
+                  "qua": "",
+                  "qui": "CAPOEIRA",
+                  "sex": ""
+                }
+              ]
+            },
+            {
+              "nivel": "6º ao 9º ANO",
+              "horarios": [
+                {
+                  "horario": "12H15 ÀS 13H05",
+                  "seg": "VÔLEI",
                   "ter": "",
-                  "qua": "BASQUETE 6º ao 9º ANO, VOLEI 6º e 9º ANO",
+                  "qua": "VÔLEI",
+                  "qui": "",
+                  "sex": ""
+                },
+                {
+                  "horario": "19H ÀS 19H50",
+                  "seg": "BASQUETE",
+                  "ter": "",
+                  "qua": "BASQUETE",
+                  "qui": "",
+                  "sex": ""
+                }
+              ]
+            },
+            {
+              "nivel": "6º ao 8º ANO",
+              "horarios": [
+                {
+                  "horario": "19H10 ÀS 20H",
+                  "seg": "VÔLEI",
+                  "ter": "",
+                  "qua": "VÔLEI",
+                  "qui": "",
+                  "sex": ""
+                }
+              ]
+            },
+            {
+              "nivel": "ANOS INICIAIS",
+              "horarios": [
+                {
+                  "horario": "13H10 ÀS 14H",
+                  "seg": "VÔLEI",
+                  "ter": "",
+                  "qua": "VÔLEI",
+                  "qui": "",
+                  "sex": ""
+                },
+                {
+                  "horario": "14H30 ÀS 15H20",
+                  "seg": "GINÁSTICA RÍTMICA, FUTSAL",
+                  "ter": "JUDÔ",
+                  "qua": "GINÁSTICA RÍTMICA, FUTSAL",
+                  "qui": "JUDÔ",
+                  "sex": ""
+                },
+                {
+                  "horario": "19H10 ÀS 20H",
+                  "seg": "FUTSAL (3º AO 5º ANO)",
+                  "ter": "",
+                  "qua": "FUTSAL (3º AO 5º ANO)",
                   "qui": "",
                   "sex": ""
                 },
                 {
                   "horario": "19H10 ÀS 20H",
-                  "seg": "CIRCO, FUTSAL ANOS INICIAIS 3º AO 5º ANO, GINÁSTICA RÍTMICA (ANOS INICIAIS)",
-                  "ter": "FUTSAL 1º E 2º ANO, JUDÔ, CAPOEIRA, BALLET (ANOS INICIAIS)",
-                  "qua": "CIRCO, FUTSAL ANOS INICIAIS 3º AO 5º ANO, GINÁSTICA RÍTMICA (ANOS INICIAIS)",
-                  "qui": "FUTSAL 1º E 2º ANO, JUDÔ, CAPOEIRA, BALLET (ANOS INICIAIS)",
+                  "seg": "VÔLEI",
+                  "ter": "",
+                  "qua": "VÔLEI",
+                  "qui": "",
                   "sex": ""
                 }
               ]
-            }
-          ],
-          "uniformes": [
-            {
-              "descricao": "Uniforme completo sigma asa sul - Masculino",
-              "foto-frente": "assets/sigma-as-frente.webp",
-              "foto-costa": "assets/sigma-as-costas.webp"
             },
             {
-              "descricao": "Uniforme completo basquete sigma asa sul - Masculino",
-              "foto-frente": "assets/sigma-as-frente-basquete.webp",
-              "foto-costa": "assets/sigma-as-costas-basquete.webp"
+              "nivel": "3º AO 5º ANO",
+              "horarios": [
+                {
+                  "horario": "19H10 ÀS 20H",
+                  "seg": "FUTSAL",
+                  "ter": "",
+                  "qua": "FUTSAL",
+                  "qui": "",
+                  "sex": ""
+                }
+              ]
             },
             {
-              "descricao": "Uniforme completo sigma asa sul - Feminino",
-              "foto-frente": "assets/sigma-as-frente-feminino.webp",
-              "foto-costa": "assets/sigma-as-costa-feminino.webp"
-            },
-            {
-              "descricao": "Uniforme completo basquete sigma asa sul - Feminino",
-              "foto-frente": "assets/sigma-as-frente-basquete-feminino.webp",
-              "foto-costa": "assets/sigma-as-costas-basquete-feminino.webp"
+              "nivel": "ED. INFANTIL",
+              "horarios": [
+                {
+                  "horario": "10H30 ÀS 11H20",
+                  "seg": "GINÁSTICA RÍTMICA, FUTSAL",
+                  "ter": "BALLET, JUDÔ",
+                  "qua": "GINÁSTICA RÍTMICA, FUTSAL",
+                  "qui": "BALLET, JUDÔ",
+                  "sex": ""
+                },
+                {
+                  "horario": "13H30 ÀS 14H20",
+                  "seg": "GINÁSTICA RÍTMICA, FUTSAL",
+                  "ter": "JUDÔ",
+                  "qua": "GINÁSTICA RÍTMICA, FUTSAL",
+                  "qui": "JUDÔ",
+                  "sex": ""
+                },
+                {
+                  "horario": "18H20 ÀS 19H10",
+                  "seg": "",
+                  "ter": "JUDÔ",
+                  "qua": "",
+                  "qui": "JUDÔ",
+                  "sex": ""
+                }
+              ]
             }
           ]
         },
@@ -708,79 +687,170 @@
           "numero": "",
           "grade": [
             {
-              "nivel": "",
+              "nivel": "Geral",
               "horarios": [
                 {
-                  "horario": "12H ÀS 12H50",
-                  "seg": "FUTSAL 6º e 7º ANO, VOLEIBOL 6º AO 9º ANO",
-                  "ter": "",
-                  "qua": "FUTSAL 6º e 7º ANO, VOLEIBOL 6º AO 9º ANO",
-                  "qui": "",
-                  "sex": ""
-                },
-                {
-                  "horario": "13H ÀS 13H50",
-                  "seg": "FUTSAL 8º e 9º ANO, VOLEIBOL - MÉDIO",
-                  "ter": "",
-                  "qua": "FUTSAL 8º e 9º ANO, VOLEIBOL - MÉDIO",
-                  "qui": "",
-                  "sex": ""
-                },
-                {
                   "horario": "13H30 ÀS 14H20",
-                  "seg": "BALLET, CIRCO, JUDÔ (INFANTIL)",
-                  "ter": "BASQUETE 6º ao 9º ANO, FUTSAL ED. INFANTIL, GINÁSTICA RÍTMICA (ED. INFANTIL)",
-                  "qua": "BALLET, CIRCO, JUDÔ (INFANTIL)",
-                  "qui": "FUTSAL ED. INFANTIL, GINÁSTICA RÍTMICA (ED. INFANTIL)",
-                  "sex": "BASQUETE 6º ao 9º ANO"
-                },
-                {
-                  "horario": "14H ÀS 14H50",
-                  "seg": "FUTSAL ENSINO MÉDIO",
+                  "seg": "BALLET, CIRCO",
                   "ter": "",
-                  "qua": "FUTSAL ENSINO MÉDIO",
+                  "qua": "BALLET, CIRCO",
                   "qui": "",
                   "sex": ""
-                },
-                {
-                  "horario": "14H20 ÀS 15H10",
-                  "seg": "HANDEBOL 6º ao 9º ANO",
-                  "ter": "BASQUETE ENSINO MÉDIO",
-                  "qua": "HANDEBOL 6º ao 9º ANO",
-                  "qui": "",
-                  "sex": "BASQUETE ENSINO MÉDIO"
                 },
                 {
                   "horario": "14H30 ÀS 15H20",
-                  "seg": "BALLET, JUDÔ (ANOS INICIAIS)",
-                  "ter": "FUTSAL 1º ao 5º ANO, GINÁSTICA RÍTMICA (ANOS INICIAIS)",
-                  "qua": "BALLET, JUDÔ (ANOS INICIAIS)",
-                  "qui": "FUTSAL 1º ao 5º ANO, GINÁSTICA RÍTMICA (ANOS INICIAIS)",
-                  "sex": ""
-                },
-                {
-                  "horario": "18H20 ÀS 19H10",
-                  "seg": "BALLET (ED. INFANTIL), JUDÔ (ED. INFANTIL), VOLEIBOL 6º e 7º ANO",
-                  "ter": "FUTSAL ED. INFANTIL, GINÁSTICA RÍTMICA (ED. INFANTIL), HANDEBOL ENSINO MÉDIO",
-                  "qua": "BALLET (ED. INFANTIL), JUDÔ (ED. INFANTIL), VOLEIBOL 6º e 7º ANO",
-                  "qui": "FUTSAL ED. INFANTIL, GINÁSTICA RÍTMICA (ED. INFANTIL), HANDEBOL ENSINO MÉDIO",
-                  "sex": ""
-                },
-                {
-                  "horario": "19H ÀS 19H50",
-                  "seg": "VOLEIBOL FUND 1",
+                  "seg": "BALLET",
                   "ter": "",
-                  "qua": "VOLEIBOL FUND 1",
+                  "qua": "BALLET",
                   "qui": "",
                   "sex": ""
                 },
                 {
                   "horario": "19H10 ÀS 20H",
-                  "seg": "FUTSAL 3º AO 5º ANO, CIRCO, BALLET (FUND. 1), JUDÔ (FUND. 1), CAPOEIRA",
-                  "ter": "FUTSAL 6º e 9º ANO, FUTSAL 1º E 2º ANO FUND. 1, GINÁSTICA RÍTMICA (ANOS INICIAIS)",
-                  "qua": "FUTSAL 3º AO 5º ANO, CIRCO, BALLET (FUND. 1), JUDÔ (FUND. 1), CAPOEIRA",
-                  "qui": "FUTSAL 6º e 9º ANO, FUTSAL 1º E 2º ANO FUND. 1, GINÁSTICA RÍTMICA (ANOS INICIAIS)",
+                  "seg": "CIRCO",
+                  "ter": "",
+                  "qua": "CIRCO",
+                  "qui": "",
                   "sex": ""
+                }
+              ]
+            },
+            {
+              "nivel": "ED. INFANTIL",
+              "horarios": [
+                {
+                  "horario": "13H30 ÀS 14H20",
+                  "seg": "JUDÔ",
+                  "ter": "GINÁSTICA RÍTMICA, FUTSAL",
+                  "qua": "JUDÔ",
+                  "qui": "GINÁSTICA RÍTMICA, FUTSAL",
+                  "sex": ""
+                },
+                {
+                  "horario": "18H20 ÀS 19H10",
+                  "seg": "BALLET, JUDÔ",
+                  "ter": "GINÁSTICA RÍTMICA, FUTSAL",
+                  "qua": "BALLET, JUDÔ",
+                  "qui": "GINÁSTICA RÍTMICA, FUTSAL",
+                  "sex": ""
+                }
+              ]
+            },
+            {
+              "nivel": "ANOS INICIAIS",
+              "horarios": [
+                {
+                  "horario": "14H30 ÀS 15H20",
+                  "seg": "JUDÔ",
+                  "ter": "GINÁSTICA RÍTMICA, FUTSAL",
+                  "qua": "JUDÔ",
+                  "qui": "GINÁSTICA RÍTMICA, FUTSAL",
+                  "sex": ""
+                },
+                {
+                  "horario": "19H10 ÀS 20H",
+                  "seg": "",
+                  "ter": "GINÁSTICA RÍTMICA, HANDEBOL",
+                  "qua": "",
+                  "qui": "GINÁSTICA RÍTMICA, HANDEBOL",
+                  "sex": ""
+                }
+              ]
+            },
+            {
+              "nivel": "1º E 2º ANO (ANOS INICIAIS)",
+              "horarios": [
+                {
+                  "horario": "19H10 ÀS 20H",
+                  "seg": "",
+                  "ter": "FUTSAL",
+                  "qua": "",
+                  "qui": "FUTSAL",
+                  "sex": ""
+                }
+              ]
+            },
+            {
+              "nivel": "3º AO 5º ANO (ANOS INICIAIS)",
+              "horarios": [
+                {
+                  "horario": "19H10 ÀS 20H",
+                  "seg": "FUTSAL",
+                  "ter": "",
+                  "qua": "FUTSAL",
+                  "qui": "",
+                  "sex": ""
+                }
+              ]
+            },
+            {
+              "nivel": "6º ao 9º ANO",
+              "horarios": [
+                {
+                  "horario": "12H ÀS 12H50",
+                  "seg": "FUTSAL",
+                  "ter": "",
+                  "qua": "FUTSAL",
+                  "qui": "",
+                  "sex": ""
+                },
+                {
+                  "horario": "13H30 ÀS 14H20",
+                  "seg": "",
+                  "ter": "BASQUETE",
+                  "qua": "",
+                  "qui": "",
+                  "sex": "BASQUETE"
+                },
+                {
+                  "horario": "18H20 ÀS 19H10",
+                  "seg": "FUTSAL",
+                  "ter": "",
+                  "qua": "FUTSAL",
+                  "qui": "",
+                  "sex": ""
+                }
+              ]
+            },
+            {
+              "nivel": "8º ANO AO ENSINO MÉDIO",
+              "horarios": [
+                {
+                  "horario": "13H ÀS 13H50",
+                  "seg": "HANDEBOL",
+                  "ter": "",
+                  "qua": "HANDEBOL",
+                  "qui": "",
+                  "sex": ""
+                }
+              ]
+            },
+            {
+              "nivel": "ENSINO MÉDIO",
+              "horarios": [
+                {
+                  "horario": "13H ÀS 13H50",
+                  "seg": "VÔLEI",
+                  "ter": "",
+                  "qua": "",
+                  "qui": "",
+                  "sex": ""
+                },
+                {
+                  "horario": "13H30 ÀS 14H20",
+                  "seg": "",
+                  "ter": "",
+                  "qua": "",
+                  "qui": "",
+                  "sex": "VÔLEI"
+                },
+                {
+                  "horario": "14H20 ÀS 15H10",
+                  "seg": "",
+                  "ter": "BASQUETE",
+                  "qua": "",
+                  "qui": "",
+                  "sex": "BASQUETE"
                 }
               ]
             }
@@ -815,32 +885,8 @@
           "numero": "",
           "grade": [
             {
-              "nivel": "",
+              "nivel": "Geral",
               "horarios": [
-                {
-                  "horario": "12H10 ÀS 13H",
-                  "seg": "",
-                  "ter": "",
-                  "qua": "",
-                  "qui": "",
-                  "sex": "BASQUETE 6º ao 8º ANO, HANDEBOL 6º ao 8º ANO"
-                },
-                {
-                  "horario": "12H15 ÀS 13H05",
-                  "seg": "FUTSAL 6º ao 9º ANO, VÔLEI 6º e 7º ANO",
-                  "ter": "",
-                  "qua": "FUTSAL 6º ao 9º ANO, VÔLEI 6º e 7º ANO",
-                  "qui": "",
-                  "sex": ""
-                },
-                {
-                  "horario": "13H10 ÀS 14H",
-                  "seg": "FUTSAL 9º ANO e ENSINO MÉDIO, VÔLEI 8º e 9º ANO",
-                  "ter": "BASQUETE 6º ao 8º ANO, HANDEBOL 6º ao 8º ANO",
-                  "qua": "FUTSAL 9º ANO e ENSINO MÉDIO, VÔLEI 8º e 9º ANO",
-                  "qui": "",
-                  "sex": "BASQUETE 9º ANO e ENSINO MÉDIO, HANDEBOL 9º ANO e ENSINO MÉDIO"
-                },
                 {
                   "horario": "13H30 ÀS 14H20",
                   "seg": "CIRCO",
@@ -850,59 +896,61 @@
                   "sex": ""
                 },
                 {
-                  "horario": "14H05 ÀS 14H55",
-                  "seg": "VÔLEI ENSINO MÉDIO",
-                  "ter": "",
-                  "qua": "VÔLEI ENSINO MÉDIO",
-                  "qui": "",
-                  "sex": ""
-                },
-                {
-                  "horario": "14H10 ÀS 15H",
-                  "seg": "",
-                  "ter": "BASQUETE 9º ANO e ENSINO MÉDIO, HANDEBOL 9º ANO e ENSINO MÉDIO",
-                  "qua": "",
-                  "qui": "",
-                  "sex": ""
-                },
-                {
                   "horario": "14H30 ÀS 15H20",
-                  "seg": "GINÁSTICA RÍTMICA (ANOS INICIAIS), FUTSAL ANOS INICIAIS",
-                  "ter": "BALLET (ANOS INICIAIS), PATINAÇÃO, JUDÔ ANOS INICIAIS",
-                  "qua": "GINÁSTICA RÍTMICA (ANOS INICIAIS), FUTSAL ANOS INICIAIS",
-                  "qui": "BALLET (ANOS INICIAIS), PATINAÇÃO, JUDÔ ANOS INICIAIS",
+                  "seg": "",
+                  "ter": "PATINAÇÃO",
+                  "qua": "",
+                  "qui": "PATINAÇÃO",
                   "sex": ""
                 },
                 {
-                  "horario": "18H05 ÀS 18H55",
-                  "seg": "FUTSAL 6º e 9º ANO",
+                  "horario": "19H10 ÀS 20H",
+                  "seg": "GINÁSTICA RÍTMICA, JUDÔ",
                   "ter": "",
-                  "qua": "FUTSAL 6º e 9º ANO",
+                  "qua": "GINÁSTICA RÍTMICA, JUDÔ",
+                  "qui": "",
+                  "sex": ""
+                }
+              ]
+            },
+            {
+              "nivel": "6º ao 9º ANO",
+              "horarios": [
+                {
+                  "horario": "12H15 ÀS 13H05",
+                  "seg": "FUTSAL, VÔLEI (6º e 7º ANO)",
+                  "ter": "",
+                  "qua": "FUTSAL, VÔLEI (6º e 7º ANO)",
                   "qui": "",
                   "sex": ""
                 },
                 {
                   "horario": "18H10 ÀS 19H",
-                  "seg": "VÔLEI 6º ao 9º ANO",
+                  "seg": "FUTSAL, VÔLEI",
                   "ter": "",
-                  "qua": "VÔLEI 6º ao 9º ANO",
+                  "qua": "FUTSAL, VÔLEI",
                   "qui": "",
                   "sex": ""
-                },
+                }
+              ]
+            },
+            {
+              "nivel": "ANOS INICIAIS",
+              "horarios": [
                 {
-                  "horario": "19H ÀS 19H50",
-                  "seg": "VÔLEI ANOS INICIAIS, CAPOEIRA",
+                  "horario": "14H30 ÀS 15H20",
+                  "seg": "FUTSAL",
                   "ter": "",
-                  "qua": "VÔLEI ANOS INICIAIS, CAPOEIRA",
+                  "qua": "FUTSAL",
                   "qui": "",
                   "sex": ""
                 },
                 {
                   "horario": "19H10 ÀS 20H",
-                  "seg": "FUTSAL ANOS INICIAIS 3º ao 5º ANO, BALLET (ANOS INICIAIS), JUDÔ, CIRCO",
-                  "ter": "FUTSAL ANOS INICIAIS 3º ao 5º ANO, GINÁSTICA RÍTMICA",
-                  "qua": "FUTSAL ANOS INICIAIS 3º ao 5º ANO, BALLET (ANOS INICIAIS), JUDÔ, CIRCO",
-                  "qui": "FUTSAL ANOS INICIAIS 3º ao 5º ANO, GINÁSTICA RÍTMICA",
+                  "seg": "",
+                  "ter": "FUTSAL",
+                  "qua": "",
+                  "qui": "FUTSAL",
                   "sex": ""
                 }
               ]
