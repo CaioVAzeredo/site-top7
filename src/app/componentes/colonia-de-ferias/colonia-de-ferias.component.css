@@ -1,11 +1,95 @@
 .img-titulo-colonia-deferias {
-    width: 400px;
+    width: 500px;
     display: block;
     margin: 0 auto;
 }
 
 .img-sub-titulo-colonia-deferias {
-    width: 400px;
+    width: 500px;
     display: block;
     margin: 0 auto;
+    margin-top: -150px;
+}
+.logos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+}
+
+.logo-box {
+    width: 280px;
+    height: 140px;
+    padding: 18px 22px;
+    border-radius: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #fff200, #00c8c8, #ff006e, #ff4b22);
+    border: 5px solid #000;
+
+    cursor: pointer;
+
+    box-shadow:
+        6px 6px 0 #000,
+        0 12px 24px rgba(0, 0, 0, 0.18);
+
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.logo-box:nth-child(2) {
+    background: linear-gradient(135deg, #ff7a00, #00c8c8, #fff200, #ff006e);
+}
+
+.logo-box:hover {
+    transform: translateY(-8px) rotate(-1deg);
+    box-shadow:
+        8px 10px 0 #000,
+        0 18px 30px rgba(0, 0, 0, 0.22);
+}
+
+.logo-box:active {
+    transform: translateY(-2px);
+    box-shadow:
+        4px 4px 0 #000,
+        0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: white;
+    border-radius: 18px;
+    padding: 12px;
+    border: 3px solid #000;
+}
+@media (max-width: 768px) {
+    .img-titulo-colonia-deferias {
+        width: 90%;
+        max-width: 360px;
+    }
+
+    .img-sub-titulo-colonia-deferias {
+        width: 90%;
+        max-width: 360px;
+        margin-top: -80px;
+    }
+
+    .logos {
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        padding: 60px 0;
+    }
+
+    .logo-box {
+        width: 260px;
+        height: 130px;
+    }
 }
