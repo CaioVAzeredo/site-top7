@@ -52,6 +52,7 @@ export class CabecalhoComponent implements OnInit {
 
   menuAberto = false;
   dropdownEscolasAberto = false;
+  dropdownColoniaAberto = false;
   grupoAberto: string | null = null;
 
   escolas: Escola[] = [];
@@ -87,7 +88,7 @@ export class CabecalhoComponent implements OnInit {
     this.grupoAberto = null;
   }
 
-  botaoColoniaDeFerias(){
+  botaoColoniaDeFerias() {
     alert("botaoColoniaDeFerias");
   }
 
@@ -100,12 +101,33 @@ export class CabecalhoComponent implements OnInit {
     event.stopPropagation();
 
     this.dropdownEscolasAberto = !this.dropdownEscolasAberto;
+    this.dropdownColoniaAberto = false;
 
     if (this.dropdownEscolasAberto) {
       this.grupoAberto = null;
     }
   }
 
+  toggleDropdownColonia(event: MouseEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    this.dropdownColoniaAberto = !this.dropdownColoniaAberto;
+    this.dropdownEscolasAberto = false;
+
+    if (this.dropdownColoniaAberto) {
+      this.grupoAberto = null;
+    }
+  }
+
+  irParaColoniaDeFerias() {
+    this.dropdownColoniaAberto = false;
+    this.dropdownEscolasAberto = false;
+    this.menuAberto = false;
+    this.grupoAberto = null;
+
+    this.router.navigate(['/colonia-de-ferias']);
+  }
   toggleGrupo(escolaId: string) {
     this.grupoAberto = this.grupoAberto === escolaId ? null : escolaId;
   }
@@ -123,15 +145,35 @@ export class CabecalhoComponent implements OnInit {
 
     this.router.navigate(['/modalidade', escolaId, unidadeId]);
   }
+  
+  selecionarColonia(escolaId: string) {
+    this.dropdownColoniaAberto = false;
+    this.dropdownEscolasAberto = false;
+    this.menuAberto = false;
+    this.grupoAberto = null;
+
+    if (escolaId === 'ideal') {
+      window.open('https://docs.google.com/forms/d/1E1t4m3u4XCtJMRw_GOnx2VQKkMBiIYFL97eabxcexhM/edit?ts=69fa93b9', '_blank');
+    }
+
+    if (escolaId === 'sigma') {
+      window.open('https://docs.google.com/forms/d/1FgJZR7QXK1fbg17gABSQXd4vyXSC_SwVqPpEf4Ysp4Y/edit?ts=69fa7e2d', '_blank');
+    }
+
+  }
 
   // ✅ fecha somente se clicar fora do componente
   @HostListener('document:click', ['$event'])
   onClickFora(event: MouseEvent) {
     const target = event.target as Node | null;
-    if (!target) return;
+
+    if (!target) {
+      return;
+    }
 
     if (!this.eRef.nativeElement.contains(target)) {
       this.dropdownEscolasAberto = false;
+      this.dropdownColoniaAberto = false;
       this.grupoAberto = null;
     }
   }
@@ -139,6 +181,7 @@ export class CabecalhoComponent implements OnInit {
   @HostListener('document:keydown.escape')
   onEsc() {
     this.dropdownEscolasAberto = false;
+    this.dropdownColoniaAberto = false;
     this.grupoAberto = null;
   }
 }

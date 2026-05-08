@@ -9,6 +9,7 @@ import { ContatoComponent } from "../../componentes/contato/contato.component";
 import { RodapeComponent } from "../../componentes/rodape/rodape.component";
 import { BotaoSubirComponent } from "../../componentes/botao-subir/botao-subir.component";
 import { EscolasComponent } from '../../componentes/escolas/escolas.component';
+import { ColoniaDeFeriasComponent } from "../../componentes/colonia-de-ferias/colonia-de-ferias.component";
 
 @Component({
   selector: 'app-principal',
@@ -19,7 +20,7 @@ import { EscolasComponent } from '../../componentes/escolas/escolas.component';
     EscolasComponent,
     EquipeComponent,
     RodapeComponent,
-    BotaoSubirComponent, ContatoComponent],
+    BotaoSubirComponent, ContatoComponent, ColoniaDeFeriasComponent],
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css'
 })

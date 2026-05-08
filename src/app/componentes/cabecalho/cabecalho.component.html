@@ -36,6 +36,28 @@
                     </ng-container>
                 </div>
             </li>
+            <!-- COLONIA DE FERIAS (dropdown) -->
+            <li class="item-dropdown" [class.aberto]="dropdownColoniaAberto">
+                <button type="button" class="escolas-trigger" (click)="toggleDropdownColonia($event)"
+                    [attr.aria-expanded]="dropdownColoniaAberto">
+                    Colônia de férias
+                    <span class="caret" [class.aberto]="dropdownColoniaAberto"></span>
+                </button>
+
+                <div class="dropdown-escolas" *ngIf="dropdownColoniaAberto" (click)="$event.stopPropagation()">
+
+                    <button type="button" class="grupo-titulo" (click)="selecionarColonia('ideal')">
+                        Ideal
+                    </button>
+
+                    <div class="linha-separador"></div>
+
+                    <button type="button" class="grupo-titulo" (click)="selecionarColonia('sigma')">
+                        Sigma
+                    </button>
+
+                </div>
+            </li>
 
             <li><a href="#equipe" (click)="fecharMenuMobile()">Equipe</a></li>
             <li><a href="#contato" (click)="fecharMenuMobile()">Contato</a></li>
@@ -45,7 +67,6 @@
                     Festivais
                 </a>
             </li>
-            <li><a href="#" (click)="fecharMenuMobile()" (click)="botaoColoniaDeFerias()">Colônia de Férias</a></li>
         </ul>
     </nav>
 
