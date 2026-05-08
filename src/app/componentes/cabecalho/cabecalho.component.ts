@@ -87,6 +87,10 @@ export class CabecalhoComponent implements OnInit {
     this.grupoAberto = null;
   }
 
+  botaoColoniaDeFerias(){
+    alert("botaoColoniaDeFerias");
+  }
+
   pagHome() {
     this.router.navigate(['/']);
   }
