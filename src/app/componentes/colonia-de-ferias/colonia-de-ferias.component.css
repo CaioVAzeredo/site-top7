@@ -10,6 +10,7 @@
     margin: 0 auto;
     margin-top: -150px;
 }
+
 .logos {
     max-width: 1200px;
     margin: 0 auto;
@@ -69,6 +70,43 @@
     padding: 12px;
     border: 3px solid #000;
 }
+
+.colonia-de-ferias {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-decoracao-esquerdo {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 260px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.img-decoracao-direito {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 260px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.segundo-modal,
+.logos {
+    position: relative;
+    z-index: 2;
+}
+
+.img-rodape-decoracao {
+    position: absolute;
+    top: 690px;
+    width: 260px;
+    width: 100%;
+}
+
 @media (max-width: 768px) {
     .img-titulo-colonia-deferias {
         width: 90%;
@@ -91,5 +129,23 @@
     .logo-box {
         width: 260px;
         height: 130px;
+    }
+
+    .img-decoracao-esquerdo {
+        left: -10px;
+        top: 300px;
+        width: 180px;
+        opacity: 0.7;
+    }
+
+    .img-decoracao-direito {
+        right: -10px;
+        top: 300px;
+        width: 180px;
+        opacity: 0.7;
+    }
+
+    .img-rodape-decoracao {
+        display: none;
     }
 }
