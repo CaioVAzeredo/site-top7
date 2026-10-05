@@ -20,7 +20,7 @@ import { ColoniaDeFeriasComponent } from "../../componentes/colonia-de-ferias/co
     EscolasComponent,
     EquipeComponent,
     RodapeComponent,
-    BotaoSubirComponent, ContatoComponent, ColoniaDeFeriasComponent],
+    BotaoSubirComponent, ContatoComponent],
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css'
 })

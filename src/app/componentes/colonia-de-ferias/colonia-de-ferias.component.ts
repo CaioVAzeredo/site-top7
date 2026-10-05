@@ -8,7 +8,7 @@ import { Escola } from '../../models/escolas.model';
 @Component({
   selector: 'app-colonia-de-ferias',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   templateUrl: './colonia-de-ferias.component.html',
   styleUrl: './colonia-de-ferias.component.css'
 })

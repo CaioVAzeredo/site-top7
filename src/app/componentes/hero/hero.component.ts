@@ -19,7 +19,7 @@ export class HeroComponent implements OnInit, OnDestroy {
   intervalo: any;
   isBrowser: boolean;
 
-  // ✅ loading/erro por slide (grande e pequeno)
+
   private slideLoaded: Record<number, boolean> = {};
   private slideError: Record<number, boolean> = {};
 
