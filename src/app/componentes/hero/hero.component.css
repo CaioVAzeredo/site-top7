@@ -1,7 +1,7 @@
 /* hero.component.css */
 
 .banner-tela-pequena img {
-  width: 100vw;
+  width: 100%;
   z-index: unset;
 }
 
@@ -24,8 +24,9 @@
 }
 
 .slides a {
-  flex-shrink: 0;
-  width: 100vw;
+  flex: 0 0 100%;
+  min-width: 0;
+  width: 100%;
 }
 
 .slides img {

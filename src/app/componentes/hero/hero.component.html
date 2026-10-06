@@ -3,7 +3,7 @@
   <div class="carrossel">
     <button class="carousel-btn prev" (click)="anterior()">‹</button>
 
-    <div class="slides" [style.transform]="'translateX(-' + (indiceAtual * 100) + 'vw)'">
+    <div class="slides" [style.transform]="'translateX(-' + (indiceAtual * 100) + '%)'">
       <a *ngFor="let img of imagens; let i = index" [href]="img.link" target="_self" class="slide-link">
         <div class="slide-wrapper">
           <!-- skeleton por trás enquanto carrega -->
@@ -45,7 +45,7 @@
   <div class="carrossel">
     <button class="carousel-btn prev" (click)="anterior()">‹</button>
 
-    <div class="slides" [style.transform]="'translateX(-' + (indiceAtual * 100) + 'vw)'">
+    <div class="slides" [style.transform]="'translateX(-' + (indiceAtual * 100) + '%)'">
       <a *ngFor="let img of imagensPequenas; let i = index" [href]="img.link" target="_self" class="slide-link">
         <div class="slide-wrapper">
           <!-- skeleton por trás enquanto carrega -->
